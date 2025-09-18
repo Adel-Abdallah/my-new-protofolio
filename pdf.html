@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adel Abdallah - Resume (PDF)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Copy all the CSS from styles.css here */
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* [Previous CSS content remains exactly the same] */
+        /* ... */
+        
+        /* Add print-specific styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .portfolio {
+                padding: 0;
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            a {
+                color: var(--color-link);
+                text-decoration: none;
+            }
+            
+            /* Ensure links have URLs in print */
+            a[href^="http"]::after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+                font-weight: normal;
+                color: var(--color-text-muted);
+            }
+        }
+        
+        /* Download button styling */
+        .download-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Top bar for prominent download button (hidden in print) */
+        .top-download-bar.no-print {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.9);
+            -webkit-backdrop-filter: saturate(180%) blur(8px);
+            backdrop-filter: saturate(180%) blur(8px);
+            border-bottom: 1px solid #e2e8f0; /* var(--color-border) fallback */
+            z-index: 1100;
+        }
+        .top-download-bar .download-btn {
+            position: static;
+        }
+        /* Prevent content from hiding behind fixed top bar when present */
+        body.has-top-bar .portfolio {
+            margin-top: 56px; /* top bar height */
+        }
+
+        /* Info banner for local-file fallback */
+        .info-banner.no-print {
+            display: none;
+            margin: 12px auto 0;
+            max-width: var(--container-width);
+            background: #fffbea;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Download Bar (visible for users, hidden in print) -->
+    <div class="top-download-bar no-print" role="region" aria-label="Download actions">
+        <button id="downloadPdfTop" class="download-btn" aria-label="Download resume as PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download PDF
+        </button>
+    </div>
+    <!-- Copy the entire content of your portfolio here -->
+    <main class="portfolio">
+        <!-- Your existing portfolio content from index.html -->
+    </main>
+
+    <!-- Info banner (shown if content wasn't injected due to file protocol) -->
+    <div id="fileProtocolBanner" class="info-banner no-print" role="alert" aria-live="polite">
+        Couldn’t load portfolio content. Please run a local server (e.g., <code>python3 -m http.server 5500</code>)
+        and open <strong>http://localhost:5500/pdf.html</strong>, or run <code>node generate-pdf.js</code> to embed the content.
+    </div>
+
+    <!-- Floating Download Button (secondary, bottom-right) -->
+    <button id="downloadPdf" class="download-btn no-print">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+    </button>
+
+    <!-- Include html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add class so body offsets content below the top bar
+            document.body.classList.add('has-top-bar');
+            // Copy the content from the main portfolio page if this is a standalone page
+            if (!document.querySelector('.portfolio').innerHTML.trim()) {
+                // This is a fallback in case the content isn't copied over
+                fetch('index.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const portfolioContent = doc.querySelector('.portfolio');
+                        if (portfolioContent) {
+                            document.querySelector('.portfolio').innerHTML = portfolioContent.innerHTML;
+                            const banner = document.getElementById('fileProtocolBanner');
+                            if (banner) banner.style.display = 'none';
+                        } else {
+                            const banner = document.getElementById('fileProtocolBanner');
+                            if (banner) banner.style.display = 'block';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading portfolio content:', error);
+                        const banner = document.getElementById('fileProtocolBanner');
+                        if (banner) banner.style.display = 'block';
+                    });
+            }
+
+            // Set up the PDF download button
+            const downloadBtn = document.getElementById('downloadPdf');
+            const downloadBtnTop = document.getElementById('downloadPdfTop');
+            if (downloadBtn) downloadBtn.addEventListener('click', generatePDF);
+            if (downloadBtnTop) downloadBtnTop.addEventListener('click', generatePDF);
+            
+            // Auto-download if the page is loaded with ?download=true
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('download') === 'true') {
+                setTimeout(generatePDF, 1000);
+            }
+
+            function generatePDF() {
+                const element = document.querySelector('.portfolio');
+                const opt = {
+                    margin: [10, 5, 10, 5],
+                    filename: 'Adel-Abdallah-Resume.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { 
+                        scale: 2,
+                        useCORS: true,
+                        logging: true,
+                        dpi: 192,
+                        letterRendering: true,
+                        allowTaint: true
+                    },
+                    jsPDF: {
+                        unit: 'mm',
+                        format: 'a4',
+                        orientation: 'portrait',
+                    },
+                    pagebreak: { 
+                        mode: ['avoid-all', 'css', 'legacy'],
+                        before: '.page-break-before',
+                        after: '.page-break-after',
+                        avoid: '.avoid-break'
+                    }
+                };
+
+                // Show loading state
+                const btn = document.getElementById('downloadPdfTop') || document.getElementById('downloadPdf');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Generating PDF...';
+                btn.disabled = true;
+
+                // Generate PDF
+                html2pdf()
+                    .set(opt)
+                    .from(element)
+                    .toPdf()
+                    .get('pdf')
+                    .then(function(pdf) {
+                        // Restore button state
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    })
+                    .catch(function(error) {
+                        console.error('Error generating PDF:', error);
+                        btn.innerHTML = 'Error! Try Again';
+                        btn.disabled = false;
+                        setTimeout(() => {
+                            btn.innerHTML = originalText;
+                        }, 2000);
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

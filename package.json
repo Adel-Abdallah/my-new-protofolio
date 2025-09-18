@@ -1,0 +1,12 @@
+{
+  "name": "adel-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Adel Abdallah portfolio with static PDF export",
+  "scripts": {
+    "pdf": "node export-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.15.0"
+  }
+}
