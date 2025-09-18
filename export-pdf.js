@@ -20,7 +20,7 @@ const puppeteer = require('puppeteer');
 
     const page = await browser.newPage();
 
-    // Ensure we render exactly like the website styles
+    // Use screen media to match the live site exactly (avoids @media print link URL artifacts)
     await page.emulateMediaType('screen');
 
     // Build file URL to local index.html
@@ -33,6 +33,11 @@ const puppeteer = require('puppeteer');
       if (document.fonts && document.fonts.ready) {
         try { await document.fonts.ready; } catch (e) {}
       }
+    });
+
+    // Hard-remove UI that should never be in the PDF (defensive along with print CSS)
+    await page.evaluate(() => {
+      document.querySelectorAll('.no-print, .actions-bar').forEach((el) => el.remove());
     });
 
     // Create PDF (A4 with background graphics)
