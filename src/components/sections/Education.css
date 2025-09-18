@@ -1,0 +1,277 @@
+/* Education Component */
+.education {
+  margin-bottom: var(--spacing-8);
+}
+
+.education__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.education__item {
+  padding: var(--spacing-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-4);
+  transition: all 0.2s ease;
+}
+
+.education__item:last-child {
+  margin-bottom: 0;
+}
+
+.education__item:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.education__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-bottom: var(--spacing-3);
+}
+
+@media (min-width: 768px) {
+  .education__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.education__degree {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.education__institution {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  margin: var(--spacing-1) 0;
+}
+
+.education__duration {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.education__location {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: var(--spacing-1);
+}
+
+.education__details {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.education__gpa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.education__gpa-label {
+  color: var(--color-text-muted);
+}
+
+.education__gpa-value {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+}
+
+.education__achievements {
+  margin-top: var(--spacing-4);
+}
+
+.education__achievements-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.education__achievements-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.education__achievement {
+  position: relative;
+  padding-left: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+}
+
+.education__achievement::before {
+  content: "◦";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Compact layout for multiple degrees */
+.education--compact .education__item {
+  padding: var(--spacing-4);
+}
+
+.education--compact .education__degree {
+  font-size: var(--font-size-base);
+}
+
+.education--compact .education__institution {
+  font-size: var(--font-size-sm);
+}
+
+/* Timeline layout */
+.education--timeline .education__list {
+  position: relative;
+  padding-left: var(--spacing-6);
+  border-left: 2px solid var(--color-border);
+}
+
+.education--timeline .education__item {
+  position: relative;
+  margin-left: var(--spacing-4);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.education--timeline .education__item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--spacing-6) - 6px);
+  top: var(--spacing-1);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  border: 2px solid var(--color-background);
+}
+
+.education--timeline .education__item:hover {
+  box-shadow: none;
+}
+
+/* Print styles */
+@media print {
+  .education__item {
+    background-color: transparent;
+    border: 0.5pt solid #ccc;
+    border-radius: 0;
+    padding: 8pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+  }
+  
+  .education__item:hover {
+    box-shadow: none;
+  }
+  
+  .education__header {
+    flex-direction: column;
+    gap: 2pt;
+    margin-bottom: 6pt;
+  }
+  
+  .education__degree {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .education__institution {
+    font-size: 11pt;
+    color: #000;
+  }
+  
+  .education__duration {
+    font-size: 9pt;
+    color: #666;
+  }
+  
+  .education__location {
+    font-size: 9pt;
+    color: #666;
+    margin-top: 2pt;
+  }
+  
+  .education__details {
+    font-size: 10pt;
+    color: #000;
+  }
+  
+  .education__gpa {
+    background-color: transparent;
+    border: 0.5pt solid #999;
+    padding: 2pt 4pt;
+    font-size: 9pt;
+    margin-top: 4pt;
+  }
+  
+  .education__gpa-label {
+    color: #666;
+  }
+  
+  .education__gpa-value {
+    color: #000;
+  }
+  
+  .education__achievements-title {
+    font-size: 9pt;
+    margin-bottom: 3pt;
+    color: #000;
+  }
+  
+  .education__achievement {
+    font-size: 9pt;
+    color: #000;
+    margin-bottom: 2pt;
+    padding-left: 8pt;
+  }
+  
+  .education__achievement::before {
+    content: "• ";
+    color: #000;
+  }
+  
+  .education--timeline .education__list {
+    padding-left: 0;
+    border-left: none;
+  }
+  
+  .education--timeline .education__item {
+    margin-left: 0;
+  }
+  
+  .education--timeline .education__item::before {
+    display: none;
+  }
+}

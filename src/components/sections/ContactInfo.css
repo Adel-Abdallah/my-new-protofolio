@@ -1,0 +1,144 @@
+/* Contact Information Component */
+.contact-info {
+  margin-bottom: var(--spacing-8);
+}
+
+.contact-info__header {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.contact-info__name {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-tight);
+}
+
+.contact-info__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-4);
+}
+
+.contact-info__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info__item:hover {
+  color: var(--color-accent);
+}
+
+.contact-info__item--link {
+  color: var(--color-accent);
+}
+
+.contact-info__item--link:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+}
+
+.contact-info__icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .contact-info__header {
+    text-align: left;
+  }
+  
+  .contact-info__name {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .contact-info__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .contact-info__details {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--spacing-8);
+  }
+  
+  .contact-info__header {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  
+  .contact-info__details {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+/* Print styles */
+@media print {
+  .contact-info {
+    margin-bottom: 16pt;
+    display: block;
+    text-align: center;
+  }
+  
+  .contact-info__header {
+    text-align: center;
+    margin-bottom: 8pt;
+  }
+  
+  .contact-info__name {
+    font-size: 18pt;
+    margin-bottom: 4pt;
+  }
+  
+  .contact-info__title {
+    font-size: 12pt;
+    margin-bottom: 8pt;
+  }
+  
+  .contact-info__details {
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    gap: 12pt;
+  }
+  
+  .contact-info__item {
+    font-size: 9pt;
+    color: #000;
+  }
+  
+  .contact-info__icon {
+    display: none;
+  }
+}

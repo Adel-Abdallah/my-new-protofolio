@@ -1,0 +1,233 @@
+/* Work Experience Component */
+.experience {
+  margin-bottom: var(--spacing-8);
+}
+
+.experience__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.experience__item {
+  position: relative;
+  margin-bottom: var(--spacing-8);
+  padding-left: var(--spacing-6);
+  border-left: 2px solid var(--color-border);
+}
+
+.experience__item:last-child {
+  margin-bottom: 0;
+}
+
+.experience__item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: var(--spacing-1);
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  border: 2px solid var(--color-background);
+}
+
+.experience__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-bottom: var(--spacing-3);
+}
+
+@media (min-width: 768px) {
+  .experience__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.experience__position {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+.experience__company {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  margin: var(--spacing-1) 0;
+}
+
+.experience__duration {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.experience__location {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: var(--spacing-1);
+}
+
+.experience__description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-4);
+}
+
+.experience__achievements {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience__achievement {
+  position: relative;
+  padding-left: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.experience__achievement::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.experience__technologies {
+  margin-top: var(--spacing-4);
+}
+
+.experience__tech-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.experience__tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience__tech-item {
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+/* Simplified layout for mobile */
+@media (max-width: 767px) {
+  .experience__item {
+    padding-left: var(--spacing-4);
+    border-left: 1px solid var(--color-border);
+  }
+  
+  .experience__item::before {
+    left: -4px;
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .experience__list {
+    border: none;
+  }
+  
+  .experience__item {
+    margin-bottom: 16pt;
+    padding-left: 0;
+    border-left: none;
+    page-break-inside: avoid;
+  }
+  
+  .experience__item::before {
+    display: none;
+  }
+  
+  .experience__header {
+    flex-direction: column;
+    gap: 2pt;
+    margin-bottom: 6pt;
+  }
+  
+  .experience__position {
+    font-size: 12pt;
+    font-weight: 600;
+  }
+  
+  .experience__company {
+    font-size: 11pt;
+    color: #000;
+  }
+  
+  .experience__duration {
+    font-size: 9pt;
+    color: #666;
+  }
+  
+  .experience__location {
+    font-size: 9pt;
+    color: #666;
+    margin-top: 2pt;
+  }
+  
+  .experience__description {
+    font-size: 10pt;
+    color: #000;
+    margin-bottom: 6pt;
+  }
+  
+  .experience__achievement {
+    font-size: 10pt;
+    color: #000;
+    margin-bottom: 3pt;
+    padding-left: 12pt;
+  }
+  
+  .experience__achievement::before {
+    content: "• ";
+    color: #000;
+  }
+  
+  .experience__tech-label {
+    font-size: 9pt;
+    margin-bottom: 3pt;
+  }
+  
+  .experience__tech-list {
+    gap: 3pt;
+  }
+  
+  .experience__tech-item {
+    background-color: transparent;
+    border: 0.5pt solid #999;
+    padding: 1pt 3pt;
+    font-size: 8pt;
+    color: #000;
+  }
+}
