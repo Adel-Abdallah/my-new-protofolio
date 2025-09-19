@@ -45,8 +45,29 @@
     --spacing-2xl: 3rem; /* 48px */
     
     /* Layout */
-    --container-width: 8.5in;
+    --container-width: 100%;
     --border-radius: 0.375rem;
+}
+
+/* Dark theme variables */
+:root[data-theme='dark'] {
+    --color-primary: #e2e8f0;       /* Slate 200 */
+    --color-secondary: #94a3b8;     /* Slate 400 */
+    --color-accent: #38bdf8;        /* Sky 400 */
+    --color-accent-hover: #0ea5e9;  /* Sky 500 */
+    --color-background: #0b1220;    /* Very dark blue */
+    --color-surface: #0f172a;       /* Slate 900 */
+    --color-text: #e2e8f0;          /* Slate 200 */
+    --color-text-muted: #94a3b8;    /* Slate 400 */
+    --color-border: #1f2937;        /* Slate 800 */
+    --color-link: #38bdf8;          /* Sky 400 */
+}
+
+/* Respect system preference by default. JS toggle will override via [data-theme] */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
 }
 
 /* Base Typography */
@@ -69,6 +90,7 @@ body {
     padding: var(--spacing-xl);
     background-color: var(--color-background);
     position: relative;
+    z-index: 1; /* sits above full-screen background */
 }
 
 /* Subtle background pattern */
@@ -84,8 +106,10 @@ body {
         radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.02) 0%, transparent 50%),
         radial-gradient(circle at 40% 20%, rgba(14, 165, 233, 0.02) 0%, transparent 50%);
     pointer-events: none;
-    z-index: -1;
+    z-index: -2; /* keep pattern below animated background */
 }
+
+/* Animated background removed */
 
 /* Contact Header */
 .contact-header {
@@ -97,8 +121,23 @@ body {
     border-bottom: 2px solid var(--color-primary);
 }
 
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.header-actions {
+    margin: 0; /* override default actions-bar margin */
+    align-self: flex-start;
+}
+
 .name-title {
     flex: 1;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .name {
@@ -108,6 +147,9 @@ body {
     margin-bottom: var(--spacing-xs);
     color: var(--color-primary);
     line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .title {
@@ -115,27 +157,44 @@ body {
     font-weight: var(--font-weight-medium);
     color: var(--color-secondary);
     letter-spacing: 0.025em;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
+/* Header icons */
+.name-icon { width: 24px; height: 24px; color: var(--color-accent); flex: 0 0 auto; }
+.title-icon { width: 18px; height: 18px; color: var(--color-accent); flex: 0 0 auto; }
+.contact-icon { width: 14px; height: 14px; margin-right: 6px; vertical-align: -2px; }
+
+/* Contact info: no left reserved space; tight rows */
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    text-align: right;
     font-size: var(--font-size-sm);
+    line-height: 1.4;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--spacing-sm);
-    justify-content: flex-end;
 }
 
 .contact-label {
     font-weight: var(--font-weight-medium);
     color: var(--color-secondary);
-    min-width: 60px;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0;
+}
+
+/* On narrow screens, stack label above value for readability */
+@media (max-width: 520px) {
+    .contact-item { flex-wrap: wrap; }
 }
 
 .contact-info a {
@@ -170,7 +229,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     gap: var(--spacing-sm);
-    margin: calc(var(--spacing-md) * -1) 0 var(--spacing-2xl);
+    margin: 0 0 var(--spacing-2xl);
 }
 
 /* Button Styles */
@@ -214,6 +273,13 @@ body {
     background: var(--color-accent-hover);
 }
 
+/* Theme toggle icon refinement */
+.btn .theme-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
 .btn-icon svg {
     display: inline-block;
 }
@@ -233,6 +299,9 @@ body {
     border-bottom: 2px solid var(--color-border);
     padding-bottom: var(--spacing-sm);
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .section-title::after {
@@ -243,6 +312,14 @@ body {
     width: 60px;
     height: 2px;
     background-color: var(--color-accent);
+}
+
+/* Section title icon */
+.section-title .section-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--color-accent);
+    flex: 0 0 auto;
 }
 
 /* Professional Summary */
@@ -529,6 +606,11 @@ body {
         flex-direction: column;
         gap: var(--spacing-lg);
     }
+
+    .header-actions {
+        align-self: stretch;
+        justify-content: flex-start;
+    }
     
     .contact-info {
         text-align: left;
@@ -635,6 +717,9 @@ body {
         font-size: 8pt;
         color: #666;
     }
+
+    /* Hide animated background in print */
+    .bg-anim { display: none !important; }
     
     /* Hide phone/email prefixes in print */
     a[href^="tel:"]:after {

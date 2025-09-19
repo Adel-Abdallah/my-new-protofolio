@@ -10,54 +10,94 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Apply saved theme ASAP to avoid flash
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
     <main class="portfolio">
         <!-- Contact Header -->
         <header class="contact-header">
-            <div class="name-title">
-                <h1 class="name">ADEL ABDALLAH</h1>
-                <p class="title">SOFTWARE ENGINEER</p>
-            </div>
-            <div class="contact-info">
+            <div class="header-left">
+                <div class="name-title">
+                    <h1 class="name">
+                        <svg class="name-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg>
+                        ADEL ABDALLAH
+                    </h1>
+                    <p class="title">
+                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <path d="M4 7h16"></path>
+                            <path d="M4 12h16"></path>
+                            <path d="M4 17h16"></path>
+                        </svg>
+                        SOFTWARE ENGINEER
+                    </p>
+                </div>
+                <div class="contact-info">
                 <div class="contact-item">
-                    <span class="contact-label">Phone:</span>
+                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path></svg>Phone:</span>
                     <a href="tel:+639369330609">+63 9369330609</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Email:</span>
+                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z" fill="none"></path><polyline points="22,6 12,13 2,6"></polyline></svg>Email:</span>
                     <a href="mailto:adelgafo@gmail.com">adelgafo@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">Location:</span>
+                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Location:</span>
                     <span>8333 Dr Arcadio Santos Ave, Fidela Tower, Manila, 1700, Philippines</span>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">LinkedIn:</span>
+                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn:</span>
                     <a href="https://linkedin.com/in/adel-gafo" target="_blank">linkedin.com/in/adel-gafo</a>
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">GitHub:</span>
+                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.52 1.06 1.52 1.06 .9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.15-4.55-5.13 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.07a9.18 9.18 0 0 1 2.5-.35c.85 0 1.7.12 2.5.35 1.91-1.35 2.75-1.07 2.75-1.07 .55 1.43.2 2.49.1 2.75 .64.73 1.03 1.66 1.03 2.79 0 3.99-2.34 4.86-4.57 5.11.36.32.69.95.69 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"></path></svg>GitHub:</span>
                     <a href="https://github.com/adel-abdallah" target="_blank">github.com/adel-abdallah</a>
                 </div>
+                </div>
+            </div>
+            <div class="actions-bar header-actions no-print">
+                <a href="/Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download PDF</span>
+                </a>
+                <button id="theme-toggle" class="btn btn-icon" type="button" aria-pressed="false" title="Toggle theme">
+                    <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <span>Theme</span>
+                </button>
             </div>
         </header>
 
-        <!-- Actions Bar -->
-        <div class="actions-bar no-print">
-            <a href="/Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <span>Download PDF</span>
-            </a>
-        </div>
 
         <!-- Professional Summary -->
         <section class="section">
-            <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <path d="M14 2v6h6"></path>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                </svg>
+                PROFESSIONAL SUMMARY
+            </h2>
             <p class="summary-text">
                 Frontend Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React. 
                 Specialized in JavaScript, React, Redux, and modern web technologies. Proven track record in full-stack development, team management, 
@@ -68,7 +108,15 @@
 
         <!-- Current Services -->
         <section class="section">
-            <h2 class="section-title">CURRENT SERVICES</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                CURRENT SERVICES
+            </h2>
             <div class="services-grid">
                 <div class="service-item">
                     <h3 class="service-title">WordPress Development</h3>
@@ -87,7 +135,15 @@
 
         <!-- Current Clients -->
         <section class="section">
-            <h2 class="section-title">CURRENT CLIENTS</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                CURRENT CLIENTS
+            </h2>
             <div class="clients-list">
                 <div class="client-item">
                     <h3 class="client-name"><a href="https://investingsnacks.com/" target="_blank">Investing Snacks</a></h3>
@@ -106,7 +162,13 @@
 
         <!-- Technical Skills -->
         <section class="section">
-            <h2 class="section-title">TECHNICAL SKILLS</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                TECHNICAL SKILLS
+            </h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3 class="skill-category-title">Frontend</h3>
@@ -146,7 +208,13 @@
 
         <!-- Work Experience -->
         <section class="section">
-            <h2 class="section-title">WORK EXPERIENCE</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                </svg>
+                WORK EXPERIENCE
+            </h2>
             
             <div class="experience-item">
                 <div class="experience-header">
@@ -231,7 +299,13 @@
 
         <!-- Education -->
         <section class="section">
-            <h2 class="section-title">EDUCATION</h2>
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M22 10L12 4 2 10l10 6 10-6z"></path>
+                    <path d="M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"></path>
+                </svg>
+                EDUCATION
+            </h2>
             <div class="education-item">
                 <div class="education-header">
                     <div class="education-title">
@@ -247,6 +321,7 @@
         </section>
     </main>
 
+    <script src="src/theme.js"></script>
     <script>
         // Print optimization
         window.addEventListener('beforeprint', function() {
