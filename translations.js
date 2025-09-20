@@ -757,9 +757,76 @@ const PORTFOLIO_TRANSLATIONS = {
 // Simple Language Selector - No server needed!
 class SimpleLanguageSelector {
     constructor() {
-        this.currentLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        this.currentLanguage = this.detectUserLanguage();
         this.translations = PORTFOLIO_TRANSLATIONS;
         this.init();
+    }
+
+    detectUserLanguage() {
+        // First check if user has manually selected a language
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage) {
+            return savedLanguage;
+        }
+
+        // Get browser language preferences
+        const browserLanguages = navigator.languages || [navigator.language];
+        
+        // Country to language mapping
+        const countryLanguageMap = {
+            'PH': 'tl',    // Philippines -> Tagalog
+            'SA': 'ar',    // Saudi Arabia -> Arabic
+            'AE': 'ar',    // UAE -> Arabic
+            'EG': 'ar',    // Egypt -> Arabic
+            'MA': 'ar',    // Morocco -> Arabic
+            'FR': 'fr',    // France -> French
+            'CA': 'fr',    // Canada (Quebec) -> French
+            'BE': 'fr',    // Belgium -> French
+            'CH': 'fr',    // Switzerland -> French
+            'ES': 'es',    // Spain -> Spanish
+            'MX': 'es',    // Mexico -> Spanish
+            'AR': 'es',    // Argentina -> Spanish
+            'CO': 'es',    // Colombia -> Spanish
+            'PE': 'es',    // Peru -> Spanish
+            'CL': 'es',    // Chile -> Spanish
+            'CN': 'zh',    // China -> Chinese
+            'TW': 'zh',    // Taiwan -> Chinese
+            'HK': 'zh',    // Hong Kong -> Chinese
+            'SG': 'zh',    // Singapore -> Chinese
+            'JP': 'ja',    // Japan -> Japanese
+            'KR': 'ko',    // South Korea -> Korean
+            'IT': 'it',    // Italy -> Italian
+            'GR': 'el',    // Greece -> Greek
+            'SE': 'sv',    // Sweden -> Swedish
+            'NO': 'sv',    // Norway -> Swedish (fallback)
+            'DK': 'sv'     // Denmark -> Swedish (fallback)
+        };
+
+        // Check browser language codes first
+        for (const lang of browserLanguages) {
+            const langCode = lang.split('-')[0].toLowerCase();
+            if (['en', 'ar', 'fr', 'es', 'zh', 'ja', 'ko', 'it', 'el', 'sv', 'tl'].includes(langCode)) {
+                console.log(`Auto-detected language from browser: ${langCode}`);
+                return langCode;
+            }
+        }
+
+        // Try to detect country from timezone
+        try {
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            const countryCode = timezone.split('/')[0];
+            
+            if (countryLanguageMap[countryCode]) {
+                console.log(`Auto-detected language from timezone (${countryCode}): ${countryLanguageMap[countryCode]}`);
+                return countryLanguageMap[countryCode];
+            }
+        } catch (error) {
+            console.log('Could not detect timezone:', error);
+        }
+
+        // Fallback to English
+        console.log('Auto-detected language: English (fallback)');
+        return 'en';
     }
 
     init() {
