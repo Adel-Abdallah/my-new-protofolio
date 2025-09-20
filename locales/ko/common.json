@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "아델 압둘라 - 소프트웨어 엔지니어",
+    "description": "아델 압둘라 - React, Node.js, WordPress 개발 및 팀 관리에서 4년 이상의 경험을 가진 소프트웨어 엔지니어",
+    "keywords": "소프트웨어 엔지니어, React 개발자, WordPress 개발자, 프론트엔드 개발자, 팀 관리"
+  },
+  "header": {
+    "name": "아델 압둘라",
+    "title": "소프트웨어 엔지니어",
+    "phone": "전화:",
+    "email": "이메일:",
+    "location": "위치:",
+    "linkedin": "LinkedIn:",
+    "github": "GitHub:",
+    "portfolio": "포트폴리오:",
+    "downloadPdf": "PDF 다운로드",
+    "theme": "테마"
+  },
+  "sections": {
+    "professionalSummary": "전문가 요약",
+    "currentServices": "현재 서비스",
+    "lastClients": "최근 협력한 클라이언트",
+    "technicalSkills": "기술적 스킬",
+    "workExperience": "경력",
+    "education": "학력",
+    "contactMe": "연락하기"
+  },
+  "summary": {
+    "intro": "React를 사용하여 사용자 친화적이고 시각적으로 매력적인 웹사이트와 애플리케이션을 만드는 5년 이상의 경험을 가진 프론트엔드 개발자.",
+    "specialization": "JavaScript, React, Redux 및 현대 웹 기술에 특화.",
+    "trackRecord": "전체 스택 개발, 팀 관리, 전자상거래, 콘텐츠 관리 및 웹 애플리케이션을 위한 확장 가능한 솔루션 제공에서 입증된 실적.",
+    "currentClients": "현재 핀테크, 마케팅 자동화 및 링크 관리 분야의 클라이언트에게 서비스를 제공하고 있습니다."
+  },
+  "services": {
+    "wordpress": {
+      "title": "WordPress 개발",
+      "description": "맞춤형 테마, 플러그인, 마이그레이션, 성능 최적화 및 사이트 유지보수"
+    },
+    "reactExpress": {
+      "title": "React & Express 개발",
+      "description": "전체 스택 웹 애플리케이션, API 개발 및 현대 JavaScript 솔루션"
+    },
+    "teamManagement": {
+      "title": "팀 관리",
+      "description": "기술 리더십, 프로젝트 조정 및 개발 팀 지도"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "핀테크 플랫폼"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "마케팅 자동화 플랫폼"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "링크 관리 솔루션"
+    }
+  },
+  "skills": {
+    "frontend": "프론트엔드",
+    "backendTools": "백엔드 및 도구",
+    "testingManagement": "테스트 및 관리"
+  },
+  "experience": {
+    "freelance": {
+      "title": "프리랜서 소프트웨어 엔지니어 및 팀 리더",
+      "company": "자영업",
+      "period": "2024 - 현재",
+      "achievements": [
+        "현재 3개의 서로 다른 클라이언트 프로젝트에서 4명의 개발자 팀을 관리",
+        "Investing Snacks(핀테크), ClickCatalyst(마케팅 자동화), Outlink Pro(링크 관리)에 서비스 제공",
+        "React, Express, WordPress를 사용한 전체 스택 개발 서비스 제공",
+        "프로젝트 계획, 스프린트 관리 및 기술 아키텍처 결정을 주도",
+        "모든 클라이언트 참여에서 코드 품질과 적시 제공을 보장"
+      ]
+    },
+    "technicalWriter": {
+      "title": "기술 콘텐츠 작가",
+      "company": "StackUp.Dev",
+      "period": "2024년 6월 - 2024년 11월",
+      "achievements": [
+        "React.js, Redux Toolkit, Docker를 다루는 포괄적인 튜토리얼 작성",
+        "다양한 기술 수준의 개발자를 위한 교육 콘텐츠 개발",
+        "실용적인 응용과 현대 웹 개발 모범 사례에 집중"
+      ]
+    },
+    "thomasArts": {
+      "title": "소프트웨어 엔지니어/프로그래머",
+      "company": "ThomasArts",
+      "period": "2023년 10월 - 2024년 7월",
+      "achievements": [
+        "최적의 성능을 보장하며 여러 WordPress 사이트를 유지 및 업데이트",
+        "사이트 네트워크를 위한 중앙화된 MERN 스택 관리 시스템 개발",
+        "향상된 기능을 위해 WP API를 활용한 맞춤형 WordPress 플러그인 구축",
+        "자동화된 모니터링 및 업데이트 추적 시스템 구현"
+      ]
+    },
+    "ozsale": {
+      "title": "소프트웨어 엔지니어",
+      "company": "Ozsale (Mysale Group)",
+      "period": "2022년 6월 - 2023년 6월",
+      "achievements": [
+        "React JS를 사용하여 10개의 전자상거래 플랫폼 개발 및 유지보수 주도",
+        "효율적인 상태 관리와 비동기 작업을 위해 Redux Saga 구현",
+        "styled-components와 Storybook을 사용하여 확장 가능한 UI 컴포넌트 개발",
+        "원활한 RESTful API 통합을 위해 백엔드 팀과 협력"
+      ]
+    },
+    "happySeason": {
+      "title": "프론트엔드 React 개발자",
+      "company": "Happy Season",
+      "period": "2020년 1월 - 2022년 5월",
+      "achievements": [
+        "확장성에 중점을 두고 React JS를 사용하여 웨딩 플래닝 플랫폼 개발",
+        "최적화된 데이터 동기화를 위해 Redux Saga로 애플리케이션 상태 관리",
+        "서버 사이드 렌더링과 SEO 성능 향상을 위해 Next.js 통합",
+        "styled-components 아키텍처로 반응형이고 모듈화된 UI 컴포넌트 구축"
+      ]
+    }
+  },
+  "education": {
+    "degree": "정보 기술 디플로마",
+    "institution": "Informatics, 필리핀 바기오",
+    "year": "2017",
+    "description": "소프트웨어 엔지니어링과 정보 기술의 다양한 측면에서 광범위한 지식을 습득했습니다."
+  },
+  "contact": {
+    "name": "이름",
+    "email": "이메일",
+    "message": "메시지",
+    "namePlaceholder": "귀하의 이름",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "어떻게 도와드릴까요?",
+    "sendMessage": "메시지 보내기"
+  },
+  "language": {
+    "select": "언어 선택",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

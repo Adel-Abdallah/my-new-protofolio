@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "阿德尔·阿卜杜拉 - 软件工程师",
+    "description": "阿德尔·阿卜杜拉 - 拥有4年以上React、Node.js、WordPress开发和团队管理经验的软件工程师",
+    "keywords": "软件工程师, React开发者, WordPress开发者, 前端开发者, 团队管理"
+  },
+  "header": {
+    "name": "阿德尔·阿卜杜拉",
+    "title": "软件工程师",
+    "phone": "电话：",
+    "email": "邮箱：",
+    "location": "位置：",
+    "linkedin": "领英：",
+    "github": "GitHub：",
+    "portfolio": "作品集：",
+    "downloadPdf": "下载PDF",
+    "theme": "主题"
+  },
+  "sections": {
+    "professionalSummary": "专业简介",
+    "currentServices": "当前服务",
+    "lastClients": "最近合作的客户",
+    "technicalSkills": "技术技能",
+    "workExperience": "工作经验",
+    "education": "教育背景",
+    "contactMe": "联系我"
+  },
+  "summary": {
+    "intro": "拥有5年以上经验的前端开发者，使用React创建用户友好且视觉吸引力强的网站和应用程序。",
+    "specialization": "专精于JavaScript、React、Redux和现代Web技术。",
+    "trackRecord": "在全栈开发、团队管理和交付电子商务、内容管理和Web应用程序的可扩展解决方案方面有良好的记录。",
+    "currentClients": "目前为金融科技、营销自动化和链接管理领域的客户提供服务。"
+  },
+  "services": {
+    "wordpress": {
+      "title": "WordPress开发",
+      "description": "自定义主题、插件、迁移、性能优化和网站维护"
+    },
+    "reactExpress": {
+      "title": "React & Express开发",
+      "description": "全栈Web应用程序、API开发和现代JavaScript解决方案"
+    },
+    "teamManagement": {
+      "title": "团队管理",
+      "description": "技术领导、项目协调和开发团队指导"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "金融科技平台"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "营销自动化平台"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "链接管理解决方案"
+    }
+  },
+  "skills": {
+    "frontend": "前端",
+    "backendTools": "后端和工具",
+    "testingManagement": "测试和管理"
+  },
+  "experience": {
+    "freelance": {
+      "title": "自由软件工程师和团队负责人",
+      "company": "自由职业",
+      "period": "2024 - 至今",
+      "achievements": [
+        "目前管理3个不同客户项目中的4名开发者团队",
+        "为Investing Snacks（金融科技）、ClickCatalyst（营销自动化）和Outlink Pro（链接管理）提供服务",
+        "提供React、Express和WordPress的全栈开发服务",
+        "领导项目规划、冲刺管理和技术架构决策",
+        "确保所有客户参与中的代码质量和及时交付"
+      ]
+    },
+    "technicalWriter": {
+      "title": "技术内容作家",
+      "company": "StackUp.Dev",
+      "period": "2024年6月 - 2024年11月",
+      "achievements": [
+        "创建了涵盖React.js、Redux Toolkit和Docker的综合教程",
+        "为不同技能水平的开发者开发教育内容",
+        "专注于实际应用和现代Web开发最佳实践"
+      ]
+    },
+    "thomasArts": {
+      "title": "软件工程师/程序员",
+      "company": "ThomasArts",
+      "period": "2023年10月 - 2024年7月",
+      "achievements": [
+        "维护和更新多个WordPress网站，确保最佳性能",
+        "开发了网站网络的集中式MERN堆栈管理系统",
+        "构建了利用WP API的自定义WordPress插件以增强功能",
+        "实施了自动化监控和更新跟踪系统"
+      ]
+    },
+    "ozsale": {
+      "title": "软件工程师",
+      "company": "Ozsale (Mysale Group)",
+      "period": "2022年6月 - 2023年6月",
+      "achievements": [
+        "领导使用React JS开发和维护10个电子商务平台",
+        "实施Redux Saga进行高效状态管理和异步操作",
+        "使用styled-components和Storybook开发可扩展的UI组件",
+        "与后端团队合作实现无缝RESTful API集成"
+      ]
+    },
+    "happySeason": {
+      "title": "前端React开发者",
+      "company": "Happy Season",
+      "period": "2020年1月 - 2022年5月",
+      "achievements": [
+        "使用React JS开发婚礼策划平台，专注于可扩展性",
+        "使用Redux Saga管理应用程序状态以优化数据同步",
+        "集成Next.js进行服务器端渲染和改善SEO性能",
+        "使用styled-components架构构建响应式、模块化UI组件"
+      ]
+    }
+  },
+  "education": {
+    "degree": "信息技术文凭",
+    "institution": "Informatics，菲律宾碧瑶",
+    "year": "2017",
+    "description": "在软件工程和信息技术的各个方面获得了广泛的知识。"
+  },
+  "contact": {
+    "name": "姓名",
+    "email": "邮箱",
+    "message": "消息",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "我如何帮助您？",
+    "sendMessage": "发送消息"
+  },
+  "language": {
+    "select": "选择语言",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

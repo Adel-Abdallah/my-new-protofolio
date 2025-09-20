@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "Adel Abdallah - Ingeniero de Software",
+    "description": "Adel Abdallah - Ingeniero de Software con más de 4 años de experiencia en React, Node.js, desarrollo WordPress y gestión de equipos",
+    "keywords": "Ingeniero de Software, Desarrollador React, Desarrollador WordPress, Desarrollador Frontend, Gestión de Equipos"
+  },
+  "header": {
+    "name": "ADEL ABDALLAH",
+    "title": "INGENIERO DE SOFTWARE",
+    "phone": "Teléfono:",
+    "email": "Email:",
+    "location": "Ubicación:",
+    "linkedin": "LinkedIn:",
+    "github": "GitHub:",
+    "portfolio": "Portfolio:",
+    "downloadPdf": "Descargar PDF",
+    "theme": "Tema"
+  },
+  "sections": {
+    "professionalSummary": "RESUMEN PROFESIONAL",
+    "currentServices": "SERVICIOS ACTUALES",
+    "lastClients": "ÚLTIMOS CLIENTES CON LOS QUE TRABAJÉ",
+    "technicalSkills": "HABILIDADES TÉCNICAS",
+    "workExperience": "EXPERIENCIA LABORAL",
+    "education": "EDUCACIÓN",
+    "contactMe": "CONTÁCTAME"
+  },
+  "summary": {
+    "intro": "Desarrollador Frontend con más de 5 años de experiencia creando sitios web y aplicaciones fáciles de usar y visualmente atractivas usando React.",
+    "specialization": "Especializado en JavaScript, React, Redux y tecnologías web modernas.",
+    "trackRecord": "Historial comprobado en desarrollo full-stack, gestión de equipos y entrega de soluciones escalables para comercio electrónico, gestión de contenido y aplicaciones web.",
+    "currentClients": "Actualmente sirviendo a clientes en sectores de fintech, automatización de marketing y gestión de enlaces."
+  },
+  "services": {
+    "wordpress": {
+      "title": "Desarrollo WordPress",
+      "description": "Temas personalizados, plugins, migraciones, optimización de rendimiento y mantenimiento de sitios"
+    },
+    "reactExpress": {
+      "title": "Desarrollo React & Express",
+      "description": "Aplicaciones web full-stack, desarrollo de API y soluciones JavaScript modernas"
+    },
+    "teamManagement": {
+      "title": "Gestión de Equipos",
+      "description": "Liderazgo técnico, coordinación de proyectos y orientación de equipos de desarrollo"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "Plataforma de Tecnología Financiera"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "Plataforma de Automatización de Marketing"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "Solución de Gestión de Enlaces"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backendTools": "Backend y Herramientas",
+    "testingManagement": "Pruebas y Gestión"
+  },
+  "experience": {
+    "freelance": {
+      "title": "Ingeniero de Software Freelance y Líder de Equipo",
+      "company": "Trabajador Independiente",
+      "period": "2024 - ACTUAL",
+      "achievements": [
+        "Actualmente gestionando equipos de 4 desarrolladores en 3 proyectos de clientes diferentes",
+        "Sirviendo a Investing Snacks (FinTech), ClickCatalyst (Automatización de Marketing) y Outlink Pro (Gestión de Enlaces)",
+        "Proporcionando servicios de desarrollo full-stack con React, Express y WordPress",
+        "Liderando planificación de proyectos, gestión de sprints y decisiones de arquitectura técnica",
+        "Asegurando calidad de código y entrega oportuna en todos los compromisos con clientes"
+      ]
+    },
+    "technicalWriter": {
+      "title": "Escritor de Contenido Técnico",
+      "company": "StackUp.Dev",
+      "period": "JUN 2024 - NOV 2024",
+      "achievements": [
+        "Creé tutoriales completos cubriendo React.js, Redux Toolkit y Docker",
+        "Desarrollé contenido educativo para desarrolladores de varios niveles de habilidad",
+        "Me enfoqué en aplicación práctica y mejores prácticas de desarrollo web moderno"
+      ]
+    },
+    "thomasArts": {
+      "title": "Ingeniero de Software/Programador",
+      "company": "ThomasArts",
+      "period": "OCT 2023 - JUL 2024",
+      "achievements": [
+        "Mantuve y actualicé múltiples sitios WordPress asegurando rendimiento óptimo",
+        "Desarrollé sistema de gestión centralizado MERN stack para red de sitios",
+        "Construí plugin personalizado de WordPress aprovechando WP API para funcionalidad mejorada",
+        "Implementé sistemas de monitoreo automatizado y seguimiento de actualizaciones"
+      ]
+    },
+    "ozsale": {
+      "title": "Ingeniero de Software",
+      "company": "Ozsale (Mysale Group)",
+      "period": "JUN 2022 - JUN 2023",
+      "achievements": [
+        "Lideré desarrollo y mantenimiento de 10 plataformas de comercio electrónico usando React JS",
+        "Implementé Redux Saga para gestión eficiente de estado y operaciones asíncronas",
+        "Desarrollé componentes UI escalables usando styled-components y Storybook",
+        "Colaboré con equipos backend para integración perfecta de RESTful API"
+      ]
+    },
+    "happySeason": {
+      "title": "Desarrollador React Frontend",
+      "company": "Happy Season",
+      "period": "ENE 2020 - MAY 2022",
+      "achievements": [
+        "Desarrollé plataforma de planificación de bodas usando React JS con enfoque en escalabilidad",
+        "Gestioné estado de aplicación con Redux Saga para sincronización optimizada de datos",
+        "Integré Next.js para renderizado del lado del servidor y mejora del rendimiento SEO",
+        "Construí componentes UI responsivos y modulares con arquitectura styled-components"
+      ]
+    }
+  },
+  "education": {
+    "degree": "Diploma en Tecnología de la Información",
+    "institution": "Informatics, Baguio, Filipinas",
+    "year": "2017",
+    "description": "Adquirí conocimiento extenso en ingeniería de software y varios aspectos de tecnología de la información."
+  },
+  "contact": {
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "messagePlaceholder": "¿Cómo puedo ayudarte?",
+    "sendMessage": "Enviar Mensaje"
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

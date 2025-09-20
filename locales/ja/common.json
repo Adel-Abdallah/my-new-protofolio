@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "アデル・アブダラ - ソフトウェアエンジニア",
+    "description": "アデル・アブダラ - React、Node.js、WordPress開発とチーム管理で4年以上の経験を持つソフトウェアエンジニア",
+    "keywords": "ソフトウェアエンジニア, React開発者, WordPress開発者, フロントエンド開発者, チーム管理"
+  },
+  "header": {
+    "name": "アデル・アブダラ",
+    "title": "ソフトウェアエンジニア",
+    "phone": "電話：",
+    "email": "メール：",
+    "location": "所在地：",
+    "linkedin": "LinkedIn：",
+    "github": "GitHub：",
+    "portfolio": "ポートフォリオ：",
+    "downloadPdf": "PDFをダウンロード",
+    "theme": "テーマ"
+  },
+  "sections": {
+    "professionalSummary": "プロフェッショナルサマリー",
+    "currentServices": "現在のサービス",
+    "lastClients": "最近のクライアント",
+    "technicalSkills": "技術スキル",
+    "workExperience": "職歴",
+    "education": "学歴",
+    "contactMe": "お問い合わせ"
+  },
+  "summary": {
+    "intro": "Reactを使用してユーザーフレンドリーで視覚的に魅力的なウェブサイトとアプリケーションを作成する5年以上の経験を持つフロントエンド開発者。",
+    "specialization": "JavaScript、React、Redux、現代のウェブ技術に特化。",
+    "trackRecord": "フルスタック開発、チーム管理、eコマース、コンテンツ管理、ウェブアプリケーションのためのスケーラブルなソリューションの提供で実績あり。",
+    "currentClients": "現在、フィンテック、マーケティング自動化、リンク管理セクターのクライアントにサービスを提供。"
+  },
+  "services": {
+    "wordpress": {
+      "title": "WordPress開発",
+      "description": "カスタムテーマ、プラグイン、移行、パフォーマンス最適化、サイトメンテナンス"
+    },
+    "reactExpress": {
+      "title": "React & Express開発",
+      "description": "フルスタックウェブアプリケーション、API開発、現代のJavaScriptソリューション"
+    },
+    "teamManagement": {
+      "title": "チーム管理",
+      "description": "技術リーダーシップ、プロジェクト調整、開発チーム指導"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "フィンテックプラットフォーム"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "マーケティング自動化プラットフォーム"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "リンク管理ソリューション"
+    }
+  },
+  "skills": {
+    "frontend": "フロントエンド",
+    "backendTools": "バックエンドとツール",
+    "testingManagement": "テストと管理"
+  },
+  "experience": {
+    "freelance": {
+      "title": "フリーランスソフトウェアエンジニア・チームリーダー",
+      "company": "自営業",
+      "period": "2024 - 現在",
+      "achievements": [
+        "現在、3つの異なるクライアントプロジェクトで4名の開発者チームを管理",
+        "Investing Snacks（フィンテック）、ClickCatalyst（マーケティング自動化）、Outlink Pro（リンク管理）にサービス提供",
+        "React、Express、WordPressを使用したフルスタック開発サービスを提供",
+        "プロジェクト計画、スプリント管理、技術アーキテクチャ決定をリード",
+        "すべてのクライアントエンゲージメントでコード品質とタイムリーな納品を確保"
+      ]
+    },
+    "technicalWriter": {
+      "title": "技術コンテンツライター",
+      "company": "StackUp.Dev",
+      "period": "2024年6月 - 2024年11月",
+      "achievements": [
+        "React.js、Redux Toolkit、Dockerをカバーする包括的なチュートリアルを作成",
+        "様々なスキルレベルの開発者向けの教育コンテンツを開発",
+        "実用的なアプリケーションと現代のウェブ開発のベストプラクティスに焦点"
+      ]
+    },
+    "thomasArts": {
+      "title": "ソフトウェアエンジニア/プログラマー",
+      "company": "ThomasArts",
+      "period": "2023年10月 - 2024年7月",
+      "achievements": [
+        "複数のWordPressサイトを維持・更新し、最適なパフォーマンスを確保",
+        "サイトネットワーク用の集中型MERNスタック管理システムを開発",
+        "機能強化のためWP APIを活用したカスタムWordPressプラグインを構築",
+        "自動監視と更新追跡システムを実装"
+      ]
+    },
+    "ozsale": {
+      "title": "ソフトウェアエンジニア",
+      "company": "Ozsale (Mysale Group)",
+      "period": "2022年6月 - 2023年6月",
+      "achievements": [
+        "React JSを使用して10のeコマースプラットフォームの開発とメンテナンスをリード",
+        "効率的な状態管理と非同期操作のためRedux Sagaを実装",
+        "styled-componentsとStorybookを使用してスケーラブルなUIコンポーネントを開発",
+        "シームレスなRESTful API統合のためバックエンドチームと協力"
+      ]
+    },
+    "happySeason": {
+      "title": "フロントエンドReact開発者",
+      "company": "Happy Season",
+      "period": "2020年1月 - 2022年5月",
+      "achievements": [
+        "スケーラビリティに焦点を当ててReact JSを使用してウェディングプランニングプラットフォームを開発",
+        "最適化されたデータ同期のためRedux Sagaでアプリケーション状態を管理",
+        "サーバーサイドレンダリングとSEOパフォーマンス向上のためNext.jsを統合",
+        "styled-componentsアーキテクチャでレスポンシブでモジュラーなUIコンポーネントを構築"
+      ]
+    }
+  },
+  "education": {
+    "degree": "情報技術ディプロマ",
+    "institution": "Informatics、フィリピン・バギオ",
+    "year": "2017",
+    "description": "ソフトウェアエンジニアリングと情報技術の様々な側面で広範な知識を習得。"
+  },
+  "contact": {
+    "name": "お名前",
+    "email": "メール",
+    "message": "メッセージ",
+    "namePlaceholder": "お名前を入力",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "どのようにお手伝いできますか？",
+    "sendMessage": "メッセージを送信"
+  },
+  "language": {
+    "select": "言語を選択",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

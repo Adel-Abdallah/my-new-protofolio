@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "عادل عبدالله - مهندس برمجيات",
+    "description": "عادل عبدالله - مهندس برمجيات مع خبرة تزيد عن 4 سنوات في React، Node.js، تطوير WordPress وإدارة الفرق",
+    "keywords": "مهندس برمجيات، مطور React، مطور WordPress، مطور واجهات أمامية، إدارة الفرق"
+  },
+  "header": {
+    "name": "عادل عبدالله",
+    "title": "مهندس برمجيات",
+    "phone": "الهاتف:",
+    "email": "البريد الإلكتروني:",
+    "location": "الموقع:",
+    "linkedin": "لينكد إن:",
+    "github": "جيت هاب:",
+    "portfolio": "معرض الأعمال:",
+    "downloadPdf": "تحميل PDF",
+    "theme": "المظهر"
+  },
+  "sections": {
+    "professionalSummary": "الملخص المهني",
+    "currentServices": "الخدمات الحالية",
+    "lastClients": "آخر العملاء الذين عملت معهم",
+    "technicalSkills": "المهارات التقنية",
+    "workExperience": "الخبرة العملية",
+    "education": "التعليم",
+    "contactMe": "تواصل معي"
+  },
+  "summary": {
+    "intro": "مطور واجهات أمامية مع خبرة تزيد عن 5 سنوات في إنشاء مواقع وتطبيقات سهلة الاستخدام وجذابة بصرياً باستخدام React.",
+    "specialization": "متخصص في JavaScript، React، Redux، وتقنيات الويب الحديثة.",
+    "trackRecord": "سجل حافل في التطوير الشامل، إدارة الفرق، وتقديم حلول قابلة للتوسع للتجارة الإلكترونية وإدارة المحتوى وتطبيقات الويب.",
+    "currentClients": "أخدم حالياً عملاء في قطاعات التكنولوجيا المالية وأتمتة التسويق وإدارة الروابط."
+  },
+  "services": {
+    "wordpress": {
+      "title": "تطوير WordPress",
+      "description": "قوالب مخصصة، إضافات، نقل، تحسين الأداء، وصيانة المواقع"
+    },
+    "reactExpress": {
+      "title": "تطوير React & Express",
+      "description": "تطبيقات ويب شاملة، تطوير API، وحلول JavaScript حديثة"
+    },
+    "teamManagement": {
+      "title": "إدارة الفرق",
+      "description": "القيادة التقنية، تنسيق المشاريع، وإرشاد فرق التطوير"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "منصة التكنولوجيا المالية"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "منصة أتمتة التسويق"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "حل إدارة الروابط"
+    }
+  },
+  "skills": {
+    "frontend": "الواجهة الأمامية",
+    "backendTools": "الخادم والأدوات",
+    "testingManagement": "الاختبار والإدارة"
+  },
+  "experience": {
+    "freelance": {
+      "title": "مهندس برمجيات مستقل وقائد فريق",
+      "company": "العمل الحر",
+      "period": "2024 - حتى الآن",
+      "achievements": [
+        "أدير حالياً فرق من 4 مطورين عبر 3 مشاريع عملاء مختلفة",
+        "أخدم Investing Snacks (التكنولوجيا المالية)، ClickCatalyst (أتمتة التسويق)، و Outlink Pro (إدارة الروابط)",
+        "أقدم خدمات تطوير شاملة مع React، Express، و WordPress",
+        "أقود تخطيط المشاريع، إدارة السبرينت، وقرارات الهندسة المعمارية التقنية",
+        "أضمن جودة الكود والتسليم في الوقت المحدد عبر جميع مشاركات العملاء"
+      ]
+    },
+    "technicalWriter": {
+      "title": "كاتب محتوى تقني",
+      "company": "StackUp.Dev",
+      "period": "يونيو 2024 - نوفمبر 2024",
+      "achievements": [
+        "أنشأت دروس شاملة تغطي React.js، Redux Toolkit، و Docker",
+        "طورت محتوى تعليمي للمطورين بمستويات مهارة مختلفة",
+        "ركزت على التطبيق العملي وأفضل ممارسات تطوير الويب الحديثة"
+      ]
+    },
+    "thomasArts": {
+      "title": "مهندس برمجيات/مبرمج",
+      "company": "ThomasArts",
+      "period": "أكتوبر 2023 - يوليو 2024",
+      "achievements": [
+        "حافظت وحدثت مواقع WordPress متعددة لضمان الأداء الأمثل",
+        "طورت نظام إدارة مركزي MERN stack لشبكة من المواقع",
+        "بنيت إضافة WordPress مخصصة تستفيد من WP API لتحسين الوظائف",
+        "نفذت أنظمة مراقبة آلية وتتبع التحديثات"
+      ]
+    },
+    "ozsale": {
+      "title": "مهندس برمجيات",
+      "company": "Ozsale (Mysale Group)",
+      "period": "يونيو 2022 - يونيو 2023",
+      "achievements": [
+        "قادت تطوير وصيانة 10 منصات تجارة إلكترونية باستخدام React JS",
+        "نفذت Redux Saga لإدارة الحالة الفعالة والعمليات غير المتزامنة",
+        "طورت مكونات واجهة مستخدم قابلة للتوسع باستخدام styled-components و Storybook",
+        "تعاونت مع فرق الخادم للتكامل السلس مع RESTful API"
+      ]
+    },
+    "happySeason": {
+      "title": "مطور React للواجهة الأمامية",
+      "company": "Happy Season",
+      "period": "يناير 2020 - مايو 2022",
+      "achievements": [
+        "طورت منصة تخطيط حفلات الزفاف باستخدام React JS مع التركيز على القابلية للتوسع",
+        "أدرت حالة التطبيق مع Redux Saga لمزامنة البيانات المحسنة",
+        "دمجت Next.js للعرض من جانب الخادم وتحسين أداء SEO",
+        "بنيت مكونات واجهة مستخدم متجاوبة ومعيارية مع هندسة styled-components"
+      ]
+    }
+  },
+  "education": {
+    "degree": "دبلوم في تكنولوجيا المعلومات",
+    "institution": "Informatics، باجيو، الفلبين",
+    "year": "2017",
+    "description": "اكتسبت معرفة واسعة في هندسة البرمجيات وجوانب مختلفة من تكنولوجيا المعلومات."
+  },
+  "contact": {
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "message": "الرسالة",
+    "namePlaceholder": "اسمك",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "كيف يمكنني مساعدتك؟",
+    "sendMessage": "إرسال الرسالة"
+  },
+  "language": {
+    "select": "اختر اللغة",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

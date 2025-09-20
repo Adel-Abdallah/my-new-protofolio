@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "Adel Abdallah - Software Engineer",
+    "description": "Adel Abdallah - Software Engineer with 4+ years experience in React, Node.js, WordPress development and team management",
+    "keywords": "Software Engineer, React Developer, WordPress Developer, Frontend Developer, Team Management"
+  },
+  "header": {
+    "name": "ADEL ABDALLAH",
+    "title": "SOFTWARE ENGINEER",
+    "phone": "Phone:",
+    "email": "Email:",
+    "location": "Location:",
+    "linkedin": "LinkedIn:",
+    "github": "GitHub:",
+    "portfolio": "Portfolio:",
+    "downloadPdf": "Download PDF",
+    "theme": "Theme"
+  },
+  "sections": {
+    "professionalSummary": "PROFESSIONAL SUMMARY",
+    "currentServices": "CURRENT SERVICES",
+    "lastClients": "LAST CLIENTS I Worked With",
+    "technicalSkills": "TECHNICAL SKILLS",
+    "workExperience": "WORK EXPERIENCE",
+    "education": "EDUCATION",
+    "contactMe": "CONTACT ME"
+  },
+  "summary": {
+    "intro": "Frontend Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.",
+    "specialization": "Specialized in JavaScript, React, Redux, and modern web technologies.",
+    "trackRecord": "Proven track record in full-stack development, team management, and delivering scalable solutions for e-commerce, content management, and web applications.",
+    "currentClients": "Currently serving clients in fintech, marketing automation, and link management sectors."
+  },
+  "services": {
+    "wordpress": {
+      "title": "WordPress Development",
+      "description": "Custom themes, plugins, migrations, performance optimization, and site maintenance"
+    },
+    "reactExpress": {
+      "title": "React & Express Development",
+      "description": "Full-stack web applications, API development, and modern JavaScript solutions"
+    },
+    "teamManagement": {
+      "title": "Team Management",
+      "description": "Technical leadership, project coordination, and development team guidance"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "Financial Technology Platform"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "Marketing Automation Platform"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "Link Management Solution"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backendTools": "Backend & Tools",
+    "testingManagement": "Testing & Management"
+  },
+  "experience": {
+    "freelance": {
+      "title": "Freelance Software Engineer & Team Lead",
+      "company": "Self-Employed",
+      "period": "2024 - PRESENT",
+      "achievements": [
+        "Currently managing teams of 4 developers across 3 different client projects",
+        "Serving Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), and Outlink Pro (Link Management)",
+        "Providing full-stack development services with React, Express, and WordPress",
+        "Leading project planning, sprint management, and technical architecture decisions",
+        "Ensuring code quality and timely delivery across all client engagements"
+      ]
+    },
+    "technicalWriter": {
+      "title": "Technical Content Writer",
+      "company": "StackUp.Dev",
+      "period": "JUN 2024 - NOV 2024",
+      "achievements": [
+        "Created comprehensive tutorials covering React.js, Redux Toolkit, and Docker",
+        "Developed educational content for developers at various skill levels",
+        "Focused on practical application and modern web development best practices"
+      ]
+    },
+    "thomasArts": {
+      "title": "Software Engineer/Programmer",
+      "company": "ThomasArts",
+      "period": "OCT 2023 - JUL 2024",
+      "achievements": [
+        "Maintained and updated multiple WordPress sites ensuring optimal performance",
+        "Developed centralized MERN stack management system for network of sites",
+        "Built custom WordPress plugin leveraging WP API for enhanced functionality",
+        "Implemented automated monitoring and update tracking systems"
+      ]
+    },
+    "ozsale": {
+      "title": "Software Engineer",
+      "company": "Ozsale (Mysale Group)",
+      "period": "JUN 2022 - JUN 2023",
+      "achievements": [
+        "Led development and maintenance of 10 e-commerce platforms using React JS",
+        "Implemented Redux Saga for efficient state management and async operations",
+        "Developed scalable UI components using styled-components and Storybook",
+        "Collaborated with backend teams for seamless RESTful API integration"
+      ]
+    },
+    "happySeason": {
+      "title": "Frontend React Developer",
+      "company": "Happy Season",
+      "period": "JAN 2020 - MAY 2022",
+      "achievements": [
+        "Developed wedding planning platform using React JS with focus on scalability",
+        "Managed application state with Redux Saga for optimized data synchronization",
+        "Integrated Next.js for server-side rendering and improved SEO performance",
+        "Built responsive, modular UI components with styled-components architecture"
+      ]
+    }
+  },
+  "education": {
+    "degree": "Diploma in Information Technology",
+    "institution": "Informatics, Baguio, Philippines",
+    "year": "2017",
+    "description": "Gained extensive knowledge in software engineering and various aspects of information technology."
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "How can I help you?",
+    "sendMessage": "Send Message"
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}

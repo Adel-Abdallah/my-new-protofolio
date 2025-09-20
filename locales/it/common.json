@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": "Adel Abdallah - Ingegnere del Software",
+    "description": "Adel Abdallah - Ingegnere del Software con oltre 4 anni di esperienza in React, Node.js, sviluppo WordPress e gestione team",
+    "keywords": "Ingegnere del Software, Sviluppatore React, Sviluppatore WordPress, Sviluppatore Frontend, Gestione Team"
+  },
+  "header": {
+    "name": "ADEL ABDALLAH",
+    "title": "INGEGNERE DEL SOFTWARE",
+    "phone": "Telefono:",
+    "email": "Email:",
+    "location": "Posizione:",
+    "linkedin": "LinkedIn:",
+    "github": "GitHub:",
+    "portfolio": "Portfolio:",
+    "downloadPdf": "Scarica PDF",
+    "theme": "Tema"
+  },
+  "sections": {
+    "professionalSummary": "RIASSUNTO PROFESSIONALE",
+    "currentServices": "SERVIZI ATTUALI",
+    "lastClients": "ULTIMI CLIENTI CON CUI HO LAVORATO",
+    "technicalSkills": "COMPETENZE TECNICHE",
+    "workExperience": "ESPERIENZA LAVORATIVA",
+    "education": "ISTRUZIONE",
+    "contactMe": "CONTATTAMI"
+  },
+  "summary": {
+    "intro": "Sviluppatore Frontend con oltre 5 anni di esperienza nella creazione di siti web e applicazioni user-friendly e visivamente accattivanti utilizzando React.",
+    "specialization": "Specializzato in JavaScript, React, Redux e tecnologie web moderne.",
+    "trackRecord": "Curriculum comprovato nello sviluppo full-stack, gestione team e consegna di soluzioni scalabili per e-commerce, gestione contenuti e applicazioni web.",
+    "currentClients": "Attualmente al servizio di clienti nei settori fintech, automazione marketing e gestione link."
+  },
+  "services": {
+    "wordpress": {
+      "title": "Sviluppo WordPress",
+      "description": "Temi personalizzati, plugin, migrazioni, ottimizzazione delle prestazioni e manutenzione siti"
+    },
+    "reactExpress": {
+      "title": "Sviluppo React & Express",
+      "description": "Applicazioni web full-stack, sviluppo API e soluzioni JavaScript moderne"
+    },
+    "teamManagement": {
+      "title": "Gestione Team",
+      "description": "Leadership tecnica, coordinamento progetti e guida team di sviluppo"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "Piattaforma di Tecnologia Finanziaria"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "Piattaforma di Automazione Marketing"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "Soluzione di Gestione Link"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backendTools": "Backend e Strumenti",
+    "testingManagement": "Test e Gestione"
+  },
+  "experience": {
+    "freelance": {
+      "title": "Ingegnere del Software Freelance e Team Leader",
+      "company": "Lavoratore Autonomo",
+      "period": "2024 - PRESENTE",
+      "achievements": [
+        "Attualmente gestisco team di 4 sviluppatori attraverso 3 progetti clienti diversi",
+        "Servo Investing Snacks (FinTech), ClickCatalyst (Automazione Marketing) e Outlink Pro (Gestione Link)",
+        "Fornisco servizi di sviluppo full-stack con React, Express e WordPress",
+        "Guido la pianificazione progetti, gestione sprint e decisioni architettura tecnica",
+        "Garantisco qualità del codice e consegna tempestiva attraverso tutti gli impegni clienti"
+      ]
+    },
+    "technicalWriter": {
+      "title": "Scrittore di Contenuti Tecnici",
+      "company": "StackUp.Dev",
+      "period": "GIU 2024 - NOV 2024",
+      "achievements": [
+        "Ho creato tutorial completi che coprono React.js, Redux Toolkit e Docker",
+        "Ho sviluppato contenuti educativi per sviluppatori di vari livelli di competenza",
+        "Mi sono concentrato sull'applicazione pratica e le migliori pratiche di sviluppo web moderno"
+      ]
+    },
+    "thomasArts": {
+      "title": "Ingegnere del Software/Programmatore",
+      "company": "ThomasArts",
+      "period": "OTT 2023 - LUG 2024",
+      "achievements": [
+        "Ho mantenuto e aggiornato più siti WordPress garantendo prestazioni ottimali",
+        "Ho sviluppato sistema di gestione centralizzato MERN stack per rete di siti",
+        "Ho costruito plugin WordPress personalizzato sfruttando WP API per funzionalità migliorata",
+        "Ho implementato sistemi di monitoraggio automatizzato e tracciamento aggiornamenti"
+      ]
+    },
+    "ozsale": {
+      "title": "Ingegnere del Software",
+      "company": "Ozsale (Mysale Group)",
+      "period": "GIU 2022 - GIU 2023",
+      "achievements": [
+        "Ho guidato sviluppo e manutenzione di 10 piattaforme e-commerce utilizzando React JS",
+        "Ho implementato Redux Saga per gestione stato efficiente e operazioni asincrone",
+        "Ho sviluppato componenti UI scalabili utilizzando styled-components e Storybook",
+        "Ho collaborato con team backend per integrazione RESTful API senza soluzione di continuità"
+      ]
+    },
+    "happySeason": {
+      "title": "Sviluppatore React Frontend",
+      "company": "Happy Season",
+      "period": "GEN 2020 - MAG 2022",
+      "achievements": [
+        "Ho sviluppato piattaforma di pianificazione matrimoni utilizzando React JS con focus su scalabilità",
+        "Ho gestito stato applicazione con Redux Saga per sincronizzazione dati ottimizzata",
+        "Ho integrato Next.js per rendering lato server e miglioramento prestazioni SEO",
+        "Ho costruito componenti UI responsive e modulari con architettura styled-components"
+      ]
+    }
+  },
+  "education": {
+    "degree": "Diploma in Tecnologia dell'Informazione",
+    "institution": "Informatics, Baguio, Filippine",
+    "year": "2017",
+    "description": "Ho acquisito conoscenza estesa in ingegneria del software e vari aspetti della tecnologia dell'informazione."
+  },
+  "contact": {
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "tu@esempio.com",
+    "messagePlaceholder": "Come posso aiutarti?",
+    "sendMessage": "Invia Messaggio"
+  },
+  "language": {
+    "select": "Seleziona Lingua",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska"
+  }
+}
