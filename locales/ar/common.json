@@ -25,6 +25,11 @@
     "education": "التعليم",
     "contactMe": "تواصل معي"
   },
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "contact": "تواصل"
+  },
   "summary": {
     "intro": "مطور واجهات أمامية مع خبرة تزيد عن 5 سنوات في إنشاء مواقع وتطبيقات سهلة الاستخدام وجذابة بصرياً باستخدام React.",
     "specialization": "متخصص في JavaScript، React، Redux، وتقنيات الويب الحديثة.",
@@ -43,6 +48,164 @@
     "teamManagement": {
       "title": "إدارة الفرق",
       "description": "القيادة التقنية، تنسيق المشاريع، وإرشاد فرق التطوير"
+    },
+    "categories": {
+      "frontend": {
+        "title": "تطوير الواجهات الأمامية",
+        "description": "React، Next.js، Vue.js، Angular، وتقنيات الويب الحديثة"
+      },
+      "backend": {
+        "title": "تطوير الخوادم",
+        "description": "Node.js، Express.js، APIs، قواعد البيانات، وحلول الخادم"
+      },
+      "fullstack": {
+        "title": "التطوير الشامل",
+        "description": "تطبيقات ويب كاملة مع خادم Node.js/Express وواجهة React/Next.js"
+      },
+      "mobile": {
+        "title": "تطبيقات الهواتف",
+        "description": "React Native + Expo لتطبيقات iOS و Android متعددة المنصات"
+      },
+      "wordpress": {
+        "title": "مواقع WordPress",
+        "description": "مواقع WordPress مخصصة، قوالب، إضافات، وصيانة المواقع"
+      }
+    },
+    "meta": {
+      "title": "الخدمات والأسعار - عادل عبدالله",
+      "description": "خدمات تطوير برمجيات احترافية تشمل تطبيقات Frontend و Backend والهواتف المحمولة. خيارات أسعار مرنة: بالساعة أو شهرياً أو لكل مشروع.",
+      "keywords": "خدمات تطوير البرمجيات، تطوير الواجهة الأمامية، تطوير الخادم، تطوير تطبيقات الهواتف المحمولة، React، Node.js، WordPress، الأسعار"
+    },
+    "hero": {
+      "title": "الخدمات والأسعار",
+      "subtitle": "خدمات تطوير برمجيات احترافية مع خيارات أسعار مرنة لتلبية احتياجاتك"
+    },
+    "pricing": {
+      "hourly": "بالساعة",
+      "monthly": "شهرياً",
+      "project": "لكل مشروع"
+    },
+    "categories": {
+      "frontend": {
+        "title": "تطوير الواجهة الأمامية",
+        "description": "تطبيقات ويب حديثة ومتجاوبة باستخدام أحدث التقنيات",
+        "services": {
+          "react": "تطوير React",
+          "nextjs": "تطوير Next.js",
+          "vue": "تطوير Vue.js",
+          "angular": "تطوير Angular",
+          "wordpress": "تطوير WordPress",
+          "ui": "تنفيذ UI/UX"
+        },
+        "pricing": {
+          "hourly": {
+            "react": "$35-50/ساعة",
+            "nextjs": "$40-55/ساعة",
+            "vue": "$35-50/ساعة",
+            "angular": "$40-55/ساعة",
+            "wordpress": "$25-40/ساعة",
+            "ui": "$30-45/ساعة"
+          },
+          "monthly": {
+            "react": "$4,000-6,000/شهر",
+            "nextjs": "$4,500-6,500/شهر",
+            "vue": "$4,000-6,000/شهر",
+            "angular": "$4,500-6,500/شهر",
+            "wordpress": "$3,000-5,000/شهر",
+            "ui": "$3,500-5,500/شهر"
+          },
+          "project": {
+            "react": "$2,000-15,000",
+            "nextjs": "$2,500-18,000",
+            "vue": "$2,000-15,000",
+            "angular": "$2,500-18,000",
+            "wordpress": "$1,500-10,000",
+            "ui": "$1,800-12,000"
+          }
+        }
+      },
+      "backend": {
+        "title": "تطوير الخادم",
+        "description": "حلول خادم قوية وتطوير API",
+        "services": {
+          "nodejs": "تطوير Node.js",
+          "express": "API Express.js",
+          "database": "تصميم قاعدة البيانات",
+          "microservices": "الخدمات المصغرة",
+          "cloud": "تكامل السحابة",
+          "security": "تنفيذ الأمان"
+        },
+        "pricing": {
+          "hourly": {
+            "nodejs": "$40-60/ساعة",
+            "express": "$35-55/ساعة",
+            "database": "$30-50/ساعة",
+            "microservices": "$45-65/ساعة",
+            "cloud": "$40-60/ساعة",
+            "security": "$50-70/ساعة"
+          },
+          "monthly": {
+            "nodejs": "$5,000-7,500/شهر",
+            "express": "$4,500-7,000/شهر",
+            "database": "$4,000-6,500/شهر",
+            "microservices": "$5,500-8,000/شهر",
+            "cloud": "$5,000-7,500/شهر",
+            "security": "$6,000-8,500/شهر"
+          },
+          "project": {
+            "nodejs": "$3,000-25,000",
+            "express": "$2,500-20,000",
+            "database": "$2,000-15,000",
+            "microservices": "$5,000-35,000",
+            "cloud": "$3,000-25,000",
+            "security": "$4,000-30,000"
+          }
+        }
+      },
+      "mobile": {
+        "title": "تطوير الهواتف المحمولة",
+        "description": "تطبيقات هاتف محمول متعددة المنصات لـ iOS و Android",
+        "services": {
+          "reactnative": "React Native",
+          "flutter": "تطوير Flutter",
+          "ios": "iOS Native",
+          "android": "Android Native",
+          "pwa": "تطوير PWA",
+          "maintenance": "صيانة التطبيقات"
+        },
+        "pricing": {
+          "hourly": {
+            "reactnative": "$45-65/ساعة",
+            "flutter": "$40-60/ساعة",
+            "ios": "$50-70/ساعة",
+            "android": "$50-70/ساعة",
+            "pwa": "$35-55/ساعة",
+            "maintenance": "$30-50/ساعة"
+          },
+          "monthly": {
+            "reactnative": "$5,500-8,000/شهر",
+            "flutter": "$5,000-7,500/شهر",
+            "ios": "$6,000-8,500/شهر",
+            "android": "$6,000-8,500/شهر",
+            "pwa": "$4,500-7,000/شهر",
+            "maintenance": "$4,000-6,500/شهر"
+          },
+          "project": {
+            "reactnative": "$5,000-40,000",
+            "flutter": "$4,000-35,000",
+            "ios": "$6,000-50,000",
+            "android": "$6,000-50,000",
+            "pwa": "$3,000-25,000",
+            "maintenance": "$2,000-15,000"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "مستعد لبدء مشروعك؟",
+      "subtitle": "دعنا نناقش متطلباتك ونجد أفضل حل لاحتياجاتك",
+      "contact": "تواصل معنا",
+      "portfolio": "عرض المعرض"
     }
   },
   "clients": {
@@ -147,6 +310,10 @@
     "ko": "한국어",
     "it": "Italiano",
     "el": "Ελληνικά",
-    "sv": "Svenska"
+    "sv": "Svenska",
+    "tl": "Tagalog"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة."
   }
 }

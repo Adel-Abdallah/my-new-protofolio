@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="services.meta.title">Services & Pricing - Adel Abdallah</title>
+    <meta name="description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta name="keywords" data-i18n="services.meta.keywords" content="software development services, frontend development, backend development, mobile app development, React, Node.js, WordPress, pricing">
+    <meta name="author" content="Adel Abdallah">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://adelgafo.website/services.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" data-i18n="services.meta.title" content="Services & Pricing - Adel Abdallah">
+    <meta property="og:description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adelgafo.website/services.html">
+    <meta property="og:image" content="https://adelgafo.website/images/adel-profile.jpg">
+    <meta property="og:site_name" content="Adel Abdallah Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n="services.meta.title" content="Services & Pricing - Adel Abdallah">
+    <meta name="twitter:description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta name="twitter:image" content="https://adelgafo.website/images/adel-profile.jpg">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="PH">
+    <meta name="geo.placename" content="Manila">
+    <meta name="geo.position" content="14.5995;120.9842">
+    <meta name="ICBM" content="14.5995, 120.9842">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Software Development Services",
+        "description": "Professional software development services including Frontend, Backend, and Mobile applications",
+        "provider": {
+            "@type": "Person",
+            "name": "Adel Abdallah",
+            "email": "adelgafo@gmail.com",
+            "telephone": "+63 9369330609",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "8333 Dr Arcadio Santos Ave, Fidela Tower",
+                "addressLocality": "Manila",
+                "postalCode": "1700",
+                "addressCountry": "Philippines"
+            }
+        },
+        "areaServed": "Worldwide",
+        "serviceType": "Software Development",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Frontend Development",
+                "description": "React, Next.js, and modern web technologies"
+            },
+            {
+                "@type": "Offer", 
+                "name": "Backend Development",
+                "description": "Node.js, Express.js, and API development"
+            },
+            {
+                "@type": "Offer",
+                "name": "Mobile Development", 
+                "description": "React Native and cross-platform mobile apps"
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Services Page Specific Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: var(--color-background);
+            color: var(--color-text);
+        }
+        
+        .services-container {
+            max-width: 100%;
+            margin: 0;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+        
+        .services-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .services-cards {
+            display: flex;
+            overflow-x: hidden; /* Hide overflow to show only 3 cards */
+            scroll-behavior: smooth;
+            padding-bottom: 1rem;
+            gap: 1.5rem;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            flex: 0 0 300px; /* Fixed width for each card */
+            min-height: 350px;
+        }
+        
+        /* Navigation arrows positioned on sides of the 3 cards */
+        .scroll-nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            width: 100%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .scroll-arrow {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--color-text);
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%); /* Vertically center the arrows */
+        }
+        
+        .scroll-arrow.left {
+            left: -60px; /* Position to the left of the cards container */
+        }
+        
+        .scroll-arrow.right {
+            right: -60px; /* Position to the right of the cards container */
+        }
+        
+        .scroll-arrow:hover {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+        }
+        
+        .scroll-arrow:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .scroll-arrow:disabled:hover {
+            background: var(--color-surface);
+            color: var(--color-text);
+            border-color: var(--color-border);
+        }
+        
+        .service-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 350px; /* Fixed height for all cards */
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            flex-shrink: 0; /* Prevent header from shrinking */
+        }
+        
+        .service-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--color-accent);
+            flex-shrink: 0;
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin: 0;
+            flex-shrink: 0;
+        }
+        
+        .service-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin: 0 0 1.5rem 0;
+            flex-grow: 1; /* Allow description to grow and push price to bottom */
+        }
+        
+        .pricing-model {
+            margin-top: auto; /* Push pricing to bottom */
+            flex-shrink: 0;
+        }
+        
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .service-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-name {
+            font-weight: 500;
+            color: var(--color-text);
+        }
+        
+        .service-price {
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+        
+        .service-price-main {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-align: center;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--color-background);
+            border: 2px solid var(--color-accent);
+            border-radius: 0.5rem;
+        }
+        
+        
+        .pricing-model {
+            display: none;
+        }
+        
+        .pricing-model.active {
+            display: block;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: var(--color-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-button:hover {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+        }
+        
+        .back-button svg {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .services-container {
+                padding: 3rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .services-header h1 {
+                font-size: 2rem;
+            }
+            
+            .services-header p {
+                font-size: 1rem;
+            }
+            
+            .pricing-toggle {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-btn {
+                width: 200px;
+            }
+            
+            .service-card {
+                flex: 0 0 280px; /* Slightly smaller on mobile */
+            }
+            
+            .services-cards {
+                max-width: 900px; /* Smaller container on mobile */
+            }
+            
+            .scroll-nav {
+                max-width: 900px; /* Smaller container on mobile */
+            }
+            
+            .scroll-arrow {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .scroll-arrow.left {
+                left: -50px; /* Closer to cards on mobile */
+            }
+            
+            .scroll-arrow.right {
+                right: -50px; /* Closer to cards on mobile */
+            }
+            
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span data-i18n="nav.home">Home</span>
+    </a>
+
+    <div class="services-container">
+        <!-- Services Header -->
+        <div class="services-header">
+            <h1 data-i18n="services.hero.title">Services & Pricing</h1>
+            <p data-i18n="services.hero.subtitle">Professional software development services with flexible pricing options to meet your needs</p>
+        </div>
+
+        <!-- Scroll Navigation -->
+        <div class="scroll-nav">
+            <button id="scroll-left" class="scroll-arrow left" title="Previous Cards">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button id="scroll-right" class="scroll-arrow right" title="Next Cards">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Services Cards -->
+        <div class="services-cards">
+            <!-- Frontend Development Card -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <h3 data-i18n="services.categories.frontend.title">Frontend Development</h3>
+                </div>
+                <p data-i18n="services.categories.frontend.description">React, Next.js, Vue.js, Angular, and modern web technologies</p>
+                
+                <!-- Hourly Pricing -->
+                <div class="service-price-main">$10/hr</div>
+            </div>
+
+            <!-- Backend Development Card -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <h3 data-i18n="services.categories.backend.title">Backend Development</h3>
+                </div>
+                <p data-i18n="services.categories.backend.description">Node.js, Express.js, APIs, databases, and server-side solutions</p>
+                
+                <!-- Hourly Pricing -->
+                <div class="service-price-main">$10/hr</div>
+            </div>
+
+            <!-- Full-Stack Development Card -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <h3 data-i18n="services.categories.fullstack.title">Full-Stack Development</h3>
+                </div>
+                <p data-i18n="services.categories.fullstack.description">Complete web applications with Node.js/Express backend and React/Next.js frontend</p>
+                
+                <!-- Hourly Pricing -->
+                <div class="service-price-main">$10/hr</div>
+            </div>
+
+            <!-- Mobile Apps Card -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                    <h3 data-i18n="services.categories.mobile.title">Mobile Apps</h3>
+                </div>
+                <p data-i18n="services.categories.mobile.description">React Native + Expo for cross-platform iOS and Android applications</p>
+                
+                <!-- Hourly Pricing -->
+                <div class="service-price-main">$10/hr</div>
+            </div>
+
+            <!-- WordPress Sites Card -->
+            <div class="service-card">
+                <div class="service-card-header">
+                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                    <h3 data-i18n="services.categories.wordpress.title">WordPress Sites</h3>
+                </div>
+                <p data-i18n="services.categories.wordpress.description">Custom WordPress websites, themes, plugins, and site maintenance</p>
+                
+                <!-- Hourly Pricing -->
+                <div class="service-price-main">$10/hr</div>
+            </div>
+        </div>
+
+        <!-- Contact Me Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span data-i18n="sections.contactMe">CONTACT ME</span>
+            </h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="name" data-i18n="contact.name">Name</label>
+                        <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder" placeholder="Your name" />
+                    </div>
+                    <div class="form-field">
+                        <label for="email" data-i18n="contact.email">Email</label>
+                        <input id="email" name="email" type="email" required data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="message" data-i18n="contact.message">Message</label>
+                    <textarea id="message" name="message" rows="5" required data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="locales/translations.js"></script>
+    <script src="locales/additional-translations.js"></script>
+    <script src="locales/services-translations.js"></script>
+    <script>
+        // Theme Synchronization with Homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for saved theme preference or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            // Listen for theme changes from other pages
+            window.addEventListener('storage', function(e) {
+                if (e.key === 'theme') {
+                    document.documentElement.setAttribute('data-theme', e.newValue);
+                }
+            });
+            
+            // Listen for theme changes from other pages
+            window.addEventListener('theme-change', function(e) {
+                document.documentElement.setAttribute('data-theme', e.detail.theme);
+                localStorage.setItem('theme', e.detail.theme);
+            });
+        });
+
+        // Scroll Navigation Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollLeftBtn = document.getElementById('scroll-left');
+            const scrollRightBtn = document.getElementById('scroll-right');
+            const servicesCards = document.querySelector('.services-cards');
+            const allCards = servicesCards.querySelectorAll('.service-card');
+            let currentIndex = 0;
+            const cardsPerView = 3;
+            const totalCards = allCards.length;
+            
+            function updateArrowStates() {
+                scrollLeftBtn.disabled = currentIndex <= 0;
+                scrollRightBtn.disabled = currentIndex >= totalCards - cardsPerView;
+            }
+            
+            function showCards(startIndex) {
+                // Hide all cards first
+                allCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // Show the 3 cards starting from startIndex
+                for (let i = startIndex; i < startIndex + cardsPerView && i < totalCards; i++) {
+                    allCards[i].style.display = 'flex';
+                }
+                
+                currentIndex = startIndex;
+                updateArrowStates();
+            }
+            
+            scrollLeftBtn.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    showCards(currentIndex - 1);
+                }
+            });
+            
+            scrollRightBtn.addEventListener('click', function() {
+                if (currentIndex < totalCards - cardsPerView) {
+                    showCards(currentIndex + 1);
+                }
+            });
+            
+            // Initial state - show first 3 cards
+            showCards(0);
+            
+            // Contact Form Functionality
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+                
+                // Create mailto link
+                const subject = `Contact from ${name}`;
+                const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+                const mailtoLink = `mailto:adelgafo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show success message
+                const submitBtn = contactForm.querySelector('.btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.background = '#28a745';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -43,6 +43,28 @@
     "teamManagement": {
       "title": "团队管理",
       "description": "技术领导、项目协调和开发团队指导"
+    },
+    "categories": {
+      "frontend": {
+        "title": "前端开发",
+        "description": "React、Next.js、Vue.js、Angular和现代Web技术"
+      },
+      "backend": {
+        "title": "后端开发",
+        "description": "Node.js、Express.js、API、数据库和服务器端解决方案"
+      },
+      "fullstack": {
+        "title": "全栈开发",
+        "description": "具有Node.js/Express后端和React/Next.js前端的完整Web应用程序"
+      },
+      "mobile": {
+        "title": "移动应用",
+        "description": "使用React Native + Expo的iOS和Android跨平台应用程序"
+      },
+      "wordpress": {
+        "title": "WordPress网站",
+        "description": "自定义WordPress网站、主题、插件和网站维护"
+      }
     }
   },
   "clients": {

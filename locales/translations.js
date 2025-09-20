@@ -27,6 +27,11 @@ const PORTFOLIO_TRANSLATIONS = {
       education: "EDUCATION",
       contactMe: "CONTACT ME"
     },
+    nav: {
+      home: "Home",
+      services: "Services",
+      contact: "Contact"
+    },
     summary: {
       intro: "Frontend Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.",
       specialization: "Specialized in JavaScript, React, Redux, and modern web technologies.",
@@ -45,6 +50,143 @@ const PORTFOLIO_TRANSLATIONS = {
       teamManagement: {
         title: "Team Management",
         description: "Technical leadership, project coordination, and development team guidance"
+      },
+      // Services page translations
+      meta: {
+        title: "Services & Pricing - Adel Abdallah",
+        description: "Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.",
+        keywords: "software development services, frontend development, backend development, mobile app development, React, Node.js, WordPress, pricing"
+      },
+      hero: {
+        title: "Services & Pricing",
+        subtitle: "Professional software development services with flexible pricing options to meet your needs"
+      },
+      pricing: {
+        hourly: "Per Hour",
+        monthly: "Per Month",
+        project: "Per Project"
+      },
+      categories: {
+        frontend: {
+          title: "Frontend Development",
+          description: "Modern, responsive web applications using the latest technologies",
+          services: {
+            react: "React Development",
+            nextjs: "Next.js Development",
+            vue: "Vue.js Development",
+            angular: "Angular Development",
+            wordpress: "WordPress Development",
+            ui: "UI/UX Implementation"
+          },
+          pricing: {
+            hourly: {
+              react: "$35-50/hr",
+              nextjs: "$40-55/hr",
+              vue: "$35-50/hr",
+              angular: "$40-55/hr",
+              wordpress: "$25-40/hr",
+              ui: "$30-45/hr"
+            },
+            monthly: {
+              react: "$4,000-6,000/mo",
+              nextjs: "$4,500-6,500/mo",
+              vue: "$4,000-6,000/mo",
+              angular: "$4,500-6,500/mo",
+              wordpress: "$3,000-5,000/mo",
+              ui: "$3,500-5,500/mo"
+            },
+            project: {
+              react: "$2,000-15,000",
+              nextjs: "$2,500-18,000",
+              vue: "$2,000-15,000",
+              angular: "$2,500-18,000",
+              wordpress: "$1,500-10,000",
+              ui: "$1,800-12,000"
+            }
+          }
+        },
+        backend: {
+          title: "Backend Development",
+          description: "Robust server-side solutions and API development",
+          services: {
+            nodejs: "Node.js Development",
+            express: "Express.js APIs",
+            database: "Database Design",
+            microservices: "Microservices",
+            cloud: "Cloud Integration",
+            security: "Security Implementation"
+          },
+          pricing: {
+            hourly: {
+              nodejs: "$40-60/hr",
+              express: "$35-55/hr",
+              database: "$30-50/hr",
+              microservices: "$45-65/hr",
+              cloud: "$40-60/hr",
+              security: "$50-70/hr"
+            },
+            monthly: {
+              nodejs: "$5,000-7,500/mo",
+              express: "$4,500-7,000/mo",
+              database: "$4,000-6,500/mo",
+              microservices: "$5,500-8,000/mo",
+              cloud: "$5,000-7,500/mo",
+              security: "$6,000-8,500/mo"
+            },
+            project: {
+              nodejs: "$3,000-25,000",
+              express: "$2,500-20,000",
+              database: "$2,000-15,000",
+              microservices: "$5,000-35,000",
+              cloud: "$3,000-25,000",
+              security: "$4,000-30,000"
+            }
+          }
+        },
+        mobile: {
+          title: "Mobile Development",
+          description: "Cross-platform mobile applications for iOS and Android",
+          services: {
+            reactnative: "React Native",
+            flutter: "Flutter Development",
+            ios: "iOS Native",
+            android: "Android Native",
+            pwa: "PWA Development",
+            maintenance: "App Maintenance"
+          },
+          pricing: {
+            hourly: {
+              reactnative: "$45-65/hr",
+              flutter: "$40-60/hr",
+              ios: "$50-70/hr",
+              android: "$50-70/hr",
+              pwa: "$35-55/hr",
+              maintenance: "$30-50/hr"
+            },
+            monthly: {
+              reactnative: "$5,500-8,000/mo",
+              flutter: "$5,000-7,500/mo",
+              ios: "$6,000-8,500/mo",
+              android: "$6,000-8,500/mo",
+              pwa: "$4,500-7,000/mo",
+              maintenance: "$4,000-6,500/mo"
+            },
+            project: {
+              reactnative: "$5,000-40,000",
+              flutter: "$4,000-35,000",
+              ios: "$6,000-50,000",
+              android: "$6,000-50,000",
+              pwa: "$3,000-25,000",
+              maintenance: "$2,000-15,000"
+            }
+          }
+        }
+      },
+      cta: {
+        title: "Ready to Start Your Project?",
+        subtitle: "Let's discuss your requirements and find the best solution for your needs",
+        contact: "Get in Touch",
+        portfolio: "View Portfolio"
       }
     },
     clients: {
@@ -141,6 +283,9 @@ const PORTFOLIO_TRANSLATIONS = {
       institution: "Informatics, Baguio, Philippines",
       date: "2017",
       description: "Gained extensive knowledge in software engineering and various aspects of information technology."
+    },
+    footer: {
+      rights: "All rights reserved."
     }
   },
   ar: {

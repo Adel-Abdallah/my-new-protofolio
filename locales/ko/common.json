@@ -43,6 +43,28 @@
     "teamManagement": {
       "title": "팀 관리",
       "description": "기술 리더십, 프로젝트 조정 및 개발 팀 지도"
+    },
+    "categories": {
+      "frontend": {
+        "title": "프론트엔드 개발",
+        "description": "React, Next.js, Vue.js, Angular 및 현대 웹 기술"
+      },
+      "backend": {
+        "title": "백엔드 개발",
+        "description": "Node.js, Express.js, API, 데이터베이스 및 서버 측 솔루션"
+      },
+      "fullstack": {
+        "title": "풀스택 개발",
+        "description": "Node.js/Express 백엔드와 React/Next.js 프론트엔드가 포함된 완전한 웹 애플리케이션"
+      },
+      "mobile": {
+        "title": "모바일 앱",
+        "description": "React Native + Expo를 사용한 iOS 및 Android 크로스 플랫폼 애플리케이션"
+      },
+      "wordpress": {
+        "title": "WordPress 사이트",
+        "description": "맞춤형 WordPress 웹사이트, 테마, 플러그인 및 사이트 유지보수"
+      }
     }
   },
   "clients": {

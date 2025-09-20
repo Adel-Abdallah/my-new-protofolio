@@ -30,20 +30,21 @@ open index.html
 portfolio/
 ├── index.html          # Main portfolio page
 ├── styles.css          # All styles
-├── translations.js      # Embedded translations (no server needed!)
 ├── src/
 │   ├── theme.js        # Theme switching
 │   └── components/     # CSS components
-└── locales/            # Translation files (for reference)
-    ├── en/common.json  # English
-    ├── ar/common.json  # Arabic
-    ├── fr/common.json  # French
-    └── es/common.json  # Spanish
+└── locales/            # Translation files and scripts
+    ├── translations.js           # Embedded translations (no server needed!)
+    ├── additional-translations.js # Additional language support
+    ├── services-translations.js  # Services page language additions
+    ├── en/common.json            # English reference data
+    ├── ar/common.json            # Arabic reference data
+    └── ...
 ```
 
 ### Adding New Languages
 
-1. Add translations to `translations.js` in the `PORTFOLIO_TRANSLATIONS` object
+1. Add translations to `locales/translations.js` in the `PORTFOLIO_TRANSLATIONS` object
 2. Add the language option to the HTML dropdown
 3. Update the JavaScript language codes
 
@@ -66,7 +67,7 @@ This will generate a PDF version of your portfolio.
 
 ### Translation Not Working
 1. Check browser console for errors
-2. Ensure `translations.js` is loading properly
+2. Ensure `locales/translations.js` is loading properly
 3. Verify the language selector elements exist
 
 ### Theme Not Working

@@ -7,6 +7,8 @@
     document.documentElement.setAttribute('data-theme', theme);
     try {
       localStorage.setItem('theme', theme);
+      // Broadcast theme change to other pages
+      window.dispatchEvent(new CustomEvent('theme-change', { detail: { theme: theme } }));
     } catch (e) {}
     const btn = document.getElementById('theme-toggle');
     if (btn) {

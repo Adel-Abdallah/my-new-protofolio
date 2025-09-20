@@ -196,6 +196,14 @@
                     <span data-i18n="header.downloadPdf">Download PDF</span>
                 </a>
                 
+                <!-- Services Button -->
+                <a href="./services.html" class="btn btn-secondary btn-icon" title="View Services and Pricing" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                    </svg>
+                    <span data-i18n="nav.services">Services</span>
+                </a>
+                
                 <!-- Language Selector -->
                 <div class="language-selector">
                     <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
@@ -541,8 +549,8 @@
     </main>
 
     <script src="src/theme.js"></script>
-    <script src="translations.js"></script>
-    <script src="additional-translations.js"></script>
+    <script src="locales/translations.js"></script>
+    <script src="locales/additional-translations.js"></script>
     <script>
         // Print optimization
         window.addEventListener('beforeprint', function() {

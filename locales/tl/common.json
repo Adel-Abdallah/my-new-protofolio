@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "title": "Adel Abdallah - Software Engineer",
+    "description": "Adel Abdallah - Software Engineer na may higit sa 4 na taong karanasan sa React, Node.js, WordPress development at team management",
+    "keywords": "Software Engineer, React Developer, WordPress Developer, Frontend Developer, Team Management"
+  },
+  "header": {
+    "name": "ADEL ABDALLAH",
+    "title": "SOFTWARE ENGINEER",
+    "phone": "Telepono:",
+    "email": "Email:",
+    "location": "Lokasyon:",
+    "linkedin": "LinkedIn:",
+    "github": "GitHub:",
+    "portfolio": "Portfolio:",
+    "downloadPdf": "I-download ang PDF",
+    "theme": "Tema"
+  },
+  "sections": {
+    "professionalSummary": "PROPESYONAL NA BUOD",
+    "currentServices": "KASALUKUYANG MGA SERBISYO",
+    "lastClients": "HULING MGA KLIYENTE NA NAKATRABAHO KO",
+    "technicalSkills": "TEKNIKAL NA MGA KAKAYAHAN",
+    "workExperience": "KARANASAN SA TRABAHO",
+    "education": "EDUKASYON",
+    "contactMe": "MAKIPAG-UGNAYAN SA AKIN"
+  },
+  "nav": {
+    "home": "Bahay",
+    "services": "Mga Serbisyo",
+    "contact": "Kontak"
+  },
+  "summary": {
+    "intro": "Frontend Developer na may higit sa 5 taong karanasan sa paggawa ng user-friendly at visually appealing na mga website at application gamit ang React.",
+    "specialization": "Espesyalista sa JavaScript, React, Redux at modernong web technologies.",
+    "trackRecord": "Napatunayang track record sa full-stack development, team management at pag-deliver ng scalable solutions para sa e-commerce, content management at web applications.",
+    "currentClients": "Kasalukuyang naglilingkod sa mga kliente sa fintech, marketing automation at link management sectors."
+  },
+  "services": {
+    "wordpress": {
+      "title": "WordPress Development",
+      "description": "Custom themes, plugins, migrations, performance optimization at site maintenance"
+    },
+    "reactExpress": {
+      "title": "React & Express Development",
+      "description": "Full-stack web applications, API development at modern JavaScript solutions"
+    },
+    "teamManagement": {
+      "title": "Team Management",
+      "description": "Technical leadership, project coordination at development team guidance"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "React, Next.js, Vue.js, Angular at modern web technologies"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Node.js, Express.js, APIs, databases at server-side solutions"
+      },
+      "fullstack": {
+        "title": "Full-Stack Development",
+        "description": "Complete web applications with Node.js/Express backend at React/Next.js frontend"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "React Native + Expo para sa cross-platform iOS at Android applications"
+      },
+      "wordpress": {
+        "title": "WordPress Sites",
+        "description": "Custom WordPress websites, themes, plugins at site maintenance"
+      }
+    },
+    "meta": {
+      "title": "Mga Serbisyo at Presyo - Adel Abdallah",
+      "description": "Mga propesyonal na serbisyo sa pagbuo ng software kasama ang Frontend, Backend, at mga mobile application. Mga flexible na opsyon sa presyo: kada oras, buwanan, o kada proyekto.",
+      "keywords": "mga serbisyo sa pagbuo ng software, frontend development, backend development, mobile app development, React, Node.js, WordPress, presyo"
+    },
+    "hero": {
+      "title": "Mga Serbisyo at Presyo",
+      "subtitle": "Mga propesyonal na serbisyo sa pagbuo ng software na may mga flexible na opsyon sa presyo upang matugunan ang inyong mga pangangailangan"
+    },
+    "pricing": {
+      "hourly": "Kada Oras",
+      "monthly": "Buwanan",
+      "project": "Kada Proyekto"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Mga moderno at responsive na web application gamit ang pinakabagong teknolohiya",
+        "services": {
+          "react": "React Development",
+          "nextjs": "Next.js Development",
+          "vue": "Vue.js Development",
+          "angular": "Angular Development",
+          "wordpress": "WordPress Development",
+          "ui": "UI/UX Implementation"
+        },
+        "pricing": {
+          "hourly": {
+            "react": "$35-50/oras",
+            "nextjs": "$40-55/oras",
+            "vue": "$35-50/oras",
+            "angular": "$40-55/oras",
+            "wordpress": "$25-40/oras",
+            "ui": "$30-45/oras"
+          },
+          "monthly": {
+            "react": "$4,000-6,000/buwan",
+            "nextjs": "$4,500-6,500/buwan",
+            "vue": "$4,000-6,000/buwan",
+            "angular": "$4,500-6,500/buwan",
+            "wordpress": "$3,000-5,000/buwan",
+            "ui": "$3,500-5,500/buwan"
+          },
+          "project": {
+            "react": "$2,000-15,000",
+            "nextjs": "$2,500-18,000",
+            "vue": "$2,000-15,000",
+            "angular": "$2,500-18,000",
+            "wordpress": "$1,500-10,000",
+            "ui": "$1,800-12,000"
+          }
+        }
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Mga matibay na server-side solution at API development",
+        "services": {
+          "nodejs": "Node.js Development",
+          "express": "Express.js APIs",
+          "database": "Database Design",
+          "microservices": "Microservices",
+          "cloud": "Cloud Integration",
+          "security": "Security Implementation"
+        },
+        "pricing": {
+          "hourly": {
+            "nodejs": "$40-60/oras",
+            "express": "$35-55/oras",
+            "database": "$30-50/oras",
+            "microservices": "$45-65/oras",
+            "cloud": "$40-60/oras",
+            "security": "$50-70/oras"
+          },
+          "monthly": {
+            "nodejs": "$5,000-7,500/buwan",
+            "express": "$4,500-7,000/buwan",
+            "database": "$4,000-6,500/buwan",
+            "microservices": "$5,500-8,000/buwan",
+            "cloud": "$5,000-7,500/buwan",
+            "security": "$6,000-8,500/buwan"
+          },
+          "project": {
+            "nodejs": "$3,000-25,000",
+            "express": "$2,500-20,000",
+            "database": "$2,000-15,000",
+            "microservices": "$5,000-35,000",
+            "cloud": "$3,000-25,000",
+            "security": "$4,000-30,000"
+          }
+        }
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "Mga cross-platform mobile application para sa iOS at Android",
+        "services": {
+          "reactnative": "React Native",
+          "flutter": "Flutter Development",
+          "ios": "iOS Native",
+          "android": "Android Native",
+          "pwa": "PWA Development",
+          "maintenance": "App Maintenance"
+        },
+        "pricing": {
+          "hourly": {
+            "reactnative": "$45-65/oras",
+            "flutter": "$40-60/oras",
+            "ios": "$50-70/oras",
+            "android": "$50-70/oras",
+            "pwa": "$35-55/oras",
+            "maintenance": "$30-50/oras"
+          },
+          "monthly": {
+            "reactnative": "$5,500-8,000/buwan",
+            "flutter": "$5,000-7,500/buwan",
+            "ios": "$6,000-8,500/buwan",
+            "android": "$6,000-8,500/buwan",
+            "pwa": "$4,500-7,000/buwan",
+            "maintenance": "$4,000-6,500/buwan"
+          },
+          "project": {
+            "reactnative": "$5,000-40,000",
+            "flutter": "$4,000-35,000",
+            "ios": "$6,000-50,000",
+            "android": "$6,000-50,000",
+            "pwa": "$3,000-25,000",
+            "maintenance": "$2,000-15,000"
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Handa na Bang Simulan ang Inyong Proyekto?",
+      "subtitle": "Pag-usapan natin ang inyong mga pangangailangan at hanapin ang pinakamahusay na solusyon para sa inyong mga pangangailangan",
+      "contact": "Makipag-ugnayan",
+      "portfolio": "Tingnan ang Portfolio"
+    }
+  },
+  "clients": {
+    "investingSnacks": {
+      "name": "Investing Snacks",
+      "type": "Fintech Platform"
+    },
+    "clickCatalyst": {
+      "name": "ClickCatalyst",
+      "type": "Marketing Automation Platform"
+    },
+    "outlinkPro": {
+      "name": "Outlink Pro",
+      "type": "Link Management Solution"
+    }
+  },
+  "skills": {
+    "frontend": "Frontend",
+    "backendTools": "Backend at Tools",
+    "testingManagement": "Testing at Management"
+  },
+  "contact": {
+    "name": "Pangalan",
+    "email": "Email",
+    "message": "Mensahe",
+    "namePlaceholder": "Ang inyong pangalan",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "Paano ko kayo matutulungan?",
+    "sendMessage": "Ipadala ang Mensahe"
+  },
+  "language": {
+    "select": "Piliin ang Wika",
+    "en": "English",
+    "ar": "العربية",
+    "fr": "Français",
+    "es": "Español",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "it": "Italiano",
+    "el": "Ελληνικά",
+    "sv": "Svenska",
+    "tl": "Tagalog"
+  },
+  "experience": {
+    "freelance": {
+      "title": "Freelance Software Engineer at Team Lead",
+      "company": "Sariling Negosyo",
+      "date": "2024 - KASALUKUYAN",
+      "achievement1": "Kasalukuyang namamahala ng mga team na may 4 na developers sa 3 magkakaibang client projects",
+      "achievement2": "Naglilingkod sa Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), at Outlink Pro (Link Management)",
+      "achievement3": "Nagbibigay ng full-stack development services gamit ang React, Express, at WordPress",
+      "achievement4": "Namumuno sa project planning, sprint management, at technical architecture decisions",
+      "achievement5": "Tinitiyak ang code quality at timely delivery sa lahat ng client engagements"
+    },
+    "contentWriter": {
+      "title": "Technical Content Writer",
+      "company": "StackUp.Dev",
+      "date": "HUN 2024 - NOB 2024",
+      "achievement1": "Gumawa ng comprehensive tutorials na sumasaklaw sa React.js, Redux Toolkit, at Docker",
+      "achievement2": "Nag-develop ng educational content para sa mga developers na may iba't ibang skill levels",
+      "achievement3": "Nakatuon sa practical application at modern web development best practices"
+    },
+    "thomasArts": {
+      "title": "Software Engineer/Programmer",
+      "company": "ThomasArts",
+      "date": "OKT 2023 - HUL 2024",
+      "achievement1": "Nag-maintain at nag-update ng maraming WordPress sites na tinitiyak ang optimal performance",
+      "achievement2": "Nag-develop ng centralized MERN stack management system para sa network ng sites",
+      "achievement3": "Gumawa ng custom WordPress plugin na gumagamit ng WP API para sa enhanced functionality",
+      "achievement4": "Nag-implement ng automated monitoring at update tracking systems"
+    },
+    "ozsale": {
+      "title": "Software Engineer",
+      "company": "Ozsale (Mysale Group)",
+      "date": "HUN 2022 - HUN 2023",
+      "achievement1": "Namuno sa development at maintenance ng 10 e-commerce platforms gamit ang React JS",
+      "achievement2": "Nag-implement ng Redux Saga para sa efficient state management at async operations",
+      "achievement3": "Nag-develop ng scalable UI components gamit ang styled-components at Storybook",
+      "achievement4": "Nakipag-collaborate sa backend teams para sa seamless RESTful API integration"
+    },
+    "happySeason": {
+      "title": "Frontend React Developer",
+      "company": "Happy Season",
+      "date": "ENE 2020 - MAY 2022",
+      "achievement1": "Nag-develop ng wedding planning platform gamit ang React JS na nakatuon sa scalability",
+      "achievement2": "Nag-manage ng application state gamit ang Redux Saga para sa optimized data synchronization",
+      "achievement3": "Nag-integrate ng Next.js para sa server-side rendering at improved SEO performance",
+      "achievement4": "Gumawa ng responsive, modular UI components gamit ang styled-components architecture"
+    }
+  },
+  "education": {
+    "title": "Diploma sa Information Technology",
+    "institution": "Informatics, Baguio, Philippines",
+    "date": "2017",
+    "description": "Nakakuha ng malawak na kaalaman sa software engineering at iba't ibang aspeto ng information technology."
+  },
+  "footer": {
+    "rights": "Lahat ng karapatan ay nakalaan."
+  }
+}

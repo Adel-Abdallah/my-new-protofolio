@@ -141,6 +141,152 @@ const ADDITIONAL_TRANSLATIONS = {
       institution: "Informatics, 바기오, 필리핀",
       date: "2017",
       description: "소프트웨어 엔지니어링 및 정보 기술의 다양한 측면에 대한 광범위한 지식 습득."
+    },
+    nav: {
+      home: "홈",
+      services: "서비스",
+      contact: "연락처"
+    },
+    services: {
+      meta: {
+        title: "서비스 및 가격 - 아델 압둘라",
+        description: "프론트엔드, 백엔드, 모바일 애플리케이션을 포함한 전문 소프트웨어 개발 서비스. 시간당, 월별 또는 프로젝트별 유연한 가격 옵션.",
+        keywords: "소프트웨어 개발 서비스, 프론트엔드 개발, 백엔드 개발, 모바일 앱 개발, React, Node.js, WordPress, 가격"
+      },
+      hero: {
+        title: "서비스 및 가격",
+        subtitle: "귀하의 요구사항에 맞는 유연한 가격 옵션을 제공하는 전문 소프트웨어 개발 서비스"
+      },
+      pricing: {
+        hourly: "시간당",
+        monthly: "월별",
+        project: "프로젝트별"
+      },
+      categories: {
+        frontend: {
+          title: "프론트엔드 개발",
+          description: "최신 기술을 사용한 현대적이고 반응형 웹 애플리케이션",
+          services: {
+            react: "React 개발",
+            nextjs: "Next.js 개발",
+            vue: "Vue.js 개발",
+            angular: "Angular 개발",
+            wordpress: "WordPress 개발",
+            ui: "UI/UX 구현"
+          },
+          pricing: {
+            hourly: {
+              react: "$35-50/시간",
+              nextjs: "$40-55/시간",
+              vue: "$35-50/시간",
+              angular: "$40-55/시간",
+              wordpress: "$25-40/시간",
+              ui: "$30-45/시간"
+            },
+            monthly: {
+              react: "$4,000-6,000/월",
+              nextjs: "$4,500-6,500/월",
+              vue: "$4,000-6,000/월",
+              angular: "$4,500-6,500/월",
+              wordpress: "$3,000-5,000/월",
+              ui: "$3,500-5,500/월"
+            },
+            project: {
+              react: "$2,000-15,000",
+              nextjs: "$2,500-18,000",
+              vue: "$2,000-15,000",
+              angular: "$2,500-18,000",
+              wordpress: "$1,500-10,000",
+              ui: "$1,800-12,000"
+            }
+          }
+        },
+        backend: {
+          title: "백엔드 개발",
+          description: "견고한 서버 측 솔루션 및 API 개발",
+          services: {
+            nodejs: "Node.js 개발",
+            express: "Express.js API",
+            database: "데이터베이스 설계",
+            microservices: "마이크로서비스",
+            cloud: "클라우드 통합",
+            security: "보안 구현"
+          },
+          pricing: {
+            hourly: {
+              nodejs: "$40-60/시간",
+              express: "$35-55/시간",
+              database: "$30-50/시간",
+              microservices: "$45-65/시간",
+              cloud: "$40-60/시간",
+              security: "$50-70/시간"
+            },
+            monthly: {
+              nodejs: "$5,000-7,500/월",
+              express: "$4,500-7,000/월",
+              database: "$4,000-6,500/월",
+              microservices: "$5,500-8,000/월",
+              cloud: "$5,000-7,500/월",
+              security: "$6,000-8,500/월"
+            },
+            project: {
+              nodejs: "$3,000-25,000",
+              express: "$2,500-20,000",
+              database: "$2,000-15,000",
+              microservices: "$5,000-35,000",
+              cloud: "$3,000-25,000",
+              security: "$4,000-30,000"
+            }
+          }
+        },
+        mobile: {
+          title: "모바일 개발",
+          description: "iOS 및 Android용 크로스 플랫폼 모바일 애플리케이션",
+          services: {
+            reactnative: "React Native",
+            flutter: "Flutter 개발",
+            ios: "iOS 네이티브",
+            android: "Android 네이티브",
+            pwa: "PWA 개발",
+            maintenance: "앱 유지보수"
+          },
+          pricing: {
+            hourly: {
+              reactnative: "$45-65/시간",
+              flutter: "$40-60/시간",
+              ios: "$50-70/시간",
+              android: "$50-70/시간",
+              pwa: "$35-55/시간",
+              maintenance: "$30-50/시간"
+            },
+            monthly: {
+              reactnative: "$5,500-8,000/월",
+              flutter: "$5,000-7,500/월",
+              ios: "$6,000-8,500/월",
+              android: "$6,000-8,500/월",
+              pwa: "$4,500-7,000/월",
+              maintenance: "$4,000-6,500/월"
+            },
+            project: {
+              reactnative: "$5,000-40,000",
+              flutter: "$4,000-35,000",
+              ios: "$6,000-50,000",
+              android: "$6,000-50,000",
+              pwa: "$3,000-25,000",
+              maintenance: "$2,000-15,000"
+            }
+          }
+        }
+      },
+      cta: {
+        title: "프로젝트를 시작할 준비가 되셨나요?",
+        subtitle: "요구사항을 논의하고 귀하의 요구에 맞는 최적의 솔루션을 찾아보겠습니다",
+        contact: "연락하기",
+        portfolio: "포트폴리오 보기"
+      }
+    },
+    footer: {
+      rights: "모든 권리 보유."
     }
   },
   it: {
@@ -236,6 +382,152 @@ const ADDITIONAL_TRANSLATIONS = {
       institution: "Informatics, Baguio, Filippine",
       date: "2017",
       description: "Acquisizione di conoscenze approfondite in ingegneria del software e vari aspetti della tecnologia dell'informazione."
+    },
+    nav: {
+      home: "Home",
+      services: "Servizi",
+      contact: "Contatto"
+    },
+    services: {
+      meta: {
+        title: "Servizi e Prezzi - Adel Abdallah",
+        description: "Servizi di sviluppo software professionali inclusi Frontend, Backend e applicazioni mobili. Opzioni di prezzo flessibili: all'ora, mensili o per progetto.",
+        keywords: "servizi sviluppo software, sviluppo frontend, sviluppo backend, sviluppo app mobili, React, Node.js, WordPress, prezzi"
+      },
+      hero: {
+        title: "Servizi e Prezzi",
+        subtitle: "Servizi di sviluppo software professionali con opzioni di prezzo flessibili per soddisfare le tue esigenze"
+      },
+      pricing: {
+        hourly: "All'Ora",
+        monthly: "Mensile",
+        project: "Per Progetto"
+      },
+      categories: {
+        frontend: {
+          title: "Sviluppo Frontend",
+          description: "Applicazioni web moderne e responsive utilizzando le tecnologie più recenti",
+          services: {
+            react: "Sviluppo React",
+            nextjs: "Sviluppo Next.js",
+            vue: "Sviluppo Vue.js",
+            angular: "Sviluppo Angular",
+            wordpress: "Sviluppo WordPress",
+            ui: "Implementazione UI/UX"
+          },
+          pricing: {
+            hourly: {
+              react: "$35-50/ora",
+              nextjs: "$40-55/ora",
+              vue: "$35-50/ora",
+              angular: "$40-55/ora",
+              wordpress: "$25-40/ora",
+              ui: "$30-45/ora"
+            },
+            monthly: {
+              react: "$4,000-6,000/mese",
+              nextjs: "$4,500-6,500/mese",
+              vue: "$4,000-6,000/mese",
+              angular: "$4,500-6,500/mese",
+              wordpress: "$3,000-5,000/mese",
+              ui: "$3,500-5,500/mese"
+            },
+            project: {
+              react: "$2,000-15,000",
+              nextjs: "$2,500-18,000",
+              vue: "$2,000-15,000",
+              angular: "$2,500-18,000",
+              wordpress: "$1,500-10,000",
+              ui: "$1,800-12,000"
+            }
+          }
+        },
+        backend: {
+          title: "Sviluppo Backend",
+          description: "Soluzioni server-side robuste e sviluppo API",
+          services: {
+            nodejs: "Sviluppo Node.js",
+            express: "API Express.js",
+            database: "Progettazione Database",
+            microservices: "Microservizi",
+            cloud: "Integrazione Cloud",
+            security: "Implementazione Sicurezza"
+          },
+          pricing: {
+            hourly: {
+              nodejs: "$40-60/ora",
+              express: "$35-55/ora",
+              database: "$30-50/ora",
+              microservices: "$45-65/ora",
+              cloud: "$40-60/ora",
+              security: "$50-70/ora"
+            },
+            monthly: {
+              nodejs: "$5,000-7,500/mese",
+              express: "$4,500-7,000/mese",
+              database: "$4,000-6,500/mese",
+              microservices: "$5,500-8,000/mese",
+              cloud: "$5,000-7,500/mese",
+              security: "$6,000-8,500/mese"
+            },
+            project: {
+              nodejs: "$3,000-25,000",
+              express: "$2,500-20,000",
+              database: "$2,000-15,000",
+              microservices: "$5,000-35,000",
+              cloud: "$3,000-25,000",
+              security: "$4,000-30,000"
+            }
+          }
+        },
+        mobile: {
+          title: "Sviluppo Mobile",
+          description: "Applicazioni mobili multipiattaforma per iOS e Android",
+          services: {
+            reactnative: "React Native",
+            flutter: "Sviluppo Flutter",
+            ios: "iOS Nativo",
+            android: "Android Nativo",
+            pwa: "Sviluppo PWA",
+            maintenance: "Manutenzione App"
+          },
+          pricing: {
+            hourly: {
+              reactnative: "$45-65/ora",
+              flutter: "$40-60/ora",
+              ios: "$50-70/ora",
+              android: "$50-70/ora",
+              pwa: "$35-55/ora",
+              maintenance: "$30-50/ora"
+            },
+            monthly: {
+              reactnative: "$5,500-8,000/mese",
+              flutter: "$5,000-7,500/mese",
+              ios: "$6,000-8,500/mese",
+              android: "$6,000-8,500/mese",
+              pwa: "$4,500-7,000/mese",
+              maintenance: "$4,000-6,500/mese"
+            },
+            project: {
+              reactnative: "$5,000-40,000",
+              flutter: "$4,000-35,000",
+              ios: "$6,000-50,000",
+              android: "$6,000-50,000",
+              pwa: "$3,000-25,000",
+              maintenance: "$2,000-15,000"
+            }
+          }
+        }
+      },
+      cta: {
+        title: "Pronto a Iniziare il Tuo Progetto?",
+        subtitle: "Discutiamo i tuoi requisiti e troviamo la soluzione migliore per le tue esigenze",
+        contact: "Mettiti in Contatto",
+        portfolio: "Visualizza Portfolio"
+      }
+    },
+    footer: {
+      rights: "Tutti i diritti riservati."
     }
   },
   el: {

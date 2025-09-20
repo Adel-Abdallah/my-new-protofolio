@@ -43,6 +43,28 @@
     "teamManagement": {
       "title": "Gestion d'Équipe",
       "description": "Leadership technique, coordination de projets et guidance d'équipes de développement"
+    },
+    "categories": {
+      "frontend": {
+        "title": "Développement Frontend",
+        "description": "React, Next.js, Vue.js, Angular et technologies web modernes"
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "description": "Node.js, Express.js, APIs, bases de données et solutions côté serveur"
+      },
+      "fullstack": {
+        "title": "Développement Full-Stack",
+        "description": "Applications web complètes avec backend Node.js/Express et frontend React/Next.js"
+      },
+      "mobile": {
+        "title": "Applications Mobiles",
+        "description": "React Native + Expo pour applications iOS et Android multiplateformes"
+      },
+      "wordpress": {
+        "title": "Sites WordPress",
+        "description": "Sites WordPress personnalisés, thèmes, plugins et maintenance de sites"
+      }
     }
   },
   "clients": {
