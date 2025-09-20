@@ -230,6 +230,12 @@ const ADDITIONAL_TRANSLATIONS = {
       it: "Italiano",
       el: "Ελληνικά",
       sv: "Svenska"
+    },
+    education: {
+      title: "Diploma in Tecnologia dell'Informazione",
+      institution: "Informatics, Baguio, Filippine",
+      date: "2017",
+      description: "Acquisizione di conoscenze approfondite in ingegneria del software e vari aspetti della tecnologia dell'informazione."
     }
   },
   el: {
@@ -319,6 +325,12 @@ const ADDITIONAL_TRANSLATIONS = {
       it: "Italiano",
       el: "Ελληνικά",
       sv: "Svenska"
+    },
+    education: {
+      title: "Δίπλωμα στην Τεχνολογία Πληροφοριών",
+      institution: "Informatics, Baguio, Φιλιππίνες",
+      date: "2017",
+      description: "Απόκτηση εκτενούς γνώσης στην μηχανική λογισμικού και διάφορες πτυχές της τεχνολογίας πληροφοριών."
     }
   },
   sv: {
@@ -408,6 +420,12 @@ const ADDITIONAL_TRANSLATIONS = {
       it: "Italiano",
       el: "Ελληνικά",
       sv: "Svenska"
+    },
+    education: {
+      title: "Diplom i Informationsteknik",
+      institution: "Informatics, Baguio, Filippinerna",
+      date: "2017",
+      description: "Förvärvade omfattande kunskaper inom mjukvaruutveckling och olika aspekter av informationsteknik."
     }
   },
   tl: {
