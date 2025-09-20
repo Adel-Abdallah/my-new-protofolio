@@ -106,6 +106,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
     <script>
         // Apply saved theme ASAP to avoid flash
         (function() {
@@ -137,56 +138,25 @@
     </script>
 </head>
 <body>
-    <main class="portfolio">
-        <!-- Contact Header -->
-        <header class="contact-header">
-            <div class="header-left">
-                <div class="name-title">
-                    <h1 class="name">
-                        <svg class="name-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" aria-label="User profile icon">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                        </svg>
-                        <span data-i18n="header.name">ADEL ABDALLAH</span>
-                    </h1>
-                    <p class="title">
-                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" aria-label="Menu lines icon">
-                            <path d="M4 7h16"></path>
-                            <path d="M4 12h16"></path>
-                            <path d="M4 17h16"></path>
-                        </svg>
-                        <span data-i18n="header.title">SOFTWARE ENGINEER</span>
-                    </p>
-                </div>
-                <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" aria-label="Phone icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path></svg><span data-i18n="header.phone">Phone:</span></span>
-                    <a href="tel:+639369330609">+63 9369330609</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" aria-label="Email icon"><path d="M4 4h16v16H4z" fill="none"></path><polyline points="22,6 12,13 2,6"></polyline></svg><span data-i18n="header.email">Email:</span></span>
-                    <a href="mailto:adelgafo@gmail.com">adelgafo@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" aria-label="Location pin icon"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-i18n="header.location">Location:</span></span>
-                    <span>8333 Dr Arcadio Santos Ave, Fidela Tower, Manila, 1700, Philippines</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn:</span>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank">linkedin.com/in/adel-gafo</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.52 1.06 1.52 1.06 .9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.55-1.15-4.55-5.13 0-1.13.39-2.06 1.03-2.79-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.07a9.18 9.18 0 0 1 2.5-.35c.85 0 1.7.12 2.5.35 1.91-1.35 2.75-1.07 2.75-1.07 .55 1.43.2 2.49.1 2.75 .64.73 1.03 1.66 1.03 2.79 0 3.99-2.34 4.86-4.57 5.11.36.32.69.95.69 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"></path></svg>GitHub:</span>
-                    <a href="https://github.com/adel-abdallah" target="_blank">github.com/adel-abdallah</a>
-                </div>
-                <!-- PDF-only Portfolio link (visible in exported PDF only) -->
-                <div class="contact-item pdf-only">
-                    <span class="contact-label"><svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Portfolio:</span>
-                    <a href="https://adelgafo.website/" target="_blank">adelgafo.website</a>
-                </div>
-                </div>
+    <!-- Header -->
+    <header class="portfolio-header">
+        <div class="header-content">
+            <!-- Logo/Name -->
+            <div class="header-brand">
+                <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                <p class="brand-title" data-i18n="header.title">Software Engineer</p>
             </div>
-            <div class="actions-bar header-actions no-print">
+            
+            <!-- Navigation -->
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Download PDF Button -->
                 <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -196,13 +166,20 @@
                     <span data-i18n="header.downloadPdf">Download PDF</span>
                 </a>
                 
-                <!-- Services Button -->
-                <a href="./services.html" class="btn btn-secondary btn-icon" title="View Services and Pricing" rel="noopener">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <span data-i18n="nav.services">Services</span>
-                </a>
+                </button>
                 
                 <!-- Language Selector -->
                 <div class="language-selector">
@@ -212,69 +189,24 @@
                             <line x1="2" y1="12" x2="22" y2="12"></line>
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                         </svg>
-                        <span id="current-language">EN</span>
-                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
                     </button>
-                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-labelledby="language-toggle">
-                        <div class="language-option" data-lang="en" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇺🇸</span>
-                            <span class="language-name">English</span>
-                        </div>
-                        <div class="language-option" data-lang="ar" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇸🇦</span>
-                            <span class="language-name">العربية</span>
-                        </div>
-                        <div class="language-option" data-lang="fr" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇫🇷</span>
-                            <span class="language-name">Français</span>
-                        </div>
-                        <div class="language-option" data-lang="es" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇪🇸</span>
-                            <span class="language-name">Español</span>
-                        </div>
-                        <div class="language-option" data-lang="zh" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇨🇳</span>
-                            <span class="language-name">中文</span>
-                        </div>
-                        <div class="language-option" data-lang="ja" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇯🇵</span>
-                            <span class="language-name">日本語</span>
-                        </div>
-                        <div class="language-option" data-lang="ko" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇰🇷</span>
-                            <span class="language-name">한국어</span>
-                        </div>
-                        <div class="language-option" data-lang="it" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇮🇹</span>
-                            <span class="language-name">Italiano</span>
-                        </div>
-                        <div class="language-option" data-lang="el" role="menuitem" tabindex="-1">
-                            <span class="flag-icon">🇬🇷</span>
-                            <span class="language-name">Ελληνικά</span>
-                        </div>
-                    <div class="language-option" data-lang="sv" role="menuitem" tabindex="-1">
-                        <span class="flag-icon">🇸🇪</span>
-                        <span class="language-name">Svenska</span>
-                    </div>
-                    <div class="language-option" data-lang="tl" role="menuitem" tabindex="-1">
-                        <span class="flag-icon">🇵🇭</span>
-                        <span class="language-name">Tagalog</span>
+                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
+                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
+                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
+                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
+                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
+                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
                     </div>
                 </div>
             </div>
-                
-                <button id="theme-toggle" class="btn btn-icon" type="button" aria-pressed="false" title="Toggle theme">
-                    <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <span data-i18n="header.theme">Theme</span>
-                </button>
-            </div>
-        </header>
-
-
+        </div>
+    </header>
+    
+    <main class="portfolio">
         <!-- Professional Summary -->
         <section class="section" itemscope itemtype="https://schema.org/Person">
             <h2 class="section-title">
@@ -511,40 +443,6 @@
                     Gained extensive knowledge in software engineering and various aspects of information technology.
                 </p>
             </div>
-        </section>
-        
-        <!-- Contact Me (web only) -->
-        <section id="contact" class="section no-print">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span data-i18n="sections.contactMe">CONTACT ME</span>
-            </h2>
-            <form class="contact-form" action="https://formsubmit.co/adelgafo@gmail.com" method="POST" onsubmit="return true;" itemscope itemtype="https://schema.org/ContactPage">
-                <!-- FormSubmit options -->
-                <input type="hidden" name="_subject" value="New message from portfolio" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://adelgafo.website/thank-you.html" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label for="name" data-i18n="contact.name">Name</label>
-                        <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder" placeholder="Your name" />
-                    </div>
-                    <div class="form-field">
-                        <label for="email" data-i18n="contact.email">Email</label>
-                        <input id="email" name="email" type="email" required data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
-                    </div>
-                </div>
-                <div class="form-field">
-                    <label for="message" data-i18n="contact.message">Message</label>
-                    <textarea id="message" name="message" rows="5" required data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send Message</button>
-            </form>
         </section>
     </main>
 

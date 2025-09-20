@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Adel Abdallah</title>
+    <meta name="description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+    <meta name="keywords" content="contact, software engineer, React developer, web development, hire developer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adelgafo.website/contact.html">
+    <meta property="og:title" content="Contact Me - Adel Abdallah">
+    <meta property="og:description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adelgafo.website/contact.html">
+    <meta property="twitter:title" content="Contact Me - Adel Abdallah">
+    <meta property="twitter:description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Adel Abdallah",
+            "jobTitle": "Software Engineer",
+            "email": "adelgafo@gmail.com",
+            "telephone": "+63 9369330609",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "8333 Dr Arcadio Santos Ave, Fidela Tower",
+                "addressLocality": "Manila",
+                "postalCode": "1700",
+                "addressCountry": "Philippines"
+            },
+            "sameAs": [
+                "https://linkedin.com/in/adel-gafo",
+                "https://github.com/adel-abdallah"
+            ]
+        }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    
+    <style>
+        /* Contact Page Specific Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .contact-hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: stretch;
+        }
+        
+        .contact-info-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-info-section h2 svg {
+            color: var(--color-accent);
+        }
+        
+        .contact-info-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info-item svg {
+            color: var(--color-accent);
+            flex-shrink: 0;
+        }
+        
+        .contact-info-item .info-content {
+            flex: 1;
+        }
+        
+        .contact-info-item .info-label {
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-info-item .info-value {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        .contact-info-item .info-value a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info-item .info-value a:hover {
+            color: var(--color-accent-hover);
+        }
+        
+        .contact-form-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-form-section h2 svg {
+            color: var(--color-accent);
+        }
+        
+        .contact-form {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-field { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 0.5rem; 
+            margin-bottom: 0.75rem;
+        }
+        
+        .form-field label { 
+            font-weight: var(--font-weight-medium); 
+            color: var(--color-secondary);
+            font-size: 0.9375rem;
+            line-height: 1.4;
+        }
+        
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: var(--color-background);
+            color: var(--color-text);
+            font-size: 1rem;
+            line-height: 1.5;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-form textarea { 
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus { 
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+        }
+        
+        .contact-form .btn { 
+            margin-top: auto;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 1rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="portfolio-header">
+        <div class="header-content">
+            <!-- Logo/Name -->
+            <div class="header-brand">
+                <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                <p class="brand-title" data-i18n="header.title">Software Engineer</p>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Download PDF Button -->
+                <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span data-i18n="header.downloadPdf">Download PDF</span>
+                </a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
+                        <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
+                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
+                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
+                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
+                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
+                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <!-- Contact Hero -->
+        <div class="contact-hero">
+            <h1 data-i18n="contact.hero.title">Get In Touch</h1>
+            <p data-i18n="contact.hero.subtitle">Ready to start your next project? Let's discuss how I can help bring your ideas to life.</p>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="contact-content">
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span data-i18n="contact.info.title">Contact Information</span>
+                </h2>
+                
+                <div class="contact-info-grid">
+                    <div class="contact-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <div class="info-content">
+                            <div class="info-label" data-i18n="header.phone">Phone</div>
+                            <div class="info-value">
+                                <a href="tel:+639369330609">+63 9369330609</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div class="info-content">
+                            <div class="info-label" data-i18n="header.email">Email</div>
+                            <div class="info-value">
+                                <a href="mailto:adelgafo@gmail.com">adelgafo@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="info-content">
+                            <div class="info-label" data-i18n="header.location">Location</div>
+                            <div class="info-value">Manila, Philippines</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <div class="info-content">
+                            <div class="info-label" data-i18n="header.linkedin">LinkedIn</div>
+                            <div class="info-value">
+                                <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener">linkedin.com/in/adel-gafo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <div class="info-content">
+                            <div class="info-label" data-i18n="header.github">GitHub</div>
+                            <div class="info-value">
+                                <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener">github.com/adel-abdallah</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span data-i18n="contact.form.title">Send a Message</span>
+                </h2>
+                
+                <form class="contact-form" action="https://formsubmit.co/adelgafo@gmail.com" method="POST" onsubmit="return true;" itemscope itemtype="https://schema.org/ContactPage">
+                    <!-- FormSubmit options -->
+                    <input type="hidden" name="_subject" value="New message from portfolio contact page" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_next" value="https://adelgafo.website/thank-you.html" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name" data-i18n="contact.name">Name</label>
+                            <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder" placeholder="Your name" />
+                        </div>
+                        <div class="form-field">
+                            <label for="email" data-i18n="contact.email">Email</label>
+                            <input id="email" name="email" type="email" required data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="message" data-i18n="contact.message">Message</label>
+                        <textarea id="message" name="message" rows="5" required data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/theme.js"></script>
+    <script src="locales/translations.js"></script>
+    <script src="locales/additional-translations.js"></script>
+</body>
+</html>

@@ -4,7 +4,11 @@
     "description": "Adel Abdallah - Software Engineer with 4+ years experience in React, Node.js, WordPress development and team management",
     "keywords": "Software Engineer, React Developer, WordPress Developer, Frontend Developer, Team Management"
   },
-  "header": {
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "contact": "Contact"
+    },
     "name": "ADEL ABDALLAH",
     "title": "SOFTWARE ENGINEER",
     "phone": "Phone:",
@@ -291,19 +295,23 @@
     "description": "Gained extensive knowledge in software engineering and various aspects of information technology."
   },
   "contact": {
+    "hero": {
+      "title": "Get In Touch",
+      "subtitle": "Ready to start your next project? Let's discuss how I can help bring your ideas to life."
+    },
+    "info": {
+      "title": "Contact Information"
+    },
+    "form": {
+      "title": "Send a Message"
+    },
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@example.com",
     "messagePlaceholder": "How can I help you?",
-    "sendMessage": "Send Message",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send Message"
-    }
+    "sendMessage": "Send Message"
   },
   "language": {
     "select": "Select Language",

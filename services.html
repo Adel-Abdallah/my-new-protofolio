@@ -75,6 +75,7 @@
     </script>
     
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
     
     <style>
         /* Services Page Specific Styles */
@@ -113,7 +114,7 @@
         
         .services-cards {
             display: flex;
-            overflow-x: hidden; /* Hide overflow to show only 3 cards */
+            overflow-x: visible; /* Allow arrows to be visible */
             scroll-behavior: smooth;
             padding-bottom: 1rem;
             gap: 1.5rem;
@@ -122,50 +123,64 @@
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
+            align-items: center; /* Center align arrows with cards */
         }
         
+        /* Desktop: Hide mobile arrow container */
+        .mobile-arrow-container {
+            display: none;
+        }
+        
+        /* Desktop: Hide mobile arrows */
+        .mobile-arrow {
+            display: none !important;
+        }
+        
+        /* Desktop: Show desktop arrows */
+        .desktop-arrow {
+            display: flex !important;
+        }
+        
+        /* Desktop: Reset order for horizontal layout */
         .service-card {
             flex: 0 0 300px; /* Fixed width for each card */
             min-height: 350px;
+            order: 0; /* Reset order for desktop */
         }
         
-        /* Navigation arrows positioned on sides of the 3 cards */
-        .scroll-nav {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem 0;
-            width: 100%;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
+        .scroll-arrow.left {
+            order: -1; /* Left arrow before cards on desktop */
+        }
+        
+        .scroll-arrow.right {
+            order: 1; /* Right arrow after cards on desktop */
         }
         
         .scroll-arrow {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
+            background: var(--color-surface) !important;
+            border: 2px solid var(--color-accent) !important; /* Make border more visible */
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            display: flex;
+            display: flex !important; /* Force display */
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            color: var(--color-text);
-            position: absolute;
+            color: var(--color-accent) !important; /* Make icon more visible */
+            position: relative;
             z-index: 10;
-            top: 50%;
-            transform: translateY(-50%); /* Vertically center the arrows */
+            flex-shrink: 0; /* Prevent arrows from shrinking */
+            margin: 0 1rem; /* Add some spacing */
+            opacity: 1 !important; /* Force opacity */
         }
         
         .scroll-arrow.left {
-            left: -60px; /* Position to the left of the cards container */
+            order: -1; /* Place left arrow before cards */
         }
         
         .scroll-arrow.right {
-            right: -60px; /* Position to the right of the cards container */
+            order: 1; /* Place right arrow after cards */
         }
         
         .scroll-arrow:hover {
@@ -330,38 +345,38 @@
                 font-size: 1rem;
             }
             
-            .pricing-toggle {
+            .services-cards {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+                max-width: 400px; /* Single card width */
             }
             
-            .pricing-btn {
-                width: 200px;
+            /* Mobile arrow container */
+            .mobile-arrow-container {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                order: 1;
+                width: 100%;
+            }
+            
+            /* Hide desktop arrows on mobile */
+            .desktop-arrow {
+                display: none !important;
             }
             
             .service-card {
-                flex: 0 0 280px; /* Slightly smaller on mobile */
-            }
-            
-            .services-cards {
-                max-width: 900px; /* Smaller container on mobile */
-            }
-            
-            .scroll-nav {
-                max-width: 900px; /* Smaller container on mobile */
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 350px;
+                order: 2; /* Card comes after arrows */
             }
             
             .scroll-arrow {
-                width: 45px;
-                height: 45px;
-            }
-            
-            .scroll-arrow.left {
-                left: -50px; /* Closer to cards on mobile */
-            }
-            
-            .scroll-arrow.right {
-                right: -50px; /* Closer to cards on mobile */
+                width: 40px;
+                height: 40px;
+                margin: 0;
             }
             
             .back-button {
@@ -372,13 +387,73 @@
     </style>
 </head>
 <body>
-    <!-- Back Button -->
-    <a href="index.html" class="back-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-        <span data-i18n="nav.home">Home</span>
-    </a>
+    <!-- Header -->
+    <header class="portfolio-header">
+        <div class="header-content">
+            <!-- Logo/Name -->
+            <div class="header-brand">
+                <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                <p class="brand-title" data-i18n="header.title">Software Engineer</p>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </nav>
+            
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Download PDF Button -->
+                <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span data-i18n="header.downloadPdf">Download PDF</span>
+                </a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
+                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
+                        <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
+                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
+                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
+                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
+                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
+                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div class="services-container">
         <!-- Services Header -->
@@ -387,22 +462,36 @@
             <p data-i18n="services.hero.subtitle">Professional software development services with flexible pricing options to meet your needs</p>
         </div>
 
-        <!-- Scroll Navigation -->
-        <div class="scroll-nav">
-            <button id="scroll-left" class="scroll-arrow left" title="Previous Cards">
+        <!-- Services Cards -->
+        <div class="services-cards">
+            <!-- Desktop arrows (outside mobile container) -->
+            <button id="scroll-left" class="scroll-arrow left desktop-arrow" title="Previous Cards">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
             </button>
-            <button id="scroll-right" class="scroll-arrow right" title="Next Cards">
+            
+            <!-- Mobile arrow container -->
+            <div class="mobile-arrow-container">
+                <button id="scroll-left-mobile" class="scroll-arrow left mobile-arrow" title="Previous Cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button id="scroll-right-mobile" class="scroll-arrow right mobile-arrow" title="Next Cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Desktop right arrow -->
+            <button id="scroll-right" class="scroll-arrow right desktop-arrow" title="Next Cards">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
             </button>
-        </div>
-
-        <!-- Services Cards -->
-        <div class="services-cards">
+            
             <!-- Frontend Development Card -->
             <div class="service-card">
                 <div class="service-card-header">
@@ -482,33 +571,6 @@
                 <div class="service-price-main">$10/hr</div>
             </div>
         </div>
-
-        <!-- Contact Me Section -->
-        <section class="section">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span data-i18n="sections.contactMe">CONTACT ME</span>
-            </h2>
-            <form class="contact-form" id="contact-form">
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label for="name" data-i18n="contact.name">Name</label>
-                        <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder" placeholder="Your name" />
-                    </div>
-                    <div class="form-field">
-                        <label for="email" data-i18n="contact.email">Email</label>
-                        <input id="email" name="email" type="email" required data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
-                    </div>
-                </div>
-                <div class="form-field">
-                    <label for="message" data-i18n="contact.message">Message</label>
-                    <textarea id="message" name="message" rows="5" required data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send Message</button>
-            </form>
-        </section>
     </div>
 
     <!-- Scripts -->
@@ -540,15 +602,40 @@
         document.addEventListener('DOMContentLoaded', function() {
             const scrollLeftBtn = document.getElementById('scroll-left');
             const scrollRightBtn = document.getElementById('scroll-right');
+            const scrollLeftMobileBtn = document.getElementById('scroll-left-mobile');
+            const scrollRightMobileBtn = document.getElementById('scroll-right-mobile');
             const servicesCards = document.querySelector('.services-cards');
             const allCards = servicesCards.querySelectorAll('.service-card');
             let currentIndex = 0;
-            const cardsPerView = 3;
+            
+            // Check if mobile (screen width <= 767px)
+            const isMobile = window.innerWidth <= 767;
+            const cardsPerView = isMobile ? 1 : 3; // 1 card on mobile, 3 cards on desktop
             const totalCards = allCards.length;
             
+            // Get the appropriate buttons based on screen size
+            function getActiveButtons() {
+                if (isMobile) {
+                    return {
+                        left: scrollLeftMobileBtn,
+                        right: scrollRightMobileBtn
+                    };
+                } else {
+                    return {
+                        left: scrollLeftBtn,
+                        right: scrollRightBtn
+                    };
+                }
+            }
+            
             function updateArrowStates() {
-                scrollLeftBtn.disabled = currentIndex <= 0;
-                scrollRightBtn.disabled = currentIndex >= totalCards - cardsPerView;
+                const buttons = getActiveButtons();
+                buttons.left.disabled = currentIndex <= 0;
+                buttons.right.disabled = currentIndex >= totalCards - cardsPerView;
+                
+                // Ensure arrows are always visible
+                buttons.left.style.display = 'flex';
+                buttons.right.style.display = 'flex';
             }
             
             function showCards(startIndex) {
@@ -557,7 +644,7 @@
                     card.style.display = 'none';
                 });
                 
-                // Show the 3 cards starting from startIndex
+                // Show the cards starting from startIndex
                 for (let i = startIndex; i < startIndex + cardsPerView && i < totalCards; i++) {
                     allCards[i].style.display = 'flex';
                 }
@@ -566,6 +653,7 @@
                 updateArrowStates();
             }
             
+            // Event listeners for desktop arrows
             scrollLeftBtn.addEventListener('click', function() {
                 if (currentIndex > 0) {
                     showCards(currentIndex - 1);
@@ -578,8 +666,35 @@
                 }
             });
             
-            // Initial state - show first 3 cards
+            // Event listeners for mobile arrows
+            scrollLeftMobileBtn.addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    showCards(currentIndex - 1);
+                }
+            });
+            
+            scrollRightMobileBtn.addEventListener('click', function() {
+                if (currentIndex < totalCards - cardsPerView) {
+                    showCards(currentIndex + 1);
+                }
+            });
+            
+            // Initial state - show first cards
             showCards(0);
+            updateArrowStates();
+            
+            // Handle window resize (orientation change)
+            window.addEventListener('resize', function() {
+                const newIsMobile = window.innerWidth <= 767;
+                const newCardsPerView = newIsMobile ? 1 : 3;
+                
+                if (newCardsPerView !== cardsPerView) {
+                    // Reset to first card when switching between mobile/desktop
+                    currentIndex = 0;
+                    showCards(0);
+                    updateArrowStates();
+                }
+            });
             
             // Contact Form Functionality
             const contactForm = document.getElementById('contact-form');
