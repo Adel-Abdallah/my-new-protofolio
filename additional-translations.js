@@ -498,6 +498,59 @@ const ADDITIONAL_TRANSLATIONS = {
       el: "Ελληνικά",
       sv: "Svenska",
       tl: "Tagalog"
+    },
+    experience: {
+      freelance: {
+        title: "Freelance Software Engineer at Team Lead",
+        company: "Sariling Negosyo",
+        date: "2024 - KASALUKUYAN",
+        achievement1: "Kasalukuyang namamahala ng mga team na may 4 na developers sa 3 magkakaibang client projects",
+        achievement2: "Naglilingkod sa Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), at Outlink Pro (Link Management)",
+        achievement3: "Nagbibigay ng full-stack development services gamit ang React, Express, at WordPress",
+        achievement4: "Namumuno sa project planning, sprint management, at technical architecture decisions",
+        achievement5: "Tinitiyak ang code quality at timely delivery sa lahat ng client engagements"
+      },
+      contentWriter: {
+        title: "Technical Content Writer",
+        company: "StackUp.Dev",
+        date: "HUN 2024 - NOB 2024",
+        achievement1: "Gumawa ng comprehensive tutorials na sumasaklaw sa React.js, Redux Toolkit, at Docker",
+        achievement2: "Nag-develop ng educational content para sa mga developers na may iba't ibang skill levels",
+        achievement3: "Nakatuon sa practical application at modern web development best practices"
+      },
+      thomasArts: {
+        title: "Software Engineer/Programmer",
+        company: "ThomasArts",
+        date: "OKT 2023 - HUL 2024",
+        achievement1: "Nag-maintain at nag-update ng maraming WordPress sites na tinitiyak ang optimal performance",
+        achievement2: "Nag-develop ng centralized MERN stack management system para sa network ng sites",
+        achievement3: "Gumawa ng custom WordPress plugin na gumagamit ng WP API para sa enhanced functionality",
+        achievement4: "Nag-implement ng automated monitoring at update tracking systems"
+      },
+      ozsale: {
+        title: "Software Engineer",
+        company: "Ozsale (Mysale Group)",
+        date: "HUN 2022 - HUN 2023",
+        achievement1: "Namuno sa development at maintenance ng 10 e-commerce platforms gamit ang React JS",
+        achievement2: "Nag-implement ng Redux Saga para sa efficient state management at async operations",
+        achievement3: "Nag-develop ng scalable UI components gamit ang styled-components at Storybook",
+        achievement4: "Nakipag-collaborate sa backend teams para sa seamless RESTful API integration"
+      },
+      happySeason: {
+        title: "Frontend React Developer",
+        company: "Happy Season",
+        date: "ENE 2020 - MAY 2022",
+        achievement1: "Nag-develop ng wedding planning platform gamit ang React JS na nakatuon sa scalability",
+        achievement2: "Nag-manage ng application state gamit ang Redux Saga para sa optimized data synchronization",
+        achievement3: "Nag-integrate ng Next.js para sa server-side rendering at improved SEO performance",
+        achievement4: "Gumawa ng responsive, modular UI components gamit ang styled-components architecture"
+      }
+    },
+    education: {
+      title: "Diploma sa Information Technology",
+      institution: "Informatics, Baguio, Philippines",
+      date: "2017",
+      description: "Nakakuha ng malawak na kaalaman sa software engineering at iba't ibang aspeto ng information technology."
     }
   }
 };
