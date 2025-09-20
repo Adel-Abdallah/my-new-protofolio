@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Apply saved theme IMMEDIATELY to prevent flash -->
+    <script>
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                } else {
+                    // Default to light theme if no preference saved
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                // Fallback to light theme
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <title>Contact Me - Adel Abdallah</title>
     <meta name="description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
     <meta name="keywords" content="contact, software engineer, React developer, web development, hire developer">

@@ -1,8 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Apply saved theme IMMEDIATELY to prevent flash -->
+    <script>
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                } else {
+                    // Default to light theme if no preference saved
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                // Fallback to light theme
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <title data-i18n="services.meta.title">Services & Pricing - Adel Abdallah</title>
     <meta name="description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
     <meta name="keywords" data-i18n="services.meta.keywords" content="software development services, frontend development, backend development, mobile app development, React, Node.js, WordPress, pricing">

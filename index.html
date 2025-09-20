@@ -1,8 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Apply saved theme IMMEDIATELY to prevent flash -->
+    <script>
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                } else {
+                    // Default to light theme if no preference saved
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {
+                // Fallback to light theme
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     
     <!-- Primary Meta Tags -->
     <title>Adel Abdallah - Software Engineer | React Developer | WordPress Expert</title>
@@ -107,17 +125,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
-    <script>
-        // Apply saved theme ASAP to avoid flash
-        (function() {
-            try {
-                var saved = localStorage.getItem('theme');
-                if (saved === 'dark' || saved === 'light') {
-                    document.documentElement.setAttribute('data-theme', saved);
-                }
-            } catch (e) {}
-        })();
-    </script>
     <script>
         // Enable PDF-only elements when URL contains ?pdf=1
         (function(){
