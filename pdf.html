@@ -156,6 +156,8 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Always enable PDF mode on this page
+            document.body.classList.add('pdf-mode');
             // Add class so body offsets content below the top bar
             document.body.classList.add('has-top-bar');
             // Copy the content from the main portfolio page if this is a standalone page

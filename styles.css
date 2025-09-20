@@ -223,6 +223,15 @@ body {
     width: 100%;
 }
 
+/* Elements that should only appear in the exported PDF */
+.pdf-only {
+    display: none !important;
+}
+
+body.pdf-mode .pdf-only {
+    display: flex !important; /* matches .contact-item layout */
+}
+
 /* Actions Bar (below header) */
 .actions-bar {
     display: flex;
@@ -588,6 +597,49 @@ body {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-normal);
 }
+
+/* Contact form */
+.contact-form {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-field { display: flex; flex-direction: column; gap: var(--spacing-xs); }
+.form-field label { font-weight: var(--font-weight-medium); color: var(--color-secondary); }
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+}
+
+.contact-form textarea { resize: vertical; }
+
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); }
+
+.contact-form .btn { margin-top: var(--spacing-sm); }
 
 /* Responsive Design */
 @media (max-width: 768px) {

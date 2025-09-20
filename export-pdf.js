@@ -23,8 +23,8 @@ const puppeteer = require('puppeteer');
     // Use screen media to match the live site exactly (avoids @media print link URL artifacts)
     await page.emulateMediaType('screen');
 
-    // Build file URL to local index.html
-    const fileUrl = 'file://' + inputFile;
+    // Build file URL to local index.html with flag to enable PDF-only content
+    const fileUrl = 'file://' + inputFile + '?pdf=1';
 
     await page.goto(fileUrl, { waitUntil: 'networkidle2', timeout: 120000 });
 
