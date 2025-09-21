@@ -82,6 +82,115 @@
             transition: all 0.3s ease;
         }
 
+        /* Mobile Header Wrapper */
+        .mobile-header-wrapper {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-header-wrapper {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1001;
+                background: var(--color-background);
+                border-bottom: 1px solid var(--color-border);
+            }
+
+            .mobile-header-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 1.5rem;
+                height: 60px;
+            }
+
+            .mobile-header-brand h1 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--color-text);
+                margin: 0;
+            }
+
+            .mobile-header-brand p {
+                font-size: 0.8rem;
+                color: var(--color-text-secondary);
+                margin: 0;
+            }
+
+            .hamburger-menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+            }
+
+            .hamburger-line {
+                width: 20px;
+                height: 2px;
+                background: var(--color-text);
+                margin: 2px 0;
+                transition: all 0.3s ease;
+            }
+
+            .hamburger-menu.is-active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger-menu.is-active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger-menu.is-active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            /* Hide desktop header on mobile */
+            .portfolio-header {
+                display: none;
+            }
+
+            /* Show expanded header when active */
+            .mobile-header-wrapper.active .portfolio-header {
+                display: block;
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            /* Adjust content wrapper for mobile */
+            .content-wrapper {
+                margin-top: 60px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-header-wrapper {
+                display: none;
+            }
+            
+            .portfolio-header {
+                display: block !important;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+            
+            .content-wrapper {
+                margin-top: 140px;
+            }
+        }
+
         /* Top Contact Bar */
         .header-top {
             background: var(--color-surface);
@@ -505,8 +614,23 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="portfolio-header">
+    <!-- Mobile Header Wrapper -->
+    <div class="mobile-header-wrapper" id="mobile-header-wrapper">
+        <!-- Mobile Header Bar -->
+        <div class="mobile-header-bar">
+            <div class="mobile-header-brand">
+                <h1>Adel Abdallah</h1>
+                <p>Software Engineer</p>
+            </div>
+            <button class="hamburger-menu" id="hamburger-menu" aria-expanded="false" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        
+        <!-- Original Header (hidden on mobile by default) -->
+        <header class="portfolio-header">
         <!-- Top Contact Bar -->
         <div class="header-top">
             <div class="header-top-content">
@@ -612,8 +736,12 @@
             </div>
         </div>
     </header>
+    </div>
+    <!-- End Mobile Header Wrapper -->
 
-    <div class="contact-container">
+    <!-- Main Content Wrapper -->
+    <div class="content-wrapper">
+        <div class="contact-container">
         <!-- Contact Hero -->
         <div class="contact-hero">
             <h1 data-i18n="contact.hero.title">Get In Touch</h1>
@@ -659,10 +787,36 @@
             </div>
         </div>
     </div>
+    <!-- End Content Wrapper -->
 
     <!-- Scripts -->
     <script src="src/theme.js"></script>
     <script src="locales/translations.js"></script>
     <script src="locales/additional-translations.js"></script>
+    <script>
+        // Mobile Header Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
+            
+            if (hamburgerMenu && mobileHeaderWrapper) {
+                hamburgerMenu.addEventListener('click', function() {
+                    const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
+                    
+                    // Toggle the active class
+                    mobileHeaderWrapper.classList.toggle('active');
+                    
+                    // Toggle hamburger animation
+                    hamburgerMenu.classList.toggle('is-active');
+                    
+                    // Update aria-expanded
+                    hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
+                    
+                    // Prevent body scroll when menu is open
+                    document.body.classList.toggle('no-scroll', !isExpanded);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
