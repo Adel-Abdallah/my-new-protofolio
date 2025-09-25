@@ -4,22 +4,21 @@
     "description": "Adel Abdallah - Software Engineer with 4+ years experience in React, Node.js, WordPress development and team management",
     "keywords": "Software Engineer, React Developer, WordPress Developer, Frontend Developer, Team Management"
   },
-    "nav": {
-        "home": "Home",
-        "services": "Services",
-        "contact": "Contact"
-    },
-    "name": "ADEL ABDALLAH",
-    "title": "SOFTWARE ENGINEER",
-    "phone": "Phone:",
-    "email": "Email:",
-    "location": "Location:",
-    "linkedin": "LinkedIn:",
-    "github": "GitHub:",
-    "portfolio": "Portfolio:",
-    "downloadPdf": "Download PDF",
-    "theme": "Theme"
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "contact": "Contact"
   },
+  "name": "ADEL ABDALLAH",
+  "title": "SOFTWARE ENGINEER",
+  "phone": "Phone:",
+  "email": "Email:",
+  "location": "Location:",
+  "linkedin": "LinkedIn:",
+  "github": "GitHub:",
+  "portfolio": "Portfolio:",
+  "downloadPdf": "Download PDF",
+  "theme": "Theme",
   "sections": {
     "professionalSummary": "PROFESSIONAL SUMMARY",
     "currentServices": "CURRENT SERVICES",
@@ -28,11 +27,6 @@
     "workExperience": "WORK EXPERIENCE",
     "education": "EDUCATION",
     "contactMe": "CONTACT ME"
-  },
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "contact": "Contact"
   },
   "summary": {
     "intro": "Frontend Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.",
@@ -237,7 +231,7 @@
       "company": "Self-Employed",
       "period": "2024 - PRESENT",
       "achievements": [
-        "Currently managing teams of 4 developers across 3 different client projects",
+        "Managing teams of 4 developers across 3 different client projects",
         "Serving Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), and Outlink Pro (Link Management)",
         "Providing full-stack development services with React, Express, and WordPress",
         "Leading project planning, sprint management, and technical architecture decisions",
