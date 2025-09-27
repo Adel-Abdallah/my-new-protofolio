@@ -236,7 +236,7 @@ const PORTFOLIO_TRANSLATIONS = {
         title: "Freelance Software Engineer & Team Lead",
         company: "Self-Employed",
         date: "2024 - PRESENT",
-        achievement1: "Managed teams of 4 developers across 3 different client projects",
+        achievement1: "Led teams of developers on different client projects",
         achievement2: "Serving Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), and Outlink Pro (Link Management)",
         achievement3: "Providing full-stack development services with React, Express, and WordPress",
         achievement4: "Leading project planning, sprint management, and technical architecture decisions",
