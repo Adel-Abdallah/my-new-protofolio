@@ -748,7 +748,7 @@ const ADDITIONAL_TRANSLATIONS = {
       contactMe: "MAKIPAG-UGNAYAN SA AKIN"
     },
     summary: {
-      intro: "Frontend Developer na may higit sa 5 taong karanasan sa paggawa ng user-friendly at visually appealing na mga website at application gamit ang React.",
+      intro: "Full-stack Developer na may higit sa 5 taong karanasan sa paggawa ng user-friendly at visually appealing na mga website at application gamit ang React.",
       specialization: "Espesyalista sa JavaScript, React, Redux at modernong web technologies.",
       trackRecord: "Napatunayang track record sa full-stack development, team management at pag-deliver ng scalable solutions para sa e-commerce, content management at web applications.",
       currentClients: "Kasalukuyang naglilingkod sa mga kliente sa fintech, marketing automation at link management sectors."

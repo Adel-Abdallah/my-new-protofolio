@@ -33,7 +33,7 @@ const PORTFOLIO_TRANSLATIONS = {
       contact: "Contact"
     },
     summary: {
-      intro: "Frontend Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.",
+      intro: "Full-stack Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.",
       specialization: "Specialized in JavaScript, React, Redux, and modern web technologies.",
       trackRecord: "Proven track record in full-stack development, team management, and delivering scalable solutions for e-commerce, content management, and web applications.",
       currentClients: "Currently serving clients in fintech, marketing automation, and link management sectors."
