@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Apply saved theme IMMEDIATELY to prevent flash -->
     <script>
-        (function() {
+        (function () {
             try {
                 var saved = localStorage.getItem('theme');
                 if (saved === 'dark' || saved === 'light') {
@@ -22,21 +23,24 @@
         })();
     </script>
     <title>Contact Me - Adel Abdallah</title>
-    <meta name="description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+    <meta name="description"
+        content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
     <meta name="keywords" content="contact, software engineer, React developer, web development, hire developer">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adelgafo.website/contact.html">
     <meta property="og:title" content="Contact Me - Adel Abdallah">
-    <meta property="og:description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
-    
+    <meta property="og:description"
+        content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://adelgafo.website/contact.html">
     <meta property="twitter:title" content="Contact Me - Adel Abdallah">
-    <meta property="twitter:description" content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
-    
+    <meta property="twitter:description"
+        content="Get in touch with Adel Abdallah - Software Engineer. Contact form and contact information for professional inquiries.">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -62,12 +66,12 @@
         }
     }
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         /* Header Styles */
         .portfolio-header {
@@ -299,7 +303,7 @@
         }
     </style>
     <link rel="stylesheet" href="header.css">
-    
+
     <style>
         /* Contact Page Specific Styles */
         body {
@@ -310,39 +314,39 @@
             color: var(--color-text);
             line-height: 1.6;
         }
-        
+
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .contact-hero {
             text-align: center;
             margin-bottom: 4rem;
         }
-        
+
         .contact-hero h1 {
             font-size: 3rem;
             font-weight: 700;
             color: var(--color-text);
             margin-bottom: 1rem;
         }
-        
+
         .contact-hero p {
             font-size: 1.2rem;
             color: var(--color-text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: stretch;
         }
-        
+
         .contact-info-section h2 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -352,16 +356,16 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .contact-info-section h2 svg {
             color: var(--color-accent);
         }
-        
+
         .contact-info-grid {
             display: grid;
             gap: 1.5rem;
         }
-        
+
         .contact-info-item {
             display: flex;
             align-items: center;
@@ -372,44 +376,44 @@
             border-radius: 0.75rem;
             transition: all 0.3s ease;
         }
-        
+
         .contact-info-item:hover {
             border-color: var(--color-accent);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        
+
         .contact-info-item svg {
             color: var(--color-accent);
             flex-shrink: 0;
         }
-        
+
         .contact-info-item .info-content {
             flex: 1;
         }
-        
+
         .contact-info-item .info-label {
             color: var(--color-text-secondary);
             font-weight: 500;
             font-size: 0.9rem;
             margin-bottom: 0.25rem;
         }
-        
+
         .contact-info-item .info-value {
             color: var(--color-text);
             font-weight: 600;
         }
-        
+
         .contact-info-item .info-value a {
             color: var(--color-accent);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .contact-info-item .info-value a:hover {
             color: var(--color-accent-hover);
         }
-        
+
         .contact-form-section-full h2 {
             font-size: 1.75rem;
             font-weight: 700;
@@ -422,12 +426,12 @@
             border-bottom: 3px solid var(--color-accent);
             position: relative;
         }
-        
+
         .contact-form-section-full h2 svg {
             color: var(--color-accent);
             filter: drop-shadow(0 2px 4px rgba(14, 165, 233, 0.3));
         }
-        
+
         .contact-form-section-full h2::after {
             content: '';
             position: absolute;
@@ -438,7 +442,7 @@
             background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
             border-radius: 2px;
         }
-        
+
         .contact-form-section-full {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -449,7 +453,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .contact-form-section-full::before {
             content: '';
             position: absolute;
@@ -460,35 +464,35 @@
             background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
             opacity: 0.3;
         }
-        
+
         .contact-form-full {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
-        
+
         .form-grid-full {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
-        
-        .form-field { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 0.75rem; 
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
             position: relative;
         }
-        
-        .form-field label { 
-            font-weight: 600; 
+
+        .form-field label {
+            font-weight: 600;
             color: var(--color-text);
             font-size: 0.95rem;
             line-height: 1.4;
             letter-spacing: 0.025em;
             margin-bottom: 0.25rem;
         }
-        
+
         .contact-form-full input[type="text"],
         .contact-form-full input[type="email"],
         .contact-form-full textarea {
@@ -505,35 +509,35 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             position: relative;
         }
-        
+
         .contact-form-full input::placeholder,
         .contact-form-full textarea::placeholder {
             color: var(--color-text-muted);
             opacity: 0.7;
             transition: opacity 0.3s ease;
         }
-        
-        .contact-form-full textarea { 
+
+        .contact-form-full textarea {
             resize: vertical;
             min-height: 160px;
             font-family: inherit;
         }
-        
+
         .contact-form-full input:focus,
-        .contact-form-full textarea:focus { 
+        .contact-form-full textarea:focus {
             outline: none;
             border-color: var(--color-accent);
             box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             transform: translateY(-2px);
             background: var(--color-background);
         }
-        
+
         .contact-form-full input:focus::placeholder,
         .contact-form-full textarea:focus::placeholder {
             opacity: 0.4;
         }
-        
-        .contact-form-full .btn { 
+
+        .contact-form-full .btn {
             align-self: flex-start;
             margin-top: 1rem;
             padding: 1.25rem 2.5rem;
@@ -545,58 +549,58 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .contact-form-full .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .contact-form-full .btn:active {
             transform: translateY(-1px);
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .contact-container {
                 padding: 1rem;
                 padding-top: 140px;
             }
-            
+
             .contact-hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .contact-hero p {
                 font-size: 1.1rem;
             }
-            
+
             .contact-content-full {
                 margin: 0;
             }
-            
+
             .form-grid-full {
                 grid-template-columns: 1fr;
                 gap: 1.25rem;
             }
-            
+
             .contact-form-section-full {
                 padding: 2rem 1.5rem;
                 border-radius: 16px;
                 margin: 0 0.5rem;
             }
-            
+
             .contact-form-section-full h2 {
                 font-size: 1.5rem;
                 margin-bottom: 2rem;
             }
-            
+
             .contact-form-full input[type="text"],
             .contact-form-full input[type="email"],
             .contact-form-full textarea {
                 padding: 1rem 1.25rem;
                 border-radius: 12px;
             }
-            
+
             .contact-form-full .btn {
                 padding: 1rem 2rem;
                 font-size: 1rem;
@@ -606,7 +610,16 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Organic Floating Background -->
+    <div class="organic-background" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
     <!-- Desktop Header (always visible on desktop) -->
     <header class="portfolio-header desktop-header">
         <!-- Top Contact Bar -->
@@ -615,14 +628,19 @@
                 <!-- Contact Info -->
                 <div class="header-contact">
                     <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                            </path>
                         </svg>
                         <span>+63 9369330609</span>
                     </a>
                     <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                         <span>adelgafo@gmail.com</span>
@@ -631,14 +649,21 @@
 
                 <!-- Social Links -->
                 <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                        title="GitHub Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
                         </svg>
                     </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                        title="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
@@ -655,64 +680,81 @@
                     <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
                     <p class="brand-title" data-i18n="header.title">Software Engineer</p>
                 </div>
-                
+
                 <!-- Navigation -->
                 <nav class="header-nav">
                     <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
                     <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
                     <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
                 </nav>
-                
+
                 <!-- Header Actions -->
                 <div class="header-actions">
                     <!-- Download PDF Button -->
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon"
+                        title="Download PDF Version" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true" focusable="false">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
                         <span data-i18n="header.downloadPdf">Download PDF</span>
                     </a>
-                
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
-                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-                
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
-                        <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme"
+                        aria-label="Toggle dark/light theme">
+                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                         </svg>
                     </button>
-                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
-                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language"
+                            aria-haspopup="true" aria-expanded="false">
+                            <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                            <button class="language-option" data-lang="en" role="menuitem"
+                                tabindex="-1">English</button>
+                            <button class="language-option" data-lang="ar" role="menuitem"
+                                tabindex="-1">العربية</button>
+                            <button class="language-option" data-lang="fr" role="menuitem"
+                                tabindex="-1">Français</button>
+                            <button class="language-option" data-lang="es" role="menuitem"
+                                tabindex="-1">Español</button>
+                            <button class="language-option" data-lang="it" role="menuitem"
+                                tabindex="-1">Italiano</button>
+                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                            <button class="language-option" data-lang="tl" role="menuitem"
+                                tabindex="-1">Tagalog</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Mobile Header Wrapper -->
@@ -729,112 +771,147 @@
                 <span class="hamburger-line"></span>
             </button>
         </div>
-        
+
         <!-- Mobile Header Content (copy of desktop header) -->
         <header class="portfolio-header mobile-header">
-        <!-- Top Contact Bar -->
-        <div class="header-top">
-            <div class="header-top-content">
-                <!-- Contact Info -->
-                <div class="header-contact">
-                    <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <span>+63 9369330609</span>
-                    </a>
-                    <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>adelgafo@gmail.com</span>
-                    </a>
-                </div>
+            <!-- Top Contact Bar -->
+            <div class="header-top">
+                <div class="header-top-content">
+                    <!-- Contact Info -->
+                    <div class="header-contact">
+                        <a href="tel:+639369330609" class="contact-link" title="Call me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+63 9369330609</span>
+                        </a>
+                        <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>adelgafo@gmail.com</span>
+                        </a>
+                    </div>
 
-                <!-- Social Links -->
-                <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+                    <!-- Social Links -->
+                    <div class="header-social">
+                        <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                            title="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                            title="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Main Header -->
-        <div class="header-main">
-            <div class="header-content">
-                <!-- Logo/Name -->
-                <div class="header-brand">
-                    <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
-                    <p class="brand-title" data-i18n="header.title">Software Engineer</p>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="header-nav">
-                    <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
-                    <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-                    <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
-                </nav>
-                
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary" data-i18n="header.downloadPdf">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7,10 12,15 17,10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download PDF
-                    </a>
-                    
-                    <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
-                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                    
-                    <div class="language-selector">
-                        <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false" aria-controls="language-dropdown">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <!-- Main Header -->
+            <div class="header-main">
+                <div class="header-content">
+                    <!-- Logo/Name -->
+                    <div class="header-brand">
+                        <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                        <p class="brand-title" data-i18n="header.title">Software Engineer</p>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="header-nav">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                        <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                        <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+                    </nav>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary"
+                            data-i18n="header.downloadPdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7,10 12,15 17,10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download PDF
+                        </a>
+
+                        <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
+                            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                             </svg>
                         </button>
-                        
-                        <div class="language-dropdown" id="language-dropdown" role="menu">
-                            <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                            <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                            <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                            <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                            <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                            <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                        <div class="language-selector">
+                            <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false"
+                                aria-controls="language-dropdown">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                            <div class="language-dropdown" id="language-dropdown" role="menu">
+                                <button class="language-option" data-lang="en" role="menuitem"
+                                    tabindex="-1">English</button>
+                                <button class="language-option" data-lang="ar" role="menuitem"
+                                    tabindex="-1">العربية</button>
+                                <button class="language-option" data-lang="fr" role="menuitem"
+                                    tabindex="-1">Français</button>
+                                <button class="language-option" data-lang="es" role="menuitem"
+                                    tabindex="-1">Español</button>
+                                <button class="language-option" data-lang="it" role="menuitem"
+                                    tabindex="-1">Italiano</button>
+                                <button class="language-option" data-lang="ja" role="menuitem"
+                                    tabindex="-1">日本語</button>
+                                <button class="language-option" data-lang="ko" role="menuitem"
+                                    tabindex="-1">한국어</button>
+                                <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                                <button class="language-option" data-lang="tl" role="menuitem"
+                                    tabindex="-1">Tagalog</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </header>
     </div>
     <!-- End Mobile Header Wrapper -->
@@ -842,81 +919,90 @@
     <!-- Main Content Wrapper -->
     <div class="content-wrapper">
         <div class="contact-container">
-        <!-- Contact Hero -->
-        <div class="contact-hero">
-            <h1 data-i18n="contact.hero.title">Get In Touch</h1>
-            <p data-i18n="contact.hero.subtitle">Ready to start your next project? Let's discuss how I can help bring your ideas to life.</p>
-        </div>
+            <!-- Contact Hero -->
+            <div class="contact-hero">
+                <h1 data-i18n="contact.hero.title">Get In Touch</h1>
+                <p data-i18n="contact.hero.subtitle">Ready to start your next project? Let's discuss how I can help
+                    bring your ideas to life.</p>
+            </div>
 
-        <!-- Contact Content -->
-        <div class="contact-content-full">
-            <!-- Contact Form -->
-            <div class="contact-form-section-full">
-                <h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    <span data-i18n="contact.form.title">Send a Message</span>
-                </h2>
-                
-                <form class="contact-form-full" id="contact-form" action="https://formsubmit.co/adelgafo@gmail.com" method="POST">
-                    <!-- FormSubmit options -->
-                    <input type="hidden" name="_subject" value="New message from portfolio" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_next" value="https://adelgafo.website/thank-you.html" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+            <!-- Contact Content -->
+            <div class="contact-content-full">
+                <!-- Contact Form -->
+                <div class="contact-form-section-full">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span data-i18n="contact.form.title">Send a Message</span>
+                    </h2>
 
-                    <div class="form-grid-full">
-                        <div class="form-field">
-                            <label for="name" data-i18n="contact.name">Name</label>
-                            <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder" placeholder="Your name" />
+                    <form class="contact-form-full" id="contact-form" action="https://formsubmit.co/adelgafo@gmail.com"
+                        method="POST">
+                        <!-- FormSubmit options -->
+                        <input type="hidden" name="_subject" value="New message from portfolio" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_next" value="https://adelgafo.website/thank-you.html" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+                        <div class="form-grid-full">
+                            <div class="form-field">
+                                <label for="name" data-i18n="contact.name">Name</label>
+                                <input id="name" name="name" type="text" required data-i18n="contact.namePlaceholder"
+                                    placeholder="Your name" />
+                            </div>
+                            <div class="form-field">
+                                <label for="email" data-i18n="contact.email">Email</label>
+                                <input id="email" name="email" type="email" required
+                                    data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
+                            </div>
                         </div>
                         <div class="form-field">
-                            <label for="email" data-i18n="contact.email">Email</label>
-                            <input id="email" name="email" type="email" required data-i18n="contact.emailPlaceholder" placeholder="you@example.com" />
+                            <label for="message" data-i18n="contact.message">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
                         </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="message" data-i18n="contact.message">Message</label>
-                        <textarea id="message" name="message" rows="4" required data-i18n="contact.messagePlaceholder" placeholder="How can I help you?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send Message</button>
-                </form>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.sendMessage">Send
+                            Message</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Content Wrapper -->
+        <!-- End Content Wrapper -->
 
-    <!-- Scripts -->
-    <script src="src/theme.js"></script>
-    <script src="locales/translations.js"></script>
-    <script src="locales/additional-translations.js"></script>
-    <script>
-        // Mobile Header Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
-            
-            if (hamburgerMenu && mobileHeaderWrapper) {
-                hamburgerMenu.addEventListener('click', function() {
-                    const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
-                    
-                    // Toggle the active class
-                    mobileHeaderWrapper.classList.toggle('active');
-                    
-                    // Toggle hamburger animation
-                    hamburgerMenu.classList.toggle('is-active');
-                    
-                    // Update aria-expanded
-                    hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
-                    
-                    // Prevent body scroll when menu is open
-                    document.body.classList.toggle('no-scroll', !isExpanded);
-                });
-            }
-        });
-    </script>
+        <!-- Scripts -->
+        <script src="src/theme.js"></script>
+        <script src="locales/translations.js"></script>
+        <script src="locales/additional-translations.js"></script>
+        <script>
+            // Mobile Header Toggle
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.getElementById('hamburger-menu');
+                const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
+
+                if (hamburgerMenu && mobileHeaderWrapper) {
+                    hamburgerMenu.addEventListener('click', function () {
+                        const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
+
+                        // Toggle the active class
+                        mobileHeaderWrapper.classList.toggle('active');
+
+                        // Toggle hamburger animation
+                        hamburgerMenu.classList.toggle('is-active');
+
+                        // Update aria-expanded
+                        hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
+
+                        // Prevent body scroll when menu is open
+                        document.body.classList.toggle('no-scroll', !isExpanded);
+                    });
+                }
+            });
+        </script>
 </body>
+
 </html>

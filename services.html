@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Apply saved theme IMMEDIATELY to prevent flash -->
     <script>
-        (function() {
+        (function () {
             try {
                 var saved = localStorage.getItem('theme');
                 if (saved === 'dark' || saved === 'light') {
@@ -22,34 +23,38 @@
         })();
     </script>
     <title data-i18n="services.meta.title">Services & Pricing - Adel Abdallah</title>
-    <meta name="description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
-    <meta name="keywords" data-i18n="services.meta.keywords" content="software development services, frontend development, backend development, mobile app development, React, Node.js, WordPress, pricing">
+    <meta name="description" data-i18n="services.meta.description"
+        content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta name="keywords" data-i18n="services.meta.keywords"
+        content="software development services, frontend development, backend development, mobile app development, React, Node.js, WordPress, pricing">
     <meta name="author" content="Adel Abdallah">
     <meta name="robots" content="index, follow">
     <meta name="language" content="en">
     <meta name="revisit-after" content="7 days">
     <link rel="canonical" href="https://adelgafo.website/services.html">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" data-i18n="services.meta.title" content="Services & Pricing - Adel Abdallah">
-    <meta property="og:description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta property="og:description" data-i18n="services.meta.description"
+        content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adelgafo.website/services.html">
     <meta property="og:image" content="https://adelgafo.website/images/adel-profile.jpg">
     <meta property="og:site_name" content="Adel Abdallah Portfolio">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" data-i18n="services.meta.title" content="Services & Pricing - Adel Abdallah">
-    <meta name="twitter:description" data-i18n="services.meta.description" content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
+    <meta name="twitter:description" data-i18n="services.meta.description"
+        content="Professional software development services including Frontend, Backend, and Mobile applications. Flexible pricing options: per hour, per month, or per project.">
     <meta name="twitter:image" content="https://adelgafo.website/images/adel-profile.jpg">
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="PH">
     <meta name="geo.placename" content="Manila">
     <meta name="geo.position" content="14.5995;120.9842">
     <meta name="ICBM" content="14.5995, 120.9842">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -91,9 +96,9 @@
         ]
     }
     </script>
-    
+
     <link rel="stylesheet" href="styles.css">
-    
+
     <style>
         /* Header Styles */
         .portfolio-header {
@@ -325,7 +330,7 @@
         }
     </style>
     <link rel="stylesheet" href="header.css">
-    
+
     <style>
         /* Services Page Specific Styles */
         body {
@@ -335,35 +340,36 @@
             background: var(--color-background);
             color: var(--color-text);
         }
-        
+
         .services-container {
             max-width: 100%;
             margin: 0;
             padding: 2rem;
             min-height: 100vh;
         }
-        
+
         .services-header {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .services-header h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--color-text);
         }
-        
+
         .services-header p {
             font-size: 1.2rem;
             color: var(--color-text-secondary);
             margin-bottom: 2rem;
         }
-        
+
         .services-cards {
             display: flex;
-            overflow-x: visible; /* Allow arrows to be visible */
+            overflow-x: visible;
+            /* Allow arrows to be visible */
             scroll-behavior: smooth;
             padding-bottom: 1rem;
             gap: 1.5rem;
@@ -372,83 +378,96 @@
             width: 100%;
             max-width: 1000px;
             margin: 0 auto;
-            align-items: center; /* Center align arrows with cards */
+            align-items: center;
+            /* Center align arrows with cards */
         }
-        
+
         /* Desktop: Hide mobile arrow container */
         .mobile-arrow-container {
             display: none;
         }
-        
+
         /* Desktop: Hide mobile arrows */
         .mobile-arrow {
             display: none !important;
         }
-        
+
         /* Desktop: Show desktop arrows */
         .desktop-arrow {
             display: flex !important;
         }
-        
+
         /* Desktop: Reset order for horizontal layout */
         .service-card {
-            flex: 0 0 300px; /* Fixed width for each card */
+            flex: 0 0 300px;
+            /* Fixed width for each card */
             min-height: 350px;
-            order: 0; /* Reset order for desktop */
+            order: 0;
+            /* Reset order for desktop */
         }
-        
+
         .scroll-arrow.left {
-            order: -1; /* Left arrow before cards on desktop */
+            order: -1;
+            /* Left arrow before cards on desktop */
         }
-        
+
         .scroll-arrow.right {
-            order: 1; /* Right arrow after cards on desktop */
+            order: 1;
+            /* Right arrow after cards on desktop */
         }
-        
+
         .scroll-arrow {
             background: var(--color-surface) !important;
-            border: 2px solid var(--color-accent) !important; /* Make border more visible */
+            border: 2px solid var(--color-accent) !important;
+            /* Make border more visible */
             border-radius: 50%;
             width: 50px;
             height: 50px;
-            display: flex !important; /* Force display */
+            display: flex !important;
+            /* Force display */
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            color: var(--color-accent) !important; /* Make icon more visible */
+            color: var(--color-accent) !important;
+            /* Make icon more visible */
             position: relative;
             z-index: 10;
-            flex-shrink: 0; /* Prevent arrows from shrinking */
-            margin: 0 1rem; /* Add some spacing */
-            opacity: 1 !important; /* Force opacity */
+            flex-shrink: 0;
+            /* Prevent arrows from shrinking */
+            margin: 0 1rem;
+            /* Add some spacing */
+            opacity: 1 !important;
+            /* Force opacity */
         }
-        
+
         .scroll-arrow.left {
-            order: -1; /* Place left arrow before cards */
+            order: -1;
+            /* Place left arrow before cards */
         }
-        
+
         .scroll-arrow.right {
-            order: 1; /* Place right arrow after cards */
+            order: 1;
+            /* Place right arrow after cards */
         }
-        
+
         .scroll-arrow:hover {
             background: var(--color-accent);
             color: white;
             border-color: var(--color-accent);
         }
-        
+
         .scroll-arrow:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
-        
+
         .scroll-arrow:disabled:hover {
             background: var(--color-surface);
             color: var(--color-text);
             border-color: var(--color-border);
         }
-        
+
         .service-card {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -458,29 +477,31 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            min-height: 350px; /* Fixed height for all cards */
+            min-height: 350px;
+            /* Fixed height for all cards */
         }
-        
+
         .service-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         .service-card-header {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 1rem;
-            flex-shrink: 0; /* Prevent header from shrinking */
+            flex-shrink: 0;
+            /* Prevent header from shrinking */
         }
-        
+
         .service-icon {
             width: 24px;
             height: 24px;
             color: var(--color-accent);
             flex-shrink: 0;
         }
-        
+
         .service-card h3 {
             font-size: 1.25rem;
             font-weight: 600;
@@ -488,25 +509,27 @@
             margin: 0;
             flex-shrink: 0;
         }
-        
+
         .service-card p {
             color: var(--color-text-secondary);
             line-height: 1.6;
             margin: 0 0 1.5rem 0;
-            flex-grow: 1; /* Allow description to grow and push price to bottom */
+            flex-grow: 1;
+            /* Allow description to grow and push price to bottom */
         }
-        
+
         .pricing-model {
-            margin-top: auto; /* Push pricing to bottom */
+            margin-top: auto;
+            /* Push pricing to bottom */
             flex-shrink: 0;
         }
-        
+
         .service-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .service-list li {
             display: flex;
             justify-content: space-between;
@@ -514,21 +537,21 @@
             padding: 0.75rem 0;
             border-bottom: 1px solid var(--color-border);
         }
-        
+
         .service-list li:last-child {
             border-bottom: none;
         }
-        
+
         .service-name {
             font-weight: 500;
             color: var(--color-text);
         }
-        
+
         .service-price {
             font-weight: 600;
             color: var(--color-accent);
         }
-        
+
         .service-price-main {
             font-size: 2rem;
             font-weight: 700;
@@ -540,16 +563,16 @@
             border: 2px solid var(--color-accent);
             border-radius: 0.5rem;
         }
-        
-        
+
+
         .pricing-model {
             display: none;
         }
-        
+
         .pricing-model.active {
             display: block;
         }
-        
+
         .back-button {
             position: fixed;
             top: 2rem;
@@ -566,41 +589,42 @@
             transition: all 0.3s ease;
             z-index: 1000;
         }
-        
+
         .back-button:hover {
             background: var(--color-accent);
             color: white;
             border-color: var(--color-accent);
         }
-        
+
         .back-button svg {
             width: 1rem;
             height: 1rem;
         }
-        
+
         /* Responsive Design */
         @media (min-width: 768px) {
             .services-container {
                 padding: 3rem;
             }
         }
-        
+
         @media (max-width: 767px) {
             .services-header h1 {
                 font-size: 2rem;
             }
-            
+
             .services-header p {
                 font-size: 1rem;
             }
-            
+
             .services-cards {
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
-                max-width: 400px; /* Single card width */
+                max-width: 400px;
+                /* Single card width */
             }
-            
+
             /* Mobile arrow container */
             .mobile-arrow-container {
                 display: flex;
@@ -609,25 +633,26 @@
                 order: 1;
                 width: 100%;
             }
-            
+
             /* Hide desktop arrows on mobile */
             .desktop-arrow {
                 display: none !important;
             }
-            
+
             .service-card {
                 flex: 0 0 auto;
                 width: 100%;
                 max-width: 350px;
-                order: 2; /* Card comes after arrows */
+                order: 2;
+                /* Card comes after arrows */
             }
-            
+
             .scroll-arrow {
                 width: 40px;
                 height: 40px;
                 margin: 0;
             }
-            
+
             .back-button {
                 top: 1rem;
                 left: 1rem;
@@ -635,7 +660,16 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Organic Floating Background -->
+    <div class="organic-background" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
     <!-- Desktop Header (always visible on desktop) -->
     <header class="portfolio-header desktop-header">
         <!-- Top Contact Bar -->
@@ -644,14 +678,19 @@
                 <!-- Contact Info -->
                 <div class="header-contact">
                     <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                            </path>
                         </svg>
                         <span>+63 9369330609</span>
                     </a>
                     <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                         <span>adelgafo@gmail.com</span>
@@ -660,14 +699,21 @@
 
                 <!-- Social Links -->
                 <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                        title="GitHub Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
                         </svg>
                     </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                        title="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
@@ -684,64 +730,81 @@
                     <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
                     <p class="brand-title" data-i18n="header.title">Software Engineer</p>
                 </div>
-                
+
                 <!-- Navigation -->
                 <nav class="header-nav">
                     <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
                     <a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a>
                     <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </nav>
-                
+
                 <!-- Header Actions -->
                 <div class="header-actions">
                     <!-- Download PDF Button -->
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon"
+                        title="Download PDF Version" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true" focusable="false">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
                         <span data-i18n="header.downloadPdf">Download PDF</span>
                     </a>
-                
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
-                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-                
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
-                        <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme"
+                        aria-label="Toggle dark/light theme">
+                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                         </svg>
                     </button>
-                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
-                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language"
+                            aria-haspopup="true" aria-expanded="false">
+                            <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                            <button class="language-option" data-lang="en" role="menuitem"
+                                tabindex="-1">English</button>
+                            <button class="language-option" data-lang="ar" role="menuitem"
+                                tabindex="-1">العربية</button>
+                            <button class="language-option" data-lang="fr" role="menuitem"
+                                tabindex="-1">Français</button>
+                            <button class="language-option" data-lang="es" role="menuitem"
+                                tabindex="-1">Español</button>
+                            <button class="language-option" data-lang="it" role="menuitem"
+                                tabindex="-1">Italiano</button>
+                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                            <button class="language-option" data-lang="tl" role="menuitem"
+                                tabindex="-1">Tagalog</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Mobile Header Wrapper -->
@@ -758,112 +821,147 @@
                 <span class="hamburger-line"></span>
             </button>
         </div>
-        
+
         <!-- Mobile Header Content (copy of desktop header) -->
         <header class="portfolio-header mobile-header">
-        <!-- Top Contact Bar -->
-        <div class="header-top">
-            <div class="header-top-content">
-                <!-- Contact Info -->
-                <div class="header-contact">
-                    <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <span>+63 9369330609</span>
-                    </a>
-                    <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>adelgafo@gmail.com</span>
-                    </a>
-                </div>
+            <!-- Top Contact Bar -->
+            <div class="header-top">
+                <div class="header-top-content">
+                    <!-- Contact Info -->
+                    <div class="header-contact">
+                        <a href="tel:+639369330609" class="contact-link" title="Call me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+63 9369330609</span>
+                        </a>
+                        <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>adelgafo@gmail.com</span>
+                        </a>
+                    </div>
 
-                <!-- Social Links -->
-                <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+                    <!-- Social Links -->
+                    <div class="header-social">
+                        <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                            title="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                            title="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Main Header -->
-        <div class="header-main">
-            <div class="header-content">
-                <!-- Logo/Name -->
-                <div class="header-brand">
-                    <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
-                    <p class="brand-title" data-i18n="header.title">Software Engineer</p>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="header-nav">
-                    <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
-                    <a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a>
-                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
-                </nav>
-                
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary" data-i18n="header.downloadPdf">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7,10 12,15 17,10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download PDF
-                    </a>
-                    
-                    <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
-                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                    
-                    <div class="language-selector">
-                        <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false" aria-controls="language-dropdown">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <!-- Main Header -->
+            <div class="header-main">
+                <div class="header-content">
+                    <!-- Logo/Name -->
+                    <div class="header-brand">
+                        <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                        <p class="brand-title" data-i18n="header.title">Software Engineer</p>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="header-nav">
+                        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                        <a href="services.html" class="nav-link active" data-i18n="nav.services">Services</a>
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+                    </nav>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary"
+                            data-i18n="header.downloadPdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7,10 12,15 17,10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download PDF
+                        </a>
+
+                        <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
+                            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                             </svg>
                         </button>
-                        
-                        <div class="language-dropdown" id="language-dropdown" role="menu">
-                            <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                            <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                            <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                            <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                            <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                            <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                        <div class="language-selector">
+                            <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false"
+                                aria-controls="language-dropdown">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                            <div class="language-dropdown" id="language-dropdown" role="menu">
+                                <button class="language-option" data-lang="en" role="menuitem"
+                                    tabindex="-1">English</button>
+                                <button class="language-option" data-lang="ar" role="menuitem"
+                                    tabindex="-1">العربية</button>
+                                <button class="language-option" data-lang="fr" role="menuitem"
+                                    tabindex="-1">Français</button>
+                                <button class="language-option" data-lang="es" role="menuitem"
+                                    tabindex="-1">Español</button>
+                                <button class="language-option" data-lang="it" role="menuitem"
+                                    tabindex="-1">Italiano</button>
+                                <button class="language-option" data-lang="ja" role="menuitem"
+                                    tabindex="-1">日本語</button>
+                                <button class="language-option" data-lang="ko" role="menuitem"
+                                    tabindex="-1">한국어</button>
+                                <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                                <button class="language-option" data-lang="tl" role="menuitem"
+                                    tabindex="-1">Tagalog</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </header>
     </div>
     <!-- End Mobile Header Wrapper -->
@@ -871,306 +969,323 @@
     <!-- Main Content Wrapper -->
     <div class="content-wrapper">
         <div class="services-container">
-        <!-- Services Header -->
-        <div class="services-header">
-            <h1 data-i18n="services.hero.title">Services & Pricing</h1>
-            <p data-i18n="services.hero.subtitle">Professional software development services with flexible pricing options to meet your needs</p>
-        </div>
+            <!-- Services Header -->
+            <div class="services-header">
+                <h1 data-i18n="services.hero.title">Services & Pricing</h1>
+                <p data-i18n="services.hero.subtitle">Professional software development services with flexible pricing
+                    options to meet your needs</p>
+            </div>
 
-        <!-- Services Cards -->
-        <div class="services-cards">
-            <!-- Desktop arrows (outside mobile container) -->
-            <button id="scroll-left" class="scroll-arrow left desktop-arrow" title="Previous Cards">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-            
-            <!-- Mobile arrow container -->
-            <div class="mobile-arrow-container">
-                <button id="scroll-left-mobile" class="scroll-arrow left mobile-arrow" title="Previous Cards">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Services Cards -->
+            <div class="services-cards">
+                <!-- Desktop arrows (outside mobile container) -->
+                <button id="scroll-left" class="scroll-arrow left desktop-arrow" title="Previous Cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
-                <button id="scroll-right-mobile" class="scroll-arrow right mobile-arrow" title="Next Cards">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- Mobile arrow container -->
+                <div class="mobile-arrow-container">
+                    <button id="scroll-left-mobile" class="scroll-arrow left mobile-arrow" title="Previous Cards">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button id="scroll-right-mobile" class="scroll-arrow right mobile-arrow" title="Next Cards">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop right arrow -->
+                <button id="scroll-right" class="scroll-arrow right desktop-arrow" title="Next Cards">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
-            </div>
-            
-            <!-- Desktop right arrow -->
-            <button id="scroll-right" class="scroll-arrow right desktop-arrow" title="Next Cards">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-            
-            <!-- Frontend Development Card -->
-            <div class="service-card">
-                <div class="service-card-header">
-                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                    <h3 data-i18n="services.categories.frontend.title">Frontend Development</h3>
-                </div>
-                <p data-i18n="services.categories.frontend.description">React, Next.js, Vue.js, Angular, and modern web technologies</p>
-                
-                <!-- Hourly Pricing -->
-                <div class="service-price-main">$10/hr</div>
-            </div>
 
-            <!-- Backend Development Card -->
-            <div class="service-card">
-                <div class="service-card-header">
-                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                    <h3 data-i18n="services.categories.backend.title">Backend Development</h3>
-                </div>
-                <p data-i18n="services.categories.backend.description">Node.js, Express.js, APIs, databases, and server-side solutions</p>
-                
-                <!-- Hourly Pricing -->
-                <div class="service-price-main">$10/hr</div>
-            </div>
+                <!-- Frontend Development Card -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3 data-i18n="services.categories.frontend.title">Frontend Development</h3>
+                    </div>
+                    <p data-i18n="services.categories.frontend.description">React, Next.js, Vue.js, Angular, and modern
+                        web technologies</p>
 
-            <!-- Full-Stack Development Card -->
-            <div class="service-card">
-                <div class="service-card-header">
-                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                    <h3 data-i18n="services.categories.fullstack.title">Full-Stack Development</h3>
+                    <!-- Hourly Pricing -->
+                    <div class="service-price-main">$10/hr</div>
                 </div>
-                <p data-i18n="services.categories.fullstack.description">Complete web applications with Node.js/Express backend and React/Next.js frontend</p>
-                
-                <!-- Hourly Pricing -->
-                <div class="service-price-main">$10/hr</div>
-            </div>
 
-            <!-- Mobile Apps Card -->
-            <div class="service-card">
-                <div class="service-card-header">
-                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                    </svg>
-                    <h3 data-i18n="services.categories.mobile.title">Mobile Apps</h3>
-                </div>
-                <p data-i18n="services.categories.mobile.description">React Native + Expo for cross-platform iOS and Android applications</p>
-                
-                <!-- Hourly Pricing -->
-                <div class="service-price-main">$10/hr</div>
-            </div>
+                <!-- Backend Development Card -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3 data-i18n="services.categories.backend.title">Backend Development</h3>
+                    </div>
+                    <p data-i18n="services.categories.backend.description">Node.js, Express.js, APIs, databases, and
+                        server-side solutions</p>
 
-            <!-- WordPress Sites Card -->
-            <div class="service-card">
-                <div class="service-card-header">
-                    <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                    <h3 data-i18n="services.categories.wordpress.title">WordPress Sites</h3>
+                    <!-- Hourly Pricing -->
+                    <div class="service-price-main">$10/hr</div>
                 </div>
-                <p data-i18n="services.categories.wordpress.description">Custom WordPress websites, themes, plugins, and site maintenance</p>
-                
-                <!-- Hourly Pricing -->
-                <div class="service-price-main">$10/hr</div>
+
+                <!-- Full-Stack Development Card -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3 data-i18n="services.categories.fullstack.title">Full-Stack Development</h3>
+                    </div>
+                    <p data-i18n="services.categories.fullstack.description">Complete web applications with
+                        Node.js/Express backend and React/Next.js frontend</p>
+
+                    <!-- Hourly Pricing -->
+                    <div class="service-price-main">$10/hr</div>
+                </div>
+
+                <!-- Mobile Apps Card -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                        <h3 data-i18n="services.categories.mobile.title">Mobile Apps</h3>
+                    </div>
+                    <p data-i18n="services.categories.mobile.description">React Native + Expo for cross-platform iOS and
+                        Android applications</p>
+
+                    <!-- Hourly Pricing -->
+                    <div class="service-price-main">$10/hr</div>
+                </div>
+
+                <!-- WordPress Sites Card -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3 data-i18n="services.categories.wordpress.title">WordPress Sites</h3>
+                    </div>
+                    <p data-i18n="services.categories.wordpress.description">Custom WordPress websites, themes, plugins,
+                        and site maintenance</p>
+
+                    <!-- Hourly Pricing -->
+                    <div class="service-price-main">$10/hr</div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Content Wrapper -->
+        <!-- End Content Wrapper -->
 
-    <!-- Scripts -->
-    <script src="locales/translations.js"></script>
-    <script src="locales/additional-translations.js"></script>
-    <script src="locales/services-translations.js"></script>
-    <script>
-        // Mobile Header Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.getElementById('hamburger-menu');
-            const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
-            
-            if (hamburgerMenu && mobileHeaderWrapper) {
-                hamburgerMenu.addEventListener('click', function() {
-                    const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
-                    
-                    // Toggle the active class
-                    mobileHeaderWrapper.classList.toggle('active');
-                    
-                    // Toggle hamburger animation
-                    hamburgerMenu.classList.toggle('is-active');
-                    
-                    // Update aria-expanded
-                    hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
-                    
-                    // Prevent body scroll when menu is open
-                    document.body.classList.toggle('no-scroll', !isExpanded);
+        <!-- Scripts -->
+        <script src="src/theme.js"></script>
+        <script src="locales/translations.js"></script>
+        <script src="locales/additional-translations.js"></script>
+        <script src="locales/services-translations.js"></script>
+        <script>
+            // Mobile Header Toggle
+            document.addEventListener('DOMContentLoaded', function () {
+                const hamburgerMenu = document.getElementById('hamburger-menu');
+                const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
+
+                if (hamburgerMenu && mobileHeaderWrapper) {
+                    hamburgerMenu.addEventListener('click', function () {
+                        const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
+
+                        // Toggle the active class
+                        mobileHeaderWrapper.classList.toggle('active');
+
+                        // Toggle hamburger animation
+                        hamburgerMenu.classList.toggle('is-active');
+
+                        // Update aria-expanded
+                        hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
+
+                        // Prevent body scroll when menu is open
+                        document.body.classList.toggle('no-scroll', !isExpanded);
+                    });
+                }
+            });
+
+            // Theme Synchronization with Homepage
+            document.addEventListener('DOMContentLoaded', function () {
+                // Check for saved theme preference or default to light
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+
+                // Listen for theme changes from other pages
+                window.addEventListener('storage', function (e) {
+                    if (e.key === 'theme') {
+                        document.documentElement.setAttribute('data-theme', e.newValue);
+                    }
                 });
-            }
-        });
 
-        // Theme Synchronization with Homepage
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check for saved theme preference or default to light
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            
-            // Listen for theme changes from other pages
-            window.addEventListener('storage', function(e) {
-                if (e.key === 'theme') {
-                    document.documentElement.setAttribute('data-theme', e.newValue);
-                }
-            });
-            
-            // Listen for theme changes from other pages
-            window.addEventListener('theme-change', function(e) {
-                document.documentElement.setAttribute('data-theme', e.detail.theme);
-                localStorage.setItem('theme', e.detail.theme);
-            });
-        });
-
-        // Scroll Navigation Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const scrollLeftBtn = document.getElementById('scroll-left');
-            const scrollRightBtn = document.getElementById('scroll-right');
-            const scrollLeftMobileBtn = document.getElementById('scroll-left-mobile');
-            const scrollRightMobileBtn = document.getElementById('scroll-right-mobile');
-            const servicesCards = document.querySelector('.services-cards');
-            const allCards = servicesCards.querySelectorAll('.service-card');
-            let currentIndex = 0;
-            
-            // Check if mobile (screen width <= 767px)
-            const isMobile = window.innerWidth <= 767;
-            const cardsPerView = isMobile ? 1 : 3; // 1 card on mobile, 3 cards on desktop
-            const totalCards = allCards.length;
-            
-            // Get the appropriate buttons based on screen size
-            function getActiveButtons() {
-                if (isMobile) {
-                    return {
-                        left: scrollLeftMobileBtn,
-                        right: scrollRightMobileBtn
-                    };
-                } else {
-                    return {
-                        left: scrollLeftBtn,
-                        right: scrollRightBtn
-                    };
-                }
-            }
-            
-            function updateArrowStates() {
-                const buttons = getActiveButtons();
-                buttons.left.disabled = currentIndex <= 0;
-                buttons.right.disabled = currentIndex >= totalCards - cardsPerView;
-                
-                // Ensure arrows are always visible
-                buttons.left.style.display = 'flex';
-                buttons.right.style.display = 'flex';
-            }
-            
-            function showCards(startIndex) {
-                // Hide all cards first
-                allCards.forEach(card => {
-                    card.style.display = 'none';
+                // Listen for theme changes from other pages
+                window.addEventListener('theme-change', function (e) {
+                    document.documentElement.setAttribute('data-theme', e.detail.theme);
+                    localStorage.setItem('theme', e.detail.theme);
                 });
-                
-                // Show the cards starting from startIndex
-                for (let i = startIndex; i < startIndex + cardsPerView && i < totalCards; i++) {
-                    allCards[i].style.display = 'flex';
-                }
-                
-                currentIndex = startIndex;
-                updateArrowStates();
-            }
-            
-            // Event listeners for desktop arrows
-            scrollLeftBtn.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    showCards(currentIndex - 1);
-                }
             });
-            
-            scrollRightBtn.addEventListener('click', function() {
-                if (currentIndex < totalCards - cardsPerView) {
-                    showCards(currentIndex + 1);
+
+            // Scroll Navigation Functionality
+            document.addEventListener('DOMContentLoaded', function () {
+                const scrollLeftBtn = document.getElementById('scroll-left');
+                const scrollRightBtn = document.getElementById('scroll-right');
+                const scrollLeftMobileBtn = document.getElementById('scroll-left-mobile');
+                const scrollRightMobileBtn = document.getElementById('scroll-right-mobile');
+                const servicesCards = document.querySelector('.services-cards');
+                const allCards = servicesCards.querySelectorAll('.service-card');
+                let currentIndex = 0;
+
+                // Check if mobile (screen width <= 767px)
+                const isMobile = window.innerWidth <= 767;
+                const cardsPerView = isMobile ? 1 : 3; // 1 card on mobile, 3 cards on desktop
+                const totalCards = allCards.length;
+
+                // Get the appropriate buttons based on screen size
+                function getActiveButtons() {
+                    if (isMobile) {
+                        return {
+                            left: scrollLeftMobileBtn,
+                            right: scrollRightMobileBtn
+                        };
+                    } else {
+                        return {
+                            left: scrollLeftBtn,
+                            right: scrollRightBtn
+                        };
+                    }
                 }
-            });
-            
-            // Event listeners for mobile arrows
-            scrollLeftMobileBtn.addEventListener('click', function() {
-                if (currentIndex > 0) {
-                    showCards(currentIndex - 1);
+
+                function updateArrowStates() {
+                    const buttons = getActiveButtons();
+                    buttons.left.disabled = currentIndex <= 0;
+                    buttons.right.disabled = currentIndex >= totalCards - cardsPerView;
+
+                    // Ensure arrows are always visible
+                    buttons.left.style.display = 'flex';
+                    buttons.right.style.display = 'flex';
                 }
-            });
-            
-            scrollRightMobileBtn.addEventListener('click', function() {
-                if (currentIndex < totalCards - cardsPerView) {
-                    showCards(currentIndex + 1);
-                }
-            });
-            
-            // Initial state - show first cards
-            showCards(0);
-            updateArrowStates();
-            
-            // Handle window resize (orientation change)
-            window.addEventListener('resize', function() {
-                const newIsMobile = window.innerWidth <= 767;
-                const newCardsPerView = newIsMobile ? 1 : 3;
-                
-                if (newCardsPerView !== cardsPerView) {
-                    // Reset to first card when switching between mobile/desktop
-                    currentIndex = 0;
-                    showCards(0);
+
+                function showCards(startIndex) {
+                    // Hide all cards first
+                    allCards.forEach(card => {
+                        card.style.display = 'none';
+                    });
+
+                    // Show the cards starting from startIndex
+                    for (let i = startIndex; i < startIndex + cardsPerView && i < totalCards; i++) {
+                        allCards[i].style.display = 'flex';
+                    }
+
+                    currentIndex = startIndex;
                     updateArrowStates();
                 }
+
+                // Event listeners for desktop arrows
+                scrollLeftBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        showCards(currentIndex - 1);
+                    }
+                });
+
+                scrollRightBtn.addEventListener('click', function () {
+                    if (currentIndex < totalCards - cardsPerView) {
+                        showCards(currentIndex + 1);
+                    }
+                });
+
+                // Event listeners for mobile arrows
+                scrollLeftMobileBtn.addEventListener('click', function () {
+                    if (currentIndex > 0) {
+                        showCards(currentIndex - 1);
+                    }
+                });
+
+                scrollRightMobileBtn.addEventListener('click', function () {
+                    if (currentIndex < totalCards - cardsPerView) {
+                        showCards(currentIndex + 1);
+                    }
+                });
+
+                // Initial state - show first cards
+                showCards(0);
+                updateArrowStates();
+
+                // Handle window resize (orientation change)
+                window.addEventListener('resize', function () {
+                    const newIsMobile = window.innerWidth <= 767;
+                    const newCardsPerView = newIsMobile ? 1 : 3;
+
+                    if (newCardsPerView !== cardsPerView) {
+                        // Reset to first card when switching between mobile/desktop
+                        currentIndex = 0;
+                        showCards(0);
+                        updateArrowStates();
+                    }
+                });
+
+                // Contact Form Functionality
+                const contactForm = document.getElementById('contact-form');
+
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const message = formData.get('message');
+
+                    // Create mailto link
+                    const subject = `Contact from ${name}`;
+                    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+                    const mailtoLink = `mailto:adelgafo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                    // Open email client
+                    window.location.href = mailtoLink;
+
+                    // Show success message
+                    const submitBtn = contactForm.querySelector('.btn');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Message Sent!';
+                    submitBtn.style.background = '#28a745';
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.background = '';
+                    }, 3000);
+                });
             });
-            
-            // Contact Form Functionality
-            const contactForm = document.getElementById('contact-form');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const formData = new FormData(contactForm);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
-                
-                // Create mailto link
-                const subject = `Contact from ${name}`;
-                const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-                const mailtoLink = `mailto:adelgafo@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                
-                // Open email client
-                window.location.href = mailtoLink;
-                
-                // Show success message
-                const submitBtn = contactForm.querySelector('.btn');
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.background = '#28a745';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.background = '';
-                }, 3000);
-            });
-        });
-    </script>
+        </script>
 </body>
+
 </html>

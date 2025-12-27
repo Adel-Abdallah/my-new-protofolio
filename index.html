@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Apply saved theme IMMEDIATELY to prevent flash -->
     <script>
-        (function() {
+        (function () {
             try {
                 var saved = localStorage.getItem('theme');
                 if (saved === 'dark' || saved === 'light') {
@@ -21,52 +22,56 @@
             }
         })();
     </script>
-    
+
     <!-- Primary Meta Tags -->
     <title>Adel Abdallah - Software Engineer | React Developer | WordPress Expert</title>
     <meta name="title" content="Adel Abdallah - Software Engineer | React Developer | WordPress Expert">
-    <meta name="description" content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications, e-commerce platforms, and technical team management. Available for freelance projects.">
-    <meta name="keywords" content="Software Engineer, React Developer, WordPress Developer, Frontend Developer, Full Stack Developer, Node.js Developer, Team Management, Freelance Developer, Web Development, JavaScript, Redux, Express.js, E-commerce Development, Technical Leadership, Philippines Developer">
+    <meta name="description"
+        content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications, e-commerce platforms, and technical team management. Available for freelance projects.">
+    <meta name="keywords"
+        content="Software Engineer, React Developer, WordPress Developer, Frontend Developer, Full Stack Developer, Node.js Developer, Team Management, Freelance Developer, Web Development, JavaScript, Redux, Express.js, E-commerce Development, Technical Leadership, Philippines Developer">
     <meta name="author" content="Adel Abdallah">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://adelgafo.website/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adelgafo.website/">
     <meta property="og:title" content="Adel Abdallah - Software Engineer | React Developer | WordPress Expert">
-    <meta property="og:description" content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications and technical team management.">
+    <meta property="og:description"
+        content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications and technical team management.">
     <meta property="og:image" content="https://adelgafo.website/images/adel-abdallah-profile.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Adel Abdallah Portfolio">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://adelgafo.website/">
     <meta property="twitter:title" content="Adel Abdallah - Software Engineer | React Developer | WordPress Expert">
-    <meta property="twitter:description" content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications and technical team management.">
+    <meta property="twitter:description"
+        content="Experienced Software Engineer with 5+ years in React, Node.js, WordPress development, and team leadership. Specializing in full-stack web applications and technical team management.">
     <meta property="twitter:image" content="https://adelgafo.website/images/adel-abdallah-profile.jpg">
     <meta property="twitter:creator" content="@adelgafo">
-    
+
     <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#f4a261">
+    <meta name="msapplication-TileColor" content="#f4a261">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Adel Abdallah">
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="PH">
     <meta name="geo.placename" content="Manila, Philippines">
     <meta name="geo.position" content="14.5995;120.9842">
     <meta name="ICBM" content="14.5995, 120.9842">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -122,9 +127,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="header.css">
     <style>
         /* Header Styles */
         .portfolio-header {
@@ -358,7 +363,7 @@
     <link rel="stylesheet" href="header.css">
     <script>
         // Enable PDF-only elements when URL contains ?pdf=1
-        (function(){
+        (function () {
             try {
                 var params = new URLSearchParams(window.location.search);
                 var enable = params.get('pdf') === '1';
@@ -366,16 +371,25 @@
                     if (document.body) {
                         document.body.classList.add('pdf-mode');
                     } else {
-                        document.addEventListener('DOMContentLoaded', function(){
+                        document.addEventListener('DOMContentLoaded', function () {
                             document.body.classList.add('pdf-mode');
                         });
                     }
                 }
-            } catch(e) {}
+            } catch (e) { }
         })();
     </script>
 </head>
+
 <body>
+    <!-- Organic Floating Background -->
+    <div class="organic-background" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
     <!-- Desktop Header (always visible on desktop) -->
     <header class="portfolio-header desktop-header">
         <!-- Top Contact Bar -->
@@ -384,14 +398,19 @@
                 <!-- Contact Info -->
                 <div class="header-contact">
                     <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                            </path>
                         </svg>
                         <span>+63 9369330609</span>
                     </a>
                     <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                         <span>adelgafo@gmail.com</span>
@@ -400,14 +419,21 @@
 
                 <!-- Social Links -->
                 <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                        title="GitHub Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
                         </svg>
                     </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                        title="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
@@ -424,64 +450,81 @@
                     <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
                     <p class="brand-title" data-i18n="header.title">Software Engineer</p>
                 </div>
-                
+
                 <!-- Navigation -->
                 <nav class="header-nav">
                     <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
                     <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
                     <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </nav>
-                
+
                 <!-- Header Actions -->
                 <div class="header-actions">
                     <!-- Download PDF Button -->
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon" title="Download PDF Version" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary btn-icon"
+                        title="Download PDF Version" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true" focusable="false">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
                         <span data-i18n="header.downloadPdf">Download PDF</span>
                     </a>
-                
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme" aria-label="Toggle dark/light theme">
-                    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-                
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language" aria-haspopup="true" aria-expanded="false">
-                        <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-icon" type="button" title="Toggle Theme"
+                        aria-label="Toggle dark/light theme">
+                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                         </svg>
                     </button>
-                    <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
-                        <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                        <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                        <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                        <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                        <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                        <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                        <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                        <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                        <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button id="language-toggle" class="btn btn-icon" type="button" title="Select Language"
+                            aria-haspopup="true" aria-expanded="false">
+                            <svg class="language-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="language-dropdown" role="menu" aria-hidden="true">
+                            <button class="language-option" data-lang="en" role="menuitem"
+                                tabindex="-1">English</button>
+                            <button class="language-option" data-lang="ar" role="menuitem"
+                                tabindex="-1">العربية</button>
+                            <button class="language-option" data-lang="fr" role="menuitem"
+                                tabindex="-1">Français</button>
+                            <button class="language-option" data-lang="es" role="menuitem"
+                                tabindex="-1">Español</button>
+                            <button class="language-option" data-lang="it" role="menuitem"
+                                tabindex="-1">Italiano</button>
+                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
+                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
+                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                            <button class="language-option" data-lang="tl" role="menuitem"
+                                tabindex="-1">Tagalog</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Mobile Header Wrapper -->
@@ -498,112 +541,147 @@
                 <span class="hamburger-line"></span>
             </button>
         </div>
-        
+
         <!-- Mobile Header Content (copy of desktop header) -->
         <header class="portfolio-header mobile-header">
-        <!-- Top Contact Bar -->
-        <div class="header-top">
-            <div class="header-top-content">
-                <!-- Contact Info -->
-                <div class="header-contact">
-                    <a href="tel:+639369330609" class="contact-link" title="Call me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <span>+63 9369330609</span>
-                    </a>
-                    <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>adelgafo@gmail.com</span>
-                    </a>
-                </div>
+            <!-- Top Contact Bar -->
+            <div class="header-top">
+                <div class="header-top-content">
+                    <!-- Contact Info -->
+                    <div class="header-contact">
+                        <a href="tel:+639369330609" class="contact-link" title="Call me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.3 1.7.54 2.5a2 2 0 0 1-.45 2.11L8 9a16 16 0 0 0 7 7l.67-1.2a2 2 0 0 1 2.11-.45c.8.24 1.64.42 2.5.54A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <span>+63 9369330609</span>
+                        </a>
+                        <a href="mailto:adelgafo@gmail.com" class="contact-link" title="Email me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>adelgafo@gmail.com</span>
+                        </a>
+                    </div>
 
-                <!-- Social Links -->
-                <div class="header-social">
-                    <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link" title="GitHub Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
+                    <!-- Social Links -->
+                    <div class="header-social">
+                        <a href="https://github.com/adel-abdallah" target="_blank" rel="noopener" class="social-link"
+                            title="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/adel-gafo" target="_blank" rel="noopener" class="social-link"
+                            title="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Main Header -->
-        <div class="header-main">
-            <div class="header-content">
-                <!-- Logo/Name -->
-                <div class="header-brand">
-                    <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
-                    <p class="brand-title" data-i18n="header.title">Software Engineer</p>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="header-nav">
-                    <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
-                    <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-                    <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
-                </nav>
-                
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary" data-i18n="header.downloadPdf">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7,10 12,15 17,10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download PDF
-                    </a>
-                    
-                    <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
-                        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                    
-                    <div class="language-selector">
-                        <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false" aria-controls="language-dropdown">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <!-- Main Header -->
+            <div class="header-main">
+                <div class="header-content">
+                    <!-- Logo/Name -->
+                    <div class="header-brand">
+                        <h1 class="brand-name" data-i18n="header.name">Adel Abdallah</h1>
+                        <p class="brand-title" data-i18n="header.title">Software Engineer</p>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="header-nav">
+                        <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+                        <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+                        <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+                    </nav>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <a href="./Adel-Abdallah-Resume.pdf" download class="btn btn-primary"
+                            data-i18n="header.downloadPdf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7,10 12,15 17,10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download PDF
+                        </a>
+
+                        <button id="theme-toggle" class="btn btn-icon" type="button" aria-label="Toggle theme">
+                            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                             </svg>
                         </button>
-                        
-                        <div class="language-dropdown" id="language-dropdown" role="menu">
-                            <button class="language-option" data-lang="en" role="menuitem" tabindex="-1">English</button>
-                            <button class="language-option" data-lang="ar" role="menuitem" tabindex="-1">العربية</button>
-                            <button class="language-option" data-lang="fr" role="menuitem" tabindex="-1">Français</button>
-                            <button class="language-option" data-lang="es" role="menuitem" tabindex="-1">Español</button>
-                            <button class="language-option" data-lang="it" role="menuitem" tabindex="-1">Italiano</button>
-                            <button class="language-option" data-lang="ja" role="menuitem" tabindex="-1">日本語</button>
-                            <button class="language-option" data-lang="ko" role="menuitem" tabindex="-1">한국어</button>
-                            <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
-                            <button class="language-option" data-lang="tl" role="menuitem" tabindex="-1">Tagalog</button>
+
+                        <div class="language-selector">
+                            <button id="language-toggle" class="btn btn-icon" type="button" aria-expanded="false"
+                                aria-controls="language-dropdown">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                            <div class="language-dropdown" id="language-dropdown" role="menu">
+                                <button class="language-option" data-lang="en" role="menuitem"
+                                    tabindex="-1">English</button>
+                                <button class="language-option" data-lang="ar" role="menuitem"
+                                    tabindex="-1">العربية</button>
+                                <button class="language-option" data-lang="fr" role="menuitem"
+                                    tabindex="-1">Français</button>
+                                <button class="language-option" data-lang="es" role="menuitem"
+                                    tabindex="-1">Español</button>
+                                <button class="language-option" data-lang="it" role="menuitem"
+                                    tabindex="-1">Italiano</button>
+                                <button class="language-option" data-lang="ja" role="menuitem"
+                                    tabindex="-1">日本語</button>
+                                <button class="language-option" data-lang="ko" role="menuitem"
+                                    tabindex="-1">한국어</button>
+                                <button class="language-option" data-lang="zh" role="menuitem" tabindex="-1">中文</button>
+                                <button class="language-option" data-lang="tl" role="menuitem"
+                                    tabindex="-1">Tagalog</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </header>
     </div>
     <!-- End Mobile Header Wrapper -->
@@ -611,243 +689,399 @@
     <!-- Main Content Wrapper -->
     <div class="content-wrapper">
         <main class="portfolio">
-        <!-- Professional Summary -->
-        <section class="section" itemscope itemtype="https://schema.org/Person">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <path d="M14 2v6h6"></path>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <line x1="10" y1="9" x2="8" y2="9"></line>
-                </svg>
-                <span data-i18n="sections.professionalSummary">PROFESSIONAL SUMMARY</span>
-            </h2>
-            <p itemprop="description" data-i18n="summary.intro">Full-stack Developer with 5+ years of experience creating user-friendly and visually appealing websites and applications using React.</p>
-            <p data-i18n="summary.specialization">Specialized in JavaScript, React, Redux, and modern web technologies.</p>
-            <p data-i18n="summary.trackRecord">Proven track record in full-stack development, team management, and delivering scalable solutions for e-commerce, content management, and web applications.</p>
-            <p data-i18n="summary.currentClients">Currently serving clients in fintech, marketing automation, and link management sectors.</p>            
-        </section>
+            <!-- Professional Summary -->
+            <section class="section" itemscope itemtype="https://schema.org/Person">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <path d="M14 2v6h6"></path>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <line x1="10" y1="9" x2="8" y2="9"></line>
+                    </svg>
+                    <span data-i18n="sections.professionalSummary">PROFESSIONAL SUMMARY</span>
+                </h2>
+                <p itemprop="description" data-i18n="summary.intro">Full-stack Developer with 5+ years of experience
+                    creating user-friendly and visually appealing websites and applications using React.</p>
+                <p data-i18n="summary.specialization">Specialized in JavaScript, React, Redux, and modern web
+                    technologies.</p>
+                <p data-i18n="summary.trackRecord">Proven track record in full-stack development, team management, and
+                    delivering scalable solutions for e-commerce, content management, and web applications.</p>
+                <p data-i18n="summary.currentClients">Currently serving clients in fintech, marketing automation, and
+                    link management sectors.</p>
+            </section>
 
-        <!-- Current Services -->
-        <section class="section" itemscope itemtype="https://schema.org/Service">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-                <span data-i18n="sections.currentServices">CURRENT SERVICES</span>
-            </h2>
-            <div class="services-grid">
-                <div class="service-item" itemscope itemtype="https://schema.org/Service">
-                    <h3 class="service-title" itemprop="name" data-i18n="services.wordpress.title">WordPress Development</h3>
-                    <p class="service-description" itemprop="description" data-i18n="services.wordpress.description">Custom themes, plugins, migrations, performance optimization, and site maintenance</p>
+            <!-- Current Services -->
+            <section class="section" itemscope itemtype="https://schema.org/Service">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span data-i18n="sections.currentServices">CURRENT SERVICES</span>
+                </h2>
+                <div class="services-grid">
+                    <div class="service-item" itemscope itemtype="https://schema.org/Service">
+                        <h3 class="service-title" itemprop="name" data-i18n="services.wordpress.title">WordPress
+                            Development</h3>
+                        <p class="service-description" itemprop="description"
+                            data-i18n="services.wordpress.description">Custom themes, plugins, migrations, performance
+                            optimization, and site maintenance</p>
+                    </div>
+                    <div class="service-item" itemscope itemtype="https://schema.org/Service">
+                        <h3 class="service-title" itemprop="name" data-i18n="services.reactExpress.title">React &
+                            Express Development</h3>
+                        <p class="service-description" itemprop="description"
+                            data-i18n="services.reactExpress.description">Full-stack web applications, API development,
+                            and modern JavaScript solutions</p>
+                    </div>
+                    <div class="service-item" itemscope itemtype="https://schema.org/Service">
+                        <h3 class="service-title" itemprop="name" data-i18n="services.teamManagement.title">Team
+                            Management</h3>
+                        <p class="service-description" itemprop="description"
+                            data-i18n="services.teamManagement.description">Technical leadership, project coordination,
+                            and development team guidance</p>
+                    </div>
                 </div>
-                <div class="service-item" itemscope itemtype="https://schema.org/Service">
-                    <h3 class="service-title" itemprop="name" data-i18n="services.reactExpress.title">React & Express Development</h3>
-                    <p class="service-description" itemprop="description" data-i18n="services.reactExpress.description">Full-stack web applications, API development, and modern JavaScript solutions</p>
-                </div>
-                <div class="service-item" itemscope itemtype="https://schema.org/Service">
-                    <h3 class="service-title" itemprop="name" data-i18n="services.teamManagement.title">Team Management</h3>
-                    <p class="service-description" itemprop="description" data-i18n="services.teamManagement.description">Technical leadership, project coordination, and development team guidance</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Last 3 Clients -->
-        <section class="section">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                <span data-i18n="sections.lastClients">LAST CLIENTS I Worked With</span>
-            </h2>
-            <div class="clients-list">
-                <div class="client-item">
-                    <h3 class="client-name"><a href="https://investingsnacks.com/" target="_blank" data-i18n="clients.investingSnacks.name">Investing Snacks</a></h3>
-                    <p class="client-type" data-i18n="clients.investingSnacks.type">Financial Technology Platform</p>
-                </div>
-                <div class="client-item">
-                    <h3 class="client-name"><a href="https://clickcatalyst.net/" target="_blank" data-i18n="clients.clickCatalyst.name">ClickCatalyst</a></h3>
-                    <p class="client-type" data-i18n="clients.clickCatalyst.type">Marketing Automation Platform</p>
-                </div>
-                <div class="client-item">
-                    <h3 class="client-name"><a href="https://outlink.pro/" target="_blank" data-i18n="clients.outlinkPro.name">Outlink Pro</a></h3>
-                    <p class="client-type" data-i18n="clients.outlinkPro.type">Link Management Solution</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-                <span data-i18n="sections.technicalSkills">TECHNICAL SKILLS</span>
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title" data-i18n="skills.frontend">Frontend</h3>
-                    <ul class="skill-list">
-                        <li>React</li>
-                        <li>Redux & Redux Saga</li>
-                        <li>Next.js</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>Tailwind CSS</li>
-                        <li>Styled-Components</li>
-                        <li>Zustand</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title" data-i18n="skills.backendTools">Backend & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>MySQL</li>
-                        <li>Docker</li>
-                        <li>WordPress</li>
-                        <li>REST APIs</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-category-title" data-i18n="skills.testingManagement">Testing & Management</h3>
-                    <ul class="skill-list">
-                        <li>Manual Testing</li>
-                        <li>Smoke Testing</li>
-                        <li>Gray Testing</li>
-                        <li>Team Leadership</li>
-                        <li>Project Management</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Experience -->
-        <section class="section" itemscope itemtype="https://schema.org/Organization">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
-                </svg>
-                <span data-i18n="sections.workExperience">WORK EXPERIENCE</span>
-            </h2>
-            
-            <div class="experience-item" itemscope itemtype="https://schema.org/JobPosting">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3 class="job-title" itemprop="title" data-i18n="experience.freelance.title">Freelance Software Engineer & Team Lead</h3>
-                        <p class="company" itemprop="hiringOrganization" itemscope itemtype="https://schema.org/Organization">
-                            <span itemprop="name" data-i18n="experience.freelance.company">Self-Employed</span>
+            <!-- Last 3 Clients -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span data-i18n="sections.lastClients">LAST CLIENTS I Worked With</span>
+                </h2>
+                <div class="clients-list">
+                    <div class="client-item">
+                        <h3 class="client-name"><a href="https://investingsnacks.com/" target="_blank"
+                                data-i18n="clients.investingSnacks.name">Investing Snacks</a></h3>
+                        <p class="client-type" data-i18n="clients.investingSnacks.type">Financial Technology Platform
                         </p>
                     </div>
-                    <div class="experience-date" itemprop="datePosted" data-i18n="experience.freelance.date">2024 - PRESENT</div>
-                </div>
-                <ul class="experience-achievements">
-                    <li data-i18n="experience.freelance.achievement1">Currently managing teams of 4 developers across 3 different client projects</li>
-                    <li data-i18n="experience.freelance.achievement2">Serving Investing Snacks (FinTech), ClickCatalyst (Marketing Automation), and Outlink Pro (Link Management)</li>
-                    <li data-i18n="experience.freelance.achievement3">Providing full-stack development services with React, Express, and WordPress</li>
-                    <li data-i18n="experience.freelance.achievement4">Leading project planning, sprint management, and technical architecture decisions</li>
-                    <li data-i18n="experience.freelance.achievement5">Ensuring code quality and timely delivery across all client engagements</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3 class="job-title" data-i18n="experience.contentWriter.title">Technical Content Writer</h3>
-                        <p class="company"><a href="https://stackup.dev/" target="_blank" data-i18n="experience.contentWriter.company">StackUp.Dev</a></p>
+                    <div class="client-item">
+                        <h3 class="client-name"><a href="https://clickcatalyst.net/" target="_blank"
+                                data-i18n="clients.clickCatalyst.name">ClickCatalyst</a></h3>
+                        <p class="client-type" data-i18n="clients.clickCatalyst.type">Marketing Automation Platform</p>
                     </div>
-                    <div class="experience-date" data-i18n="experience.contentWriter.date">JUN 2024 - NOV 2024</div>
-                </div>
-                <ul class="experience-achievements">
-                    <li data-i18n="experience.contentWriter.achievement1">Created comprehensive tutorials covering React.js, Redux Toolkit, and Docker</li>
-                    <li data-i18n="experience.contentWriter.achievement2">Developed educational content for developers at various skill levels</li>
-                    <li data-i18n="experience.contentWriter.achievement3">Focused on practical application and modern web development best practices</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3 class="job-title" data-i18n="experience.thomasArts.title">Software Engineer/Programmer</h3>
-                        <p class="company"><a href="https://www.thomasarts.com/" target="_blank" data-i18n="experience.thomasArts.company">ThomasArts</a></p>
+                    <div class="client-item">
+                        <h3 class="client-name"><a href="https://outlink.pro/" target="_blank"
+                                data-i18n="clients.outlinkPro.name">Outlink Pro</a></h3>
+                        <p class="client-type" data-i18n="clients.outlinkPro.type">Link Management Solution</p>
                     </div>
-                    <div class="experience-date" data-i18n="experience.thomasArts.date">OCT 2023 - JUL 2024</div>
                 </div>
-                <ul class="experience-achievements">
-                    <li data-i18n="experience.thomasArts.achievement1">Maintained and updated multiple WordPress sites ensuring optimal performance</li>
-                    <li data-i18n="experience.thomasArts.achievement2">Developed centralized MERN stack management system for network of sites</li>
-                    <li data-i18n="experience.thomasArts.achievement3">Built custom WordPress plugin leveraging WP API for enhanced functionality</li>
-                    <li data-i18n="experience.thomasArts.achievement4">Implemented automated monitoring and update tracking systems</li>
-                </ul>
-            </div>
+            </section>
 
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3 class="job-title" data-i18n="experience.ozsale.title">Software Engineer</h3>
-                        <p class="company"><a href="https://www.ozsale.com.au" target="_blank" data-i18n="experience.ozsale.company">Ozsale (Mysale Group)</a></p>
-                    </div>
-                    <div class="experience-date" data-i18n="experience.ozsale.date">JUN 2022 - JUN 2023</div>
-                </div>
-                <ul class="experience-achievements">
-                    <li data-i18n="experience.ozsale.achievement1">Led development and maintenance of 10 e-commerce platforms using React JS</li>
-                    <li data-i18n="experience.ozsale.achievement2">Implemented Redux Saga for efficient state management and async operations</li>
-                    <li data-i18n="experience.ozsale.achievement3">Developed scalable UI components using styled-components and Storybook</li>
-                    <li data-i18n="experience.ozsale.achievement4">Collaborated with backend teams for seamless RESTful API integration</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3 class="job-title" data-i18n="experience.happySeason.title">Frontend React Developer</h3>
-                        <p class="company"><a href="https://happy-season.com/" target="_blank" data-i18n="experience.happySeason.company">Happy Season</a></p>
-                    </div>
-                    <div class="experience-date" data-i18n="experience.happySeason.date">JAN 2020 - MAY 2022</div>
-                </div>
-                <ul class="experience-achievements">
-                    <li data-i18n="experience.happySeason.achievement1">Developed wedding planning platform using React JS with focus on scalability</li>
-                    <li data-i18n="experience.happySeason.achievement2">Managed application state with Redux Saga for optimized data synchronization</li>
-                    <li data-i18n="experience.happySeason.achievement3">Integrated Next.js for server-side rendering and improved SEO performance</li>
-                    <li data-i18n="experience.happySeason.achievement4">Built responsive, modular UI components with styled-components architecture</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section class="section" itemscope itemtype="https://schema.org/EducationalOrganization">
-            <h2 class="section-title">
-                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                    <path d="M22 10L12 4 2 10l10 6 10-6z"></path>
-                    <path d="M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"></path>
-                </svg>
-                <span data-i18n="sections.education">EDUCATION</span>
-            </h2>
-            <div class="education-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-                <div class="education-header">
-                    <div class="education-title">
-                        <h3 class="degree" itemprop="name" data-i18n="education.title">Diploma in Information Technology</h3>
-                        <p class="institution" itemprop="recognizedBy" itemscope itemtype="https://schema.org/EducationalOrganization">
-                            <a href="https://informatics.edu.ph/" target="_blank" itemprop="url">
-                                <span itemprop="name" data-i18n="education.institution">Informatics, Baguio, Philippines</span>
-                            </a>
+            <!-- Featured Projects -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>FEATURED PROJECTS</span>
+                </h2>
+                <div class="projects-grid">
+                    <!-- E-commerce Template Collection -->
+                    <div class="project-card">
+                        <div class="project-badge">Live</div>
+                        <h3 class="project-title">E-commerce Template Collection</h3>
+                        <p class="project-tagline">10 Complete, Production-Ready Templates</p>
+                        <p class="project-description">
+                            A curated collection of modern e-commerce templates built with Next.js and Vanilla CSS.
+                            Each template includes a product list page, product detail page, cart, and wishlist —
+                            all with unique design systems and fully responsive layouts.
                         </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Vanilla CSS</span>
+                            <span class="tech-tag">E-commerce</span>
+                        </div>
+                        <a href="https://template-showcase-six.vercel.app/" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Browse Templates
+                        </a>
                     </div>
-                    <div class="education-date" itemprop="dateCreated">2017</div>
+
+                    <!-- English Gold Academy -->
+                    <div class="project-card">
+                        <div class="project-badge">Live</div>
+                        <h3 class="project-title">English Gold Academy</h3>
+                        <p class="project-tagline">Master English with Expert Teachers</p>
+                        <p class="project-description">
+                            A modern language learning platform for students worldwide. Features include
+                            personalized lessons with native English speakers, structured learning paths
+                            from basic to advanced levels, and real-time booking consultations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Education</span>
+                        </div>
+                        <a href="https://english-gold-v2-3elp.vercel.app/en" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Visit Platform
+                        </a>
+                    </div>
+
+                    <!-- GafoHive.io -->
+                    <div class="project-card project-coming-soon">
+                        <div class="project-badge badge-coming-soon">Coming Soon</div>
+                        <h3 class="project-title">GafoHive.io</h3>
+                        <p class="project-tagline">WordPress Services Company</p>
+                        <p class="project-description">
+                            My personal services company providing comprehensive WordPress solutions.
+                            Offering custom theme development, plugin creation, performance optimization,
+                            and ongoing maintenance for businesses of all sizes.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Agency</span>
+                            <span class="tech-tag">Services</span>
+                        </div>
+                        <a href="https://gafohive.io/" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Learn More
+                        </a>
+                    </div>
                 </div>
-                <p class="education-description" itemprop="description" data-i18n="education.description">
-                    Gained extensive knowledge in software engineering and various aspects of information technology.
-                </p>
-            </div>
-        </section>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="section">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span data-i18n="sections.technicalSkills">TECHNICAL SKILLS</span>
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-i18n="skills.frontend">Frontend</h3>
+                        <ul class="skill-list">
+                            <li>React</li>
+                            <li>Redux & Redux Saga</li>
+                            <li>Next.js</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Tailwind CSS</li>
+                            <li>Styled-Components</li>
+                            <li>Zustand</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-i18n="skills.backendTools">Backend & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>MySQL</li>
+                            <li>Docker</li>
+                            <li>WordPress</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title" data-i18n="skills.testingManagement">Testing & Management</h3>
+                        <ul class="skill-list">
+                            <li>Manual Testing</li>
+                            <li>Smoke Testing</li>
+                            <li>Gray Testing</li>
+                            <li>Team Leadership</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section class="section" itemscope itemtype="https://schema.org/Organization">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                    </svg>
+                    <span data-i18n="sections.workExperience">WORK EXPERIENCE</span>
+                </h2>
+
+                <div class="experience-item" itemscope itemtype="https://schema.org/JobPosting">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title" itemprop="title" data-i18n="experience.freelance.title">Freelance
+                                Software Engineer & Team Lead</h3>
+                            <p class="company" itemprop="hiringOrganization" itemscope
+                                itemtype="https://schema.org/Organization">
+                                <span itemprop="name" data-i18n="experience.freelance.company">Self-Employed</span>
+                            </p>
+                        </div>
+                        <div class="experience-date" itemprop="datePosted" data-i18n="experience.freelance.date">2024 -
+                            PRESENT</div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li data-i18n="experience.freelance.achievement1">Currently managing teams of 4 developers
+                            across 3 different client projects</li>
+                        <li data-i18n="experience.freelance.achievement2">Serving Investing Snacks (FinTech),
+                            ClickCatalyst (Marketing Automation), and Outlink Pro (Link Management)</li>
+                        <li data-i18n="experience.freelance.achievement3">Providing full-stack development services with
+                            React, Express, and WordPress</li>
+                        <li data-i18n="experience.freelance.achievement4">Leading project planning, sprint management,
+                            and technical architecture decisions</li>
+                        <li data-i18n="experience.freelance.achievement5">Ensuring code quality and timely delivery
+                            across all client engagements</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title" data-i18n="experience.contentWriter.title">Technical Content Writer
+                            </h3>
+                            <p class="company"><a href="https://stackup.dev/" target="_blank"
+                                    data-i18n="experience.contentWriter.company">StackUp.Dev</a></p>
+                        </div>
+                        <div class="experience-date" data-i18n="experience.contentWriter.date">JUN 2024 - NOV 2024</div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li data-i18n="experience.contentWriter.achievement1">Created comprehensive tutorials covering
+                            React.js, Redux Toolkit, and Docker</li>
+                        <li data-i18n="experience.contentWriter.achievement2">Developed educational content for
+                            developers at various skill levels</li>
+                        <li data-i18n="experience.contentWriter.achievement3">Focused on practical application and
+                            modern web development best practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title" data-i18n="experience.thomasArts.title">Software Engineer/Programmer
+                            </h3>
+                            <p class="company"><a href="https://www.thomasarts.com/" target="_blank"
+                                    data-i18n="experience.thomasArts.company">ThomasArts</a></p>
+                        </div>
+                        <div class="experience-date" data-i18n="experience.thomasArts.date">OCT 2023 - JUL 2024</div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li data-i18n="experience.thomasArts.achievement1">Maintained and updated multiple WordPress
+                            sites ensuring optimal performance</li>
+                        <li data-i18n="experience.thomasArts.achievement2">Developed centralized MERN stack management
+                            system for network of sites</li>
+                        <li data-i18n="experience.thomasArts.achievement3">Built custom WordPress plugin leveraging WP
+                            API for enhanced functionality</li>
+                        <li data-i18n="experience.thomasArts.achievement4">Implemented automated monitoring and update
+                            tracking systems</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title" data-i18n="experience.ozsale.title">Software Engineer</h3>
+                            <p class="company"><a href="https://www.ozsale.com.au" target="_blank"
+                                    data-i18n="experience.ozsale.company">Ozsale (Mysale Group)</a></p>
+                        </div>
+                        <div class="experience-date" data-i18n="experience.ozsale.date">JUN 2022 - JUN 2023</div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li data-i18n="experience.ozsale.achievement1">Led development and maintenance of 10 e-commerce
+                            platforms using React JS</li>
+                        <li data-i18n="experience.ozsale.achievement2">Implemented Redux Saga for efficient state
+                            management and async operations</li>
+                        <li data-i18n="experience.ozsale.achievement3">Developed scalable UI components using
+                            styled-components and Storybook</li>
+                        <li data-i18n="experience.ozsale.achievement4">Collaborated with backend teams for seamless
+                            RESTful API integration</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title" data-i18n="experience.happySeason.title">Frontend React Developer</h3>
+                            <p class="company"><a href="https://happy-season.com/" target="_blank"
+                                    data-i18n="experience.happySeason.company">Happy Season</a></p>
+                        </div>
+                        <div class="experience-date" data-i18n="experience.happySeason.date">JAN 2020 - MAY 2022</div>
+                    </div>
+                    <ul class="experience-achievements">
+                        <li data-i18n="experience.happySeason.achievement1">Developed wedding planning platform using
+                            React JS with focus on scalability</li>
+                        <li data-i18n="experience.happySeason.achievement2">Managed application state with Redux Saga
+                            for optimized data synchronization</li>
+                        <li data-i18n="experience.happySeason.achievement3">Integrated Next.js for server-side rendering
+                            and improved SEO performance</li>
+                        <li data-i18n="experience.happySeason.achievement4">Built responsive, modular UI components with
+                            styled-components architecture</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section" itemscope itemtype="https://schema.org/EducationalOrganization">
+                <h2 class="section-title">
+                    <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true" focusable="false">
+                        <path d="M22 10L12 4 2 10l10 6 10-6z"></path>
+                        <path d="M6 12v5a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-5"></path>
+                    </svg>
+                    <span data-i18n="sections.education">EDUCATION</span>
+                </h2>
+                <div class="education-item" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+                    <div class="education-header">
+                        <div class="education-title">
+                            <h3 class="degree" itemprop="name" data-i18n="education.title">Diploma in Information
+                                Technology</h3>
+                            <p class="institution" itemprop="recognizedBy" itemscope
+                                itemtype="https://schema.org/EducationalOrganization">
+                                <a href="https://informatics.edu.ph/" target="_blank" itemprop="url">
+                                    <span itemprop="name" data-i18n="education.institution">Informatics, Baguio,
+                                        Philippines</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="education-date" itemprop="dateCreated">2017</div>
+                    </div>
+                    <p class="education-description" itemprop="description" data-i18n="education.description">
+                        Gained extensive knowledge in software engineering and various aspects of information
+                        technology.
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
     <!-- End Content Wrapper -->
@@ -857,23 +1091,23 @@
     <script src="locales/additional-translations.js"></script>
     <script>
         // Mobile Header Toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const hamburgerMenu = document.getElementById('hamburger-menu');
             const mobileHeaderWrapper = document.getElementById('mobile-header-wrapper');
-            
+
             if (hamburgerMenu && mobileHeaderWrapper) {
-                hamburgerMenu.addEventListener('click', function() {
+                hamburgerMenu.addEventListener('click', function () {
                     const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true';
-                    
+
                     // Toggle the active class
                     mobileHeaderWrapper.classList.toggle('active');
-                    
+
                     // Toggle hamburger animation
                     hamburgerMenu.classList.toggle('is-active');
-                    
+
                     // Update aria-expanded
                     hamburgerMenu.setAttribute('aria-expanded', String(!isExpanded));
-                    
+
                     // Prevent body scroll when menu is open
                     document.body.classList.toggle('no-scroll', !isExpanded);
                 });
@@ -881,13 +1115,14 @@
         });
 
         // Print optimization
-        window.addEventListener('beforeprint', function() {
+        window.addEventListener('beforeprint', function () {
             document.body.classList.add('printing');
         });
-        
-        window.addEventListener('afterprint', function() {
+
+        window.addEventListener('afterprint', function () {
             document.body.classList.remove('printing');
         });
     </script>
 </body>
+
 </html>
