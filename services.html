@@ -366,124 +366,72 @@
             margin-bottom: 2rem;
         }
 
-        .services-cards {
-            display: flex;
-            overflow-x: visible;
-            /* Allow arrows to be visible */
-            scroll-behavior: smooth;
-            padding-bottom: 1rem;
-            gap: 1.5rem;
-            justify-content: center;
-            position: relative;
+        /* Infinite Carousel Styles */
+        .services-carousel {
             width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            align-items: center;
-            /* Center align arrows with cards */
-        }
-
-        /* Desktop: Hide mobile arrow container */
-        .mobile-arrow-container {
-            display: none;
-        }
-
-        /* Desktop: Hide mobile arrows */
-        .mobile-arrow {
-            display: none !important;
-        }
-
-        /* Desktop: Show desktop arrows */
-        .desktop-arrow {
-            display: flex !important;
-        }
-
-        /* Desktop: Reset order for horizontal layout */
-        .service-card {
-            flex: 0 0 300px;
-            /* Fixed width for each card */
-            min-height: 350px;
-            order: 0;
-            /* Reset order for desktop */
-        }
-
-        .scroll-arrow.left {
-            order: -1;
-            /* Left arrow before cards on desktop */
-        }
-
-        .scroll-arrow.right {
-            order: 1;
-            /* Right arrow after cards on desktop */
-        }
-
-        .scroll-arrow {
-            background: var(--color-surface) !important;
-            border: 2px solid var(--color-accent) !important;
-            /* Make border more visible */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex !important;
-            /* Force display */
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: var(--color-accent) !important;
-            /* Make icon more visible */
+            overflow: hidden;
             position: relative;
-            z-index: 10;
-            flex-shrink: 0;
-            /* Prevent arrows from shrinking */
-            margin: 0 1rem;
-            /* Add some spacing */
-            opacity: 1 !important;
-            /* Force opacity */
+            padding: 2rem 0;
         }
 
-        .scroll-arrow.left {
-            order: -1;
-            /* Place left arrow before cards */
+        .services-carousel::before,
+        .services-carousel::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            z-index: 2;
+            pointer-events: none;
         }
 
-        .scroll-arrow.right {
-            order: 1;
-            /* Place right arrow after cards */
+        .services-carousel::before {
+            left: 0;
+            background: linear-gradient(to right, var(--color-background), transparent);
         }
 
-        .scroll-arrow:hover {
-            background: var(--color-accent);
-            color: white;
-            border-color: var(--color-accent);
+        .services-carousel::after {
+            right: 0;
+            background: linear-gradient(to left, var(--color-background), transparent);
         }
 
-        .scroll-arrow:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
+        .services-track {
+            display: flex;
+            gap: 2rem;
+            animation: scroll 30s linear infinite;
+            width: max-content;
         }
 
-        .scroll-arrow:disabled:hover {
-            background: var(--color-surface);
-            color: var(--color-text);
-            border-color: var(--color-border);
+        .services-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 1rem));
+            }
         }
 
         .service-card {
+            flex: 0 0 320px;
+            min-height: 280px;
             background: var(--color-surface);
             border: 1px solid var(--color-border);
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            min-height: 350px;
-            /* Fixed height for all cards */
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         }
 
         .service-card-header {
@@ -492,12 +440,11 @@
             gap: 0.75rem;
             margin-bottom: 1rem;
             flex-shrink: 0;
-            /* Prevent header from shrinking */
         }
 
         .service-icon {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             color: var(--color-accent);
             flex-shrink: 0;
         }
@@ -515,90 +462,59 @@
             line-height: 1.6;
             margin: 0 0 1.5rem 0;
             flex-grow: 1;
-            /* Allow description to grow and push price to bottom */
+            font-size: 0.95rem;
         }
 
-        .pricing-model {
-            margin-top: auto;
-            /* Push pricing to bottom */
-            flex-shrink: 0;
-        }
-
-        .service-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .service-list li {
-            display: flex;
-            justify-content: space-between;
+        .service-cta {
+            display: inline-flex;
             align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .service-list li:last-child {
-            border-bottom: none;
-        }
-
-        .service-name {
-            font-weight: 500;
-            color: var(--color-text);
-        }
-
-        .service-price {
-            font-weight: 600;
-            color: var(--color-accent);
-        }
-
-        .service-price-main {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-accent);
-            text-align: center;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: var(--color-background);
-            border: 2px solid var(--color-accent);
-            border-radius: 0.5rem;
-        }
-
-
-        .pricing-model {
-            display: none;
-        }
-
-        .pricing-model.active {
-            display: block;
-        }
-
-        .back-button {
-            position: fixed;
-            top: 2rem;
-            left: 2rem;
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 0.5rem;
-            padding: 0.75rem 1rem;
-            color: var(--color-text);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        .back-button:hover {
-            background: var(--color-accent);
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient-accent, linear-gradient(135deg, #f4a261, #e76f51));
             color: white;
-            border-color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+            margin-top: auto;
         }
 
-        .back-button svg {
-            width: 1rem;
-            height: 1rem;
+        .service-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(244, 162, 97, 0.4);
+        }
+
+        /* Services CTA Container */
+        .services-cta-container {
+            display: flex;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+
+        .services-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            background: var(--gradient-accent, linear-gradient(135deg, #f4a261, #e76f51));
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(244, 162, 97, 0.3);
+        }
+
+        .services-cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(244, 162, 97, 0.5);
+        }
+
+        .services-cta-button svg {
+            width: 20px;
+            height: 20px;
         }
 
         /* Responsive Design */
@@ -617,46 +533,45 @@
                 font-size: 1rem;
             }
 
-            .services-cards {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                max-width: 400px;
-                /* Single card width */
-            }
-
-            /* Mobile arrow container */
-            .mobile-arrow-container {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-                order: 1;
-                width: 100%;
-            }
-
-            /* Hide desktop arrows on mobile */
-            .desktop-arrow {
-                display: none !important;
+            .services-carousel::before,
+            .services-carousel::after {
+                width: 30px;
             }
 
             .service-card {
-                flex: 0 0 auto;
-                width: 100%;
-                max-width: 350px;
-                order: 2;
-                /* Card comes after arrows */
+                flex: 0 0 280px;
+                min-height: 240px;
+                padding: 1.5rem;
             }
 
-            .scroll-arrow {
-                width: 40px;
-                height: 40px;
-                margin: 0;
+            .services-track {
+                animation-duration: 25s;
             }
+        }
 
-            .back-button {
-                top: 1rem;
-                left: 1rem;
+        @media (prefers-reduced-motion: reduce) {
+            .services-track {
+                animation: none;
             }
+        }
+
+        .service-card {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 350px;
+            order: 2;
+            /* Card comes after arrows */
+        }
+
+        .scroll-arrow {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+        }
+
+        .back-button {
+            top: 1rem;
+            left: 1rem;
         }
     </style>
 </head>
@@ -977,127 +892,96 @@
             </div>
 
             <!-- Services Cards -->
-            <div class="services-cards">
-                <!-- Desktop arrows (outside mobile container) -->
-                <button id="scroll-left" class="scroll-arrow left desktop-arrow" title="Previous Cards">
+            <div class="services-carousel">
+                <div class="services-track">
+                    <!-- Frontend Development Card -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3 data-i18n="services.categories.frontend.title">Frontend Development</h3>
+                        </div>
+                        <p data-i18n="services.categories.frontend.description">React, Next.js, Vue.js, Angular, and
+                            modern
+                            web technologies</p>
+                    </div>
+
+                    <!-- Backend Development Card -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3 data-i18n="services.categories.backend.title">Backend Development</h3>
+                        </div>
+                        <p data-i18n="services.categories.backend.description">Node.js, Express.js, APIs, databases, and
+                            server-side solutions</p>
+                    </div>
+
+                    <!-- Full-Stack Development Card -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3 data-i18n="services.categories.fullstack.title">Full-Stack Development</h3>
+                        </div>
+                        <p data-i18n="services.categories.fullstack.description">Complete web applications with
+                            Node.js/Express backend and React/Next.js frontend</p>
+                    </div>
+
+                    <!-- Mobile Apps Card -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                            <h3 data-i18n="services.categories.mobile.title">Mobile Apps</h3>
+                        </div>
+                        <p data-i18n="services.categories.mobile.description">React Native + Expo for cross-platform iOS
+                            and
+                            Android applications</p>
+                    </div>
+
+                    <!-- WordPress Sites Card -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <h3 data-i18n="services.categories.wordpress.title">WordPress Sites</h3>
+                        </div>
+                        <p data-i18n="services.categories.wordpress.description">Custom WordPress websites, themes,
+                            plugins,
+                            and site maintenance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="services-cta-container">
+                <a href="contact.html" class="services-cta-button" data-i18n="services.contactForQuote">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
-                </button>
-
-                <!-- Mobile arrow container -->
-                <div class="mobile-arrow-container">
-                    <button id="scroll-left-mobile" class="scroll-arrow left mobile-arrow" title="Previous Cards">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
-                    <button id="scroll-right-mobile" class="scroll-arrow right mobile-arrow" title="Next Cards">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Desktop right arrow -->
-                <button id="scroll-right" class="scroll-arrow right desktop-arrow" title="Next Cards">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-
-                <!-- Frontend Development Card -->
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                        <h3 data-i18n="services.categories.frontend.title">Frontend Development</h3>
-                    </div>
-                    <p data-i18n="services.categories.frontend.description">React, Next.js, Vue.js, Angular, and modern
-                        web technologies</p>
-
-                    <!-- Hourly Pricing -->
-                    <div class="service-price-main">$10/hr</div>
-                </div>
-
-                <!-- Backend Development Card -->
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                        <h3 data-i18n="services.categories.backend.title">Backend Development</h3>
-                    </div>
-                    <p data-i18n="services.categories.backend.description">Node.js, Express.js, APIs, databases, and
-                        server-side solutions</p>
-
-                    <!-- Hourly Pricing -->
-                    <div class="service-price-main">$10/hr</div>
-                </div>
-
-                <!-- Full-Stack Development Card -->
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                        <h3 data-i18n="services.categories.fullstack.title">Full-Stack Development</h3>
-                    </div>
-                    <p data-i18n="services.categories.fullstack.description">Complete web applications with
-                        Node.js/Express backend and React/Next.js frontend</p>
-
-                    <!-- Hourly Pricing -->
-                    <div class="service-price-main">$10/hr</div>
-                </div>
-
-                <!-- Mobile Apps Card -->
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                        </svg>
-                        <h3 data-i18n="services.categories.mobile.title">Mobile Apps</h3>
-                    </div>
-                    <p data-i18n="services.categories.mobile.description">React Native + Expo for cross-platform iOS and
-                        Android applications</p>
-
-                    <!-- Hourly Pricing -->
-                    <div class="service-price-main">$10/hr</div>
-                </div>
-
-                <!-- WordPress Sites Card -->
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                        <h3 data-i18n="services.categories.wordpress.title">WordPress Sites</h3>
-                    </div>
-                    <p data-i18n="services.categories.wordpress.description">Custom WordPress websites, themes, plugins,
-                        and site maintenance</p>
-
-                    <!-- Hourly Pricing -->
-                    <div class="service-price-main">$10/hr</div>
-                </div>
+                    Contact for Quote
+                </a>
             </div>
         </div>
         <!-- End Content Wrapper -->

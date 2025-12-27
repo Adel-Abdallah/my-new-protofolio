@@ -22,6 +22,7 @@ const PORTFOLIO_TRANSLATIONS = {
       professionalSummary: "PROFESSIONAL SUMMARY",
       currentServices: "CURRENT SERVICES",
       lastClients: "LAST CLIENTS I Worked With",
+      featuredProjects: "FEATURED PROJECTS",
       technicalSkills: "TECHNICAL SKILLS",
       workExperience: "WORK EXPERIENCE",
       education: "EDUCATION",
@@ -61,6 +62,7 @@ const PORTFOLIO_TRANSLATIONS = {
         title: "Services & Pricing",
         subtitle: "Professional software development services with flexible pricing options to meet your needs"
       },
+      contactForQuote: "Contact for Quote",
       pricing: {
         hourly: "Per Hour",
         monthly: "Per Month",
@@ -203,6 +205,30 @@ const PORTFOLIO_TRANSLATIONS = {
         type: "Link Management Solution"
       }
     },
+    projects: {
+      ecommerce: {
+        title: "E-commerce Template Collection",
+        tagline: "10 Complete, Production-Ready Templates",
+        description: "A curated collection of modern e-commerce templates built with Next.js and Vanilla CSS. Each template includes a product list page, product detail page, cart, and wishlist — all with unique design systems and fully responsive layouts.",
+        link: "Browse Templates"
+      },
+      englishGold: {
+        title: "English Gold Academy",
+        tagline: "Master English with Expert Teachers",
+        description: "A modern language learning platform for students worldwide. Features include personalized lessons with native English speakers, structured learning paths from basic to advanced levels, and real-time booking consultations.",
+        link: "Visit Platform"
+      },
+      gafohive: {
+        title: "GafoHive.io",
+        tagline: "WordPress Services Company",
+        description: "My personal services company providing comprehensive WordPress solutions. Offering custom theme development, plugin creation, performance optimization, and ongoing maintenance for businesses of all sizes.",
+        link: "Learn More"
+      },
+      badges: {
+        live: "Live",
+        comingSoon: "Coming Soon"
+      }
+    },
     skills: {
       frontend: "Frontend",
       backendTools: "Backend & Tools",
@@ -310,6 +336,7 @@ const PORTFOLIO_TRANSLATIONS = {
       professionalSummary: "الملخص المهني",
       currentServices: "الخدمات الحالية",
       lastClients: "آخر العملاء الذين عملت معهم",
+      featuredProjects: "المشاريع المميزة",
       technicalSkills: "المهارات التقنية",
       workExperience: "الخبرة العملية",
       education: "التعليم",
@@ -333,6 +360,33 @@ const PORTFOLIO_TRANSLATIONS = {
       teamManagement: {
         title: "إدارة الفرق",
         description: "القيادة التقنية، تنسيق المشاريع، وإرشاد فرق التطوير"
+      },
+      hero: {
+        title: "الخدمات والأسعار",
+        subtitle: "خدمات تطوير برمجيات احترافية مع خيارات تسعير مرنة تلبي احتياجاتك"
+      },
+      contactForQuote: "تواصل للحصول على عرض سعر",
+      categories: {
+        frontend: {
+          title: "تطوير الواجهة الأمامية",
+          description: "تطبيقات ويب حديثة ومتجاوبة باستخدام أحدث التقنيات"
+        },
+        backend: {
+          title: "تطوير الخادم",
+          description: "Node.js، Express.js، APIs، قواعد البيانات، وحلول الخادم"
+        },
+        fullstack: {
+          title: "تطوير كامل",
+          description: "تطبيقات ويب كاملة مع خادم Node.js/Express وواجهة React/Next.js"
+        },
+        mobile: {
+          title: "تطبيقات الجوال",
+          description: "React Native + Expo لتطبيقات iOS وAndroid متعددة المنصات"
+        },
+        wordpress: {
+          title: "مواقع ووردبريس",
+          description: "مواقع ووردبريس مخصصة، قوالب، إضافات، وصيانة"
+        }
       }
     },
     clients: {
@@ -347,6 +401,30 @@ const PORTFOLIO_TRANSLATIONS = {
       outlinkPro: {
         name: "Outlink Pro",
         type: "حل إدارة الروابط"
+      }
+    },
+    projects: {
+      ecommerce: {
+        title: "مجموعة قوالب التجارة الإلكترونية",
+        tagline: "10 قوالب جاهزة للإنتاج",
+        description: "مجموعة منتقاة من قوالب التجارة الإلكترونية الحديثة المبنية باستخدام Next.js و CSS. يتضمن كل قالب صفحة قائمة المنتجات وصفحة تفاصيل المنتج والسلة وقائمة الأمنيات.",
+        link: "تصفح القوالب"
+      },
+      englishGold: {
+        title: "أكاديمية إنجلش جولد",
+        tagline: "أتقن اللغة الإنجليزية مع مدرسين خبراء",
+        description: "منصة تعلم لغات حديثة للطلاب في جميع أنحاء العالم. تتضمن دروس مخصصة مع متحدثين أصليين ومسارات تعلم منظمة.",
+        link: "زيارة المنصة"
+      },
+      gafohive: {
+        title: "GafoHive.io",
+        tagline: "شركة خدمات ووردبريس",
+        description: "شركتي الشخصية لتقديم حلول ووردبريس الشاملة. نوفر تطوير القوالب المخصصة وإنشاء الإضافات وتحسين الأداء والصيانة المستمرة.",
+        link: "اكتشف المزيد"
+      },
+      badges: {
+        live: "مباشر",
+        comingSoon: "قريباً"
       }
     },
     skills: {
@@ -901,260 +979,260 @@ const PORTFOLIO_TRANSLATIONS = {
 
 // Simple Language Selector - No server needed!
 class SimpleLanguageSelector {
-    constructor() {
-        this.currentLanguage = this.detectUserLanguage();
-        this.translations = PORTFOLIO_TRANSLATIONS;
-        this.init();
+  constructor() {
+    this.currentLanguage = this.detectUserLanguage();
+    this.translations = PORTFOLIO_TRANSLATIONS;
+    this.init();
+  }
+
+  detectUserLanguage() {
+    // First check if user has manually selected a language
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+      return savedLanguage;
     }
 
-    detectUserLanguage() {
-        // First check if user has manually selected a language
-        const savedLanguage = localStorage.getItem('preferredLanguage');
-        if (savedLanguage) {
-            return savedLanguage;
-        }
+    // Get browser language preferences
+    const browserLanguages = navigator.languages || [navigator.language];
 
-        // Get browser language preferences
-        const browserLanguages = navigator.languages || [navigator.language];
-        
-        // Country to language mapping
-        const countryLanguageMap = {
-            'PH': 'tl',    // Philippines -> Tagalog
-            'SA': 'ar',    // Saudi Arabia -> Arabic
-            'AE': 'ar',    // UAE -> Arabic
-            'EG': 'ar',    // Egypt -> Arabic
-            'MA': 'ar',    // Morocco -> Arabic
-            'FR': 'fr',    // France -> French
-            'CA': 'fr',    // Canada (Quebec) -> French
-            'BE': 'fr',    // Belgium -> French
-            'CH': 'fr',    // Switzerland -> French
-            'ES': 'es',    // Spain -> Spanish
-            'MX': 'es',    // Mexico -> Spanish
-            'AR': 'es',    // Argentina -> Spanish
-            'CO': 'es',    // Colombia -> Spanish
-            'PE': 'es',    // Peru -> Spanish
-            'CL': 'es',    // Chile -> Spanish
-            'CN': 'zh',    // China -> Chinese
-            'TW': 'zh',    // Taiwan -> Chinese
-            'HK': 'zh',    // Hong Kong -> Chinese
-            'SG': 'zh',    // Singapore -> Chinese
-            'JP': 'ja',    // Japan -> Japanese
-            'KR': 'ko',    // South Korea -> Korean
-            'IT': 'it',    // Italy -> Italian
-            'GR': 'el',    // Greece -> Greek
-            'SE': 'sv',    // Sweden -> Swedish
-            'NO': 'sv',    // Norway -> Swedish (fallback)
-            'DK': 'sv'     // Denmark -> Swedish (fallback)
-        };
+    // Country to language mapping
+    const countryLanguageMap = {
+      'PH': 'tl',    // Philippines -> Tagalog
+      'SA': 'ar',    // Saudi Arabia -> Arabic
+      'AE': 'ar',    // UAE -> Arabic
+      'EG': 'ar',    // Egypt -> Arabic
+      'MA': 'ar',    // Morocco -> Arabic
+      'FR': 'fr',    // France -> French
+      'CA': 'fr',    // Canada (Quebec) -> French
+      'BE': 'fr',    // Belgium -> French
+      'CH': 'fr',    // Switzerland -> French
+      'ES': 'es',    // Spain -> Spanish
+      'MX': 'es',    // Mexico -> Spanish
+      'AR': 'es',    // Argentina -> Spanish
+      'CO': 'es',    // Colombia -> Spanish
+      'PE': 'es',    // Peru -> Spanish
+      'CL': 'es',    // Chile -> Spanish
+      'CN': 'zh',    // China -> Chinese
+      'TW': 'zh',    // Taiwan -> Chinese
+      'HK': 'zh',    // Hong Kong -> Chinese
+      'SG': 'zh',    // Singapore -> Chinese
+      'JP': 'ja',    // Japan -> Japanese
+      'KR': 'ko',    // South Korea -> Korean
+      'IT': 'it',    // Italy -> Italian
+      'GR': 'el',    // Greece -> Greek
+      'SE': 'sv',    // Sweden -> Swedish
+      'NO': 'sv',    // Norway -> Swedish (fallback)
+      'DK': 'sv'     // Denmark -> Swedish (fallback)
+    };
 
-        // Check browser language codes first
-        for (const lang of browserLanguages) {
-            const langCode = lang.split('-')[0].toLowerCase();
-            if (['en', 'ar', 'fr', 'es', 'zh', 'ja', 'ko', 'it', 'el', 'sv', 'tl'].includes(langCode)) {
-                console.log(`Auto-detected language from browser: ${langCode}`);
-                return langCode;
-            }
-        }
-
-        // Try to detect country from timezone
-        try {
-            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-            const countryCode = timezone.split('/')[0];
-            
-            if (countryLanguageMap[countryCode]) {
-                console.log(`Auto-detected language from timezone (${countryCode}): ${countryLanguageMap[countryCode]}`);
-                return countryLanguageMap[countryCode];
-            }
-        } catch (error) {
-            console.log('Could not detect timezone:', error);
-        }
-
-        // Fallback to English
-        console.log('Auto-detected language: English (fallback)');
-        return 'en';
+    // Check browser language codes first
+    for (const lang of browserLanguages) {
+      const langCode = lang.split('-')[0].toLowerCase();
+      if (['en', 'ar', 'fr', 'es', 'zh', 'ja', 'ko', 'it', 'el', 'sv', 'tl'].includes(langCode)) {
+        console.log(`Auto-detected language from browser: ${langCode}`);
+        return langCode;
+      }
     }
 
-    init() {
-        console.log('Initializing Simple Language Selector...');
-        this.setupEventListeners();
-        this.updateLanguage(this.currentLanguage);
-        console.log('Language Selector initialized successfully!');
+    // Try to detect country from timezone
+    try {
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const countryCode = timezone.split('/')[0];
+
+      if (countryLanguageMap[countryCode]) {
+        console.log(`Auto-detected language from timezone (${countryCode}): ${countryLanguageMap[countryCode]}`);
+        return countryLanguageMap[countryCode];
+      }
+    } catch (error) {
+      console.log('Could not detect timezone:', error);
     }
 
-    setupEventListeners() {
-        const toggle = document.getElementById('language-toggle');
-        const dropdown = document.getElementById('language-dropdown');
-        
-        if (!toggle || !dropdown) {
-            console.error('Language selector elements not found!');
-            return;
-        }
+    // Fallback to English
+    console.log('Auto-detected language: English (fallback)');
+    return 'en';
+  }
 
-        // Toggle dropdown
-        toggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-            const newState = !isExpanded;
-            
-            toggle.setAttribute('aria-expanded', newState);
-            dropdown.classList.toggle('show', newState);
-            
-            if (newState) {
-                const firstOption = dropdown.querySelector('.language-option');
-                if (firstOption) {
-                    firstOption.focus();
-                }
-            }
-        });
+  init() {
+    console.log('Initializing Simple Language Selector...');
+    this.setupEventListeners();
+    this.updateLanguage(this.currentLanguage);
+    console.log('Language Selector initialized successfully!');
+  }
 
-        // Handle language selection
-        dropdown.addEventListener('click', (e) => {
-            const option = e.target.closest('.language-option');
-            if (option) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const lang = option.dataset.lang;
-                console.log('Language selected:', lang);
-                
-                this.updateLanguage(lang);
-                dropdown.classList.remove('show');
-                toggle.setAttribute('aria-expanded', 'false');
-                toggle.focus();
-            }
-        });
+  setupEventListeners() {
+    const toggle = document.getElementById('language-toggle');
+    const dropdown = document.getElementById('language-dropdown');
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                dropdown.classList.remove('show');
-                toggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Keyboard navigation
-        toggle.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggle.click();
-            }
-        });
-
-        dropdown.addEventListener('keydown', (e) => {
-            const options = Array.from(dropdown.querySelectorAll('.language-option'));
-            const currentIndex = options.indexOf(document.activeElement);
-            
-            switch (e.key) {
-                case 'ArrowDown':
-                    e.preventDefault();
-                    const nextIndex = (currentIndex + 1) % options.length;
-                    options[nextIndex].focus();
-                    break;
-                case 'ArrowUp':
-                    e.preventDefault();
-                    const prevIndex = currentIndex === 0 ? options.length - 1 : currentIndex - 1;
-                    options[prevIndex].focus();
-                    break;
-                case 'Enter':
-                case ' ':
-                    e.preventDefault();
-                    document.activeElement.click();
-                    break;
-                case 'Escape':
-                    dropdown.classList.remove('show');
-                    toggle.setAttribute('aria-expanded', 'false');
-                    toggle.focus();
-                    break;
-            }
-        });
+    if (!toggle || !dropdown) {
+      console.error('Language selector elements not found!');
+      return;
     }
 
-    updateLanguage(lang) {
-        const translation = this.translations[lang];
-        if (!translation) {
-            console.warn(`No translations found for language: ${lang}`);
-            return;
-        }
+    // Toggle dropdown
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-        this.currentLanguage = lang;
-        localStorage.setItem('preferredLanguage', lang);
-        
-        console.log(`Switching to language: ${lang}`);
-        
-        // Update UI
-        this.updateCurrentLanguageDisplay(lang);
-        this.updateContent(lang);
-        this.updateDocumentDirection(lang);
-        this.updateActiveOption(lang);
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      const newState = !isExpanded;
+
+      toggle.setAttribute('aria-expanded', newState);
+      dropdown.classList.toggle('show', newState);
+
+      if (newState) {
+        const firstOption = dropdown.querySelector('.language-option');
+        if (firstOption) {
+          firstOption.focus();
+        }
+      }
+    });
+
+    // Handle language selection
+    dropdown.addEventListener('click', (e) => {
+      const option = e.target.closest('.language-option');
+      if (option) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const lang = option.dataset.lang;
+        console.log('Language selected:', lang);
+
+        this.updateLanguage(lang);
+        dropdown.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Keyboard navigation
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle.click();
+      }
+    });
+
+    dropdown.addEventListener('keydown', (e) => {
+      const options = Array.from(dropdown.querySelectorAll('.language-option'));
+      const currentIndex = options.indexOf(document.activeElement);
+
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          const nextIndex = (currentIndex + 1) % options.length;
+          options[nextIndex].focus();
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          const prevIndex = currentIndex === 0 ? options.length - 1 : currentIndex - 1;
+          options[prevIndex].focus();
+          break;
+        case 'Enter':
+        case ' ':
+          e.preventDefault();
+          document.activeElement.click();
+          break;
+        case 'Escape':
+          dropdown.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+          break;
+      }
+    });
+  }
+
+  updateLanguage(lang) {
+    const translation = this.translations[lang];
+    if (!translation) {
+      console.warn(`No translations found for language: ${lang}`);
+      return;
     }
 
-    updateCurrentLanguageDisplay(lang) {
-        const currentLangElement = document.getElementById('current-language');
-        const langCodes = {
-            'en': 'EN', 'ar': 'AR', 'fr': 'FR', 'es': 'ES', 'zh': 'ZH',
-            'ja': 'JA', 'ko': 'KO', 'it': 'IT', 'el': 'EL', 'sv': 'SV'
-        };
-        if (currentLangElement) {
-            currentLangElement.textContent = langCodes[lang] || lang.toUpperCase();
-        }
+    this.currentLanguage = lang;
+    localStorage.setItem('preferredLanguage', lang);
+
+    console.log(`Switching to language: ${lang}`);
+
+    // Update UI
+    this.updateCurrentLanguageDisplay(lang);
+    this.updateContent(lang);
+    this.updateDocumentDirection(lang);
+    this.updateActiveOption(lang);
+  }
+
+  updateCurrentLanguageDisplay(lang) {
+    const currentLangElement = document.getElementById('current-language');
+    const langCodes = {
+      'en': 'EN', 'ar': 'AR', 'fr': 'FR', 'es': 'ES', 'zh': 'ZH',
+      'ja': 'JA', 'ko': 'KO', 'it': 'IT', 'el': 'EL', 'sv': 'SV'
+    };
+    if (currentLangElement) {
+      currentLangElement.textContent = langCodes[lang] || lang.toUpperCase();
+    }
+  }
+
+  updateContent(lang) {
+    const translation = this.translations[lang];
+    if (!translation) return;
+
+    // Update meta tags
+    if (translation.meta?.title) {
+      document.title = translation.meta.title;
+    }
+    if (translation.meta?.description) {
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', translation.meta.description);
+      }
     }
 
-    updateContent(lang) {
-        const translation = this.translations[lang];
-        if (!translation) return;
+    // Update content with data-i18n attributes
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      const value = this.getNestedValue(translation, key);
 
-        // Update meta tags
-        if (translation.meta?.title) {
-            document.title = translation.meta.title;
-        }
-        if (translation.meta?.description) {
-            const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) {
-                metaDesc.setAttribute('content', translation.meta.description);
-            }
-        }
-        
-        // Update content with data-i18n attributes
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            const value = this.getNestedValue(translation, key);
-            
-            if (value) {
-                if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'email')) {
-                    element.placeholder = value;
-                } else if (element.tagName === 'TEXTAREA') {
-                    element.placeholder = value;
-                } else {
-                    element.textContent = value;
-                }
-            }
-        });
-    }
-
-    updateDocumentDirection(lang) {
-        if (lang === 'ar') {
-            document.documentElement.setAttribute('dir', 'rtl');
-            document.documentElement.setAttribute('lang', 'ar');
+      if (value) {
+        if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'email')) {
+          element.placeholder = value;
+        } else if (element.tagName === 'TEXTAREA') {
+          element.placeholder = value;
         } else {
-            document.documentElement.setAttribute('dir', 'ltr');
-            document.documentElement.setAttribute('lang', lang);
+          element.textContent = value;
         }
-    }
+      }
+    });
+  }
 
-    updateActiveOption(lang) {
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.classList.toggle('active', option.dataset.lang === lang);
-        });
+  updateDocumentDirection(lang) {
+    if (lang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', lang);
     }
+  }
 
-    getNestedValue(obj, path) {
-        return path.split('.').reduce((current, key) => current?.[key], obj);
-    }
+  updateActiveOption(lang) {
+    document.querySelectorAll('.language-option').forEach(option => {
+      option.classList.toggle('active', option.dataset.lang === lang);
+    });
+  }
+
+  getNestedValue(obj, path) {
+    return path.split('.').reduce((current, key) => current?.[key], obj);
+  }
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new SimpleLanguageSelector();
+  new SimpleLanguageSelector();
 });
